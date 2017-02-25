@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>iOS单元测试 | 百度Hi iOS团队技术周报</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="by 崔春健一、什么是单元测试？ 1、最小可测单元
+ 2、不是为了发现bug，是为了提高开发效率，为了我们的代码健康可持续发展
+二、单元测试的优缺点1⃣️优点： 1、好的单元测试就是一份上好的文档，而且比文档更容易被程序员接受。
+ 2、开发人员修改代码不再畏首畏尾，提高开发者的信心
+ 3、单元测试能保证在加入新功能或修改旧功能时代码的正确性
+ 4、单元测试保证在整个开发流程中代码都会被测试，更容易">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS单元测试">
+<meta property="og:url" content="http://baiduhidevios.github.io/2016/03/20/iOS单元测试/index.html">
+<meta property="og:site_name" content="百度Hi iOS团队技术周报">
+<meta property="og:description" content="by 崔春健一、什么是单元测试？ 1、最小可测单元
+ 2、不是为了发现bug，是为了提高开发效率，为了我们的代码健康可持续发展
+二、单元测试的优缺点1⃣️优点： 1、好的单元测试就是一份上好的文档，而且比文档更容易被程序员接受。
+ 2、开发人员修改代码不再畏首畏尾，提高开发者的信心
+ 3、单元测试能保证在加入新功能或修改旧功能时代码的正确性
+ 4、单元测试保证在整个开发流程中代码都会被测试，更容易">
+<meta property="og:updated_time" content="2017-02-25T09:08:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS单元测试">
+<meta name="twitter:description" content="by 崔春健一、什么是单元测试？ 1、最小可测单元
+ 2、不是为了发现bug，是为了提高开发效率，为了我们的代码健康可持续发展
+二、单元测试的优缺点1⃣️优点： 1、好的单元测试就是一份上好的文档，而且比文档更容易被程序员接受。
+ 2、开发人员修改代码不再畏首畏尾，提高开发者的信心
+ 3、单元测试能保证在加入新功能或修改旧功能时代码的正确性
+ 4、单元测试保证在整个开发流程中代码都会被测试，更容易">
+  
+    <link rel="alternative" href="/atom.xml" title="百度Hi iOS团队技术周报" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">百度Hi iOS团队技术周报</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://baiduhidevios.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-iOS单元测试" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/20/iOS单元测试/" class="article-date">
+  <time datetime="2016-03-20T10:44:48.000Z" itemprop="datePublished">2016-03-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      iOS单元测试
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="by-崔春健"><a href="#by-崔春健" class="headerlink" title="by 崔春健"></a>by 崔春健</h5><h4 id="一、什么是单元测试？"><a href="#一、什么是单元测试？" class="headerlink" title="一、什么是单元测试？"></a>一、什么是单元测试？</h4><p> 1、最小可测单元</p>
+<p> 2、不是为了发现bug，是为了提高开发效率，为了我们的代码健康可持续发展</p>
+<h4 id="二、单元测试的优缺点"><a href="#二、单元测试的优缺点" class="headerlink" title="二、单元测试的优缺点"></a>二、单元测试的优缺点</h4><h5 id="1⃣️优点："><a href="#1⃣️优点：" class="headerlink" title="1⃣️优点："></a>1⃣️优点：</h5><p> 1、好的单元测试就是一份上好的文档，而且比文档更容易被程序员接受。</p>
+<p> 2、开发人员修改代码不再畏首畏尾，提高开发者的信心</p>
+<p> 3、单元测试能保证在加入新功能或修改旧功能时代码的正确性</p>
+<p> 4、单元测试保证在整个开发流程中代码都会被测试，更容易及早发现问题，降低风险。对于项目管理来说，使软件的开发流程更容易掌控。</p>
+<h5 id="2⃣️缺点："><a href="#2⃣️缺点：" class="headerlink" title="2⃣️缺点："></a>2⃣️缺点：</h5><p> 1、单元测试不能减少研发的代码量，反而会花费很多精力在编写单元测试上，增加了开发成本，而且对开发人员的要求也会更高<br> 另外个人觉得，单元测试对于很小的项目意义不大；对于项目周期较长，需求比较复杂的中性或大型项目，单测将意义重大</p>
+<h4 id="三、测试用例的来源"><a href="#三、测试用例的来源" class="headerlink" title="三、测试用例的来源"></a>三、测试用例的来源</h4><p> 1、需求和详细设计文档</p>
+<p> 2、bug fix</p>
+<h4 id="四、单元测试由谁写"><a href="#四、单元测试由谁写" class="headerlink" title="四、单元测试由谁写"></a>四、单元测试由谁写</h4><p> 1、最好是开发者本人</p>
+<p> 2、对于新人，可以由老师傅来写单元测试，用于指导新人开发</p>
+<h4 id="五、如何写单元测试"><a href="#五、如何写单元测试" class="headerlink" title="五、如何写单元测试"></a>五、如何写单元测试</h4><p> 1、iOS单元测试的结构是这样的，</p>
+<p> 2、每一个Test Case的写法有三个步骤：①Mock对象，准备测试数据。②调用要测试的目标API。③验证输出和行为是否正确</p>
+<p> 测试普通文件消息收发:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">- (void)testSendFileMessage &#123;</div><div class="line"></div><div class="line">    // ①Mock对象，准备测试数据</div><div class="line">    BDIMFileMessage *fileMessage = [[BDIMFileMessage alloc] init];</div><div class="line"></div><div class="line">   BDIMFileMessageContent *fileContent = [[BDIMFileMessageContent alloc] init];</div><div class="line">    fileContent.fileName = @&quot;bd_logo1.png&quot;;</div><div class="line">    fileContent.filePath = deskTopPath;</div><div class="line"></div><div class="line">	fileMessage.comnFile = fileContent;</div><div class="line">	fileMessage.addresserName = @&quot;tester&quot;;</div><div class="line">   fileMessage.extra = @&quot;file_extra&quot;;</div><div class="line"></div><div class="line">    // ②调用要测试的目标API</div><div class="line">    [self.conversation sendMessage:fileMessage];</div><div class="line"></div><div class="line">    // ③验证输出和行为是否正确</div><div class="line">    expect([_imMessage isKindOfClass:[BDIMFileMessage class]]).will.beTruthy();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> 3、Application Tests</p>
+<pre><code>.    $(BUILT_PRODUCTS_DIR)/&lt;app_name&gt;.app/&lt;app_name&gt;
+.    $(BUNDLE_LOADER)
+</code></pre><h4 id="六、代码的可测性"><a href="#六、代码的可测性" class="headerlink" title="六、代码的可测性"></a>六、代码的可测性</h4><ul>
+<li>类之间要松耦合</li>
+<li>被测试的函数需要产生可测量的结果</li>
+<li>被测试的函数要遵循单一职责</li>
+<li>展示和业务逻辑要分开</li>
+<li>记得重构，不断提高代码的可测性</li>
+</ul>
+<h4 id="七、最佳实践"><a href="#七、最佳实践" class="headerlink" title="七、最佳实践"></a>七、最佳实践</h4><ul>
+<li><p>每个功能类都应提供单元测试，且每一个测试类，只依赖于其要测试的受测类。使用伪造对象避免对其他类的依赖，保证一个测试类只关注一个被测类，当测试不通过时，就能迅速的定位到是谁发生了错误，而不会受到其他类的干扰；使用伪造环境避免其他环境的干扰，保证case在任何环境下都能输出同样的测试结果</p>
+</li>
+<li><p>一个单测方法只测试一个功能点，并且不依赖其他测试用例的结果作为输入，保证case的原子性。if-else这种分支的情况最好分成两个case来测试</p>
+</li>
+<li><p>单元测试通过数据的变化来做输出结果的验证</p>
+</li>
+<li><p>应对所有暴露的属性和方法提供测试（包含回调方法），私有方法则不必。因为对外接口应该会调用到所有的私有方法，而且私有方法相对公有方法来说发生变动的可能性大很多，会造成不必要的修改测试代码的成本。如果非要测试私有方法，可以通过KVC、子类化和类别来实现</p>
+</li>
+<li><p>TDD，测试驱动开发的妙处即在于，它以需求为引领，通过测试的形式，来指导开发者进行软件的设计与架构，并编写出最为精炼的代码，使得测试用例运行通过。经过适当的重构之后，测试用例与产品代码可达到较为健康的状态。</p>
+</li>
+<li><p>第三方的框架有很多，OCUnit、<a href="https://github.com/gh-unit/gh-unit.git" target="_blank" rel="external">GHUnit</a>、<a href="https://github.com/specta/expecta.git" target="_blank" rel="external">Expecta</a>、<a href="https://github.com/erikdoe/ocmock.git" target="_blank" rel="external">OCMock</a>，目前我使用的OCUnit + Expecta</p>
+</li>
+</ul>
+<h4 id="八、衡量标准"><a href="#八、衡量标准" class="headerlink" title="八、衡量标准"></a>八、衡量标准</h4><p> 1、代码覆盖率</p>
+<p> 2、Case的成功率</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://baiduhidevios.github.io/2016/03/20/iOS单元测试/" data-id="cizl15kxc001xoajmkmfikn2d" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/03/20/2016-03-14技术周报/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2016.03.14技术周报
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/03/06/2016-03-06技术周报/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2016.03.06技术周报</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/25/2017-02-25技术周报/">2017-02-25技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/19/2016-12-18技术周报/">2016-12-18技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/11/2016-12-11技术周报/">2016-12-11技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/04/2016-12-04技术周报/">2016-12-04技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/27/2016-11-27技术周报/">2016-11-27技术周报</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 BaiduHiDeviOS<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

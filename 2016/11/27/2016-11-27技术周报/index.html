@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>2016-11-27技术周报 | 百度Hi iOS团队技术周报</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本期周报内容来自: GlareCH、nolol时光机：周报汇总、周报博客、iOS puzzles
+
+测试
+Test Doubles: Mocks, Stubs, and More
+Dependency Injection
+Bad Testing Practices
+
+技术实践
+移动端图片格式调研: ibireme 在做YYImage时的调研成果
+iOS 处理图片的一些小 Tip: ibireme">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2016-11-27技术周报">
+<meta property="og:url" content="http://baiduhidevios.github.io/2016/11/27/2016-11-27技术周报/index.html">
+<meta property="og:site_name" content="百度Hi iOS团队技术周报">
+<meta property="og:description" content="本期周报内容来自: GlareCH、nolol时光机：周报汇总、周报博客、iOS puzzles
+
+测试
+Test Doubles: Mocks, Stubs, and More
+Dependency Injection
+Bad Testing Practices
+
+技术实践
+移动端图片格式调研: ibireme 在做YYImage时的调研成果
+iOS 处理图片的一些小 Tip: ibireme">
+<meta property="og:updated_time" content="2017-02-25T09:08:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2016-11-27技术周报">
+<meta name="twitter:description" content="本期周报内容来自: GlareCH、nolol时光机：周报汇总、周报博客、iOS puzzles
+
+测试
+Test Doubles: Mocks, Stubs, and More
+Dependency Injection
+Bad Testing Practices
+
+技术实践
+移动端图片格式调研: ibireme 在做YYImage时的调研成果
+iOS 处理图片的一些小 Tip: ibireme">
+  
+    <link rel="alternative" href="/atom.xml" title="百度Hi iOS团队技术周报" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">百度Hi iOS团队技术周报</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://baiduhidevios.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2016-11-27技术周报" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/11/27/2016-11-27技术周报/" class="article-date">
+  <time datetime="2016-11-27T15:08:26.000Z" itemprop="datePublished">2016-11-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2016-11-27技术周报
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h6 id="本期周报内容来自-GlareCH、nolol"><a href="#本期周报内容来自-GlareCH、nolol" class="headerlink" title="本期周报内容来自: GlareCH、nolol"></a>本期周报内容来自: <a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
+<hr>
+<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><ol>
+<li><a href="https://www.objc.io/issues/15-testing/mocking-stubbing/" target="_blank" rel="external">Test Doubles: Mocks, Stubs, and More</a></li>
+<li><a href="https://www.objc.io/issues/15-testing/dependency-injection/" target="_blank" rel="external">Dependency Injection</a></li>
+<li><a href="https://www.objc.io/issues/15-testing/bad-testing-practices/" target="_blank" rel="external">Bad Testing Practices</a></li>
+</ol>
+<h1 id="技术实践"><a href="#技术实践" class="headerlink" title="技术实践"></a>技术实践</h1><ol>
+<li><a href="http://blog.ibireme.com/2015/11/02/mobile_image_benchmark/" target="_blank" rel="external">移动端图片格式调研</a>: <a href="https://github.com/ibireme" target="_blank" rel="external">ibireme</a> 在做YYImage时的调研成果</li>
+<li><a href="http://blog.ibireme.com/2015/11/02/ios_image_tips/" target="_blank" rel="external">iOS 处理图片的一些小 Tip</a>: <a href="https://github.com/ibireme" target="_blank" rel="external">ibireme</a> 在做YYImage时的调研成果</li>
+<li><a href="http://www.programering.com/a/MTN1ATNwATQ.html" target="_blank" rel="external">To speed up the XCode compile and link speed (200%+)</a>: 如何加快XCode编译速度？</li>
+</ol>
+<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ol>
+<li><a href="https://github.com/Flipboard/FLEX" target="_blank" rel="external">FLEX</a>: FLEX (Flipboard Explorer) is a set of in-app debugging and exploration tools for iOS development. When presented, FLEX shows a toolbar that lives in a window above your application. From this toolbar, you can view and modify nearly every piece of state in your running application.</li>
+<li><a href="http://www.freebuf.com/sectool/119680.html" target="_blank" rel="external">静态分析工具大集合</a>: 静态程序分析（Static program analysis）是指在不运行计算机程序的条件下，进行程序分析的方法。有些程序分析需要在程序运行时才能进行，这种程序分析称为动态程序分析。大部分的静态程序分析的对象是针对特定版本的源代码，也有些静态程序分析的对象是目标代码。静态程序分析一词多半是指配合静态程序分析工具进行的分析，人工进行的分析一般称为程序理解或代码审查。</li>
+</ol>
+<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><ol>
+<li><a href="https://www.objc.io/about/" target="_blank" rel="external">objc.io</a>: objc.io was founded 2013 in Berlin by Chris Eidhof, Daniel Eggert, and Florian Kugler. We started objc.io to create a platform for in-depth technical topics relevant to all iOS and OS X developers.</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://baiduhidevios.github.io/2016/11/27/2016-11-27技术周报/" data-id="cizl15kwz001joajmtyz4nvm6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/12/04/2016-12-04技术周报/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2016-12-04技术周报
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/13/2016-11-13技术周报/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2016-11-13技术周报</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/25/2017-02-25技术周报/">2017-02-25技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/19/2016-12-18技术周报/">2016-12-18技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/11/2016-12-11技术周报/">2016-12-11技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/04/2016-12-04技术周报/">2016-12-04技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/27/2016-11-27技术周报/">2016-11-27技术周报</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 BaiduHiDeviOS<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Baidu Hi iOS 技术周报-2015.11.09 | 百度Hi iOS团队技术周报</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="感谢本期周报线索提供同学:张萌
+周报汇总 地址
+周报博客 地址
+文章：Objective-C 的现代语法和新特性
+iOS 处理图片的一些小 Tip
+移动端图片格式调研
+ReactiveCocoa系列：
+细说ReactiveCocoa的冷信号与热信号（一）
+细说ReactiveCocoa的冷信号与热信号（二）：为什么要区分冷热信号
+细说ReactiveCocoa的冷信号与热信号（三）：怎么处理冷信号">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Baidu Hi iOS 技术周报-2015.11.09">
+<meta property="og:url" content="http://baiduhidevios.github.io/2015/11/09/20151109/index.html">
+<meta property="og:site_name" content="百度Hi iOS团队技术周报">
+<meta property="og:description" content="感谢本期周报线索提供同学:张萌
+周报汇总 地址
+周报博客 地址
+文章：Objective-C 的现代语法和新特性
+iOS 处理图片的一些小 Tip
+移动端图片格式调研
+ReactiveCocoa系列：
+细说ReactiveCocoa的冷信号与热信号（一）
+细说ReactiveCocoa的冷信号与热信号（二）：为什么要区分冷热信号
+细说ReactiveCocoa的冷信号与热信号（三）：怎么处理冷信号">
+<meta property="og:updated_time" content="2017-02-25T09:08:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Baidu Hi iOS 技术周报-2015.11.09">
+<meta name="twitter:description" content="感谢本期周报线索提供同学:张萌
+周报汇总 地址
+周报博客 地址
+文章：Objective-C 的现代语法和新特性
+iOS 处理图片的一些小 Tip
+移动端图片格式调研
+ReactiveCocoa系列：
+细说ReactiveCocoa的冷信号与热信号（一）
+细说ReactiveCocoa的冷信号与热信号（二）：为什么要区分冷热信号
+细说ReactiveCocoa的冷信号与热信号（三）：怎么处理冷信号">
+  
+    <link rel="alternative" href="/atom.xml" title="百度Hi iOS团队技术周报" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">百度Hi iOS团队技术周报</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://baiduhidevios.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-20151109" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/09/20151109/" class="article-date">
+  <time datetime="2015-11-09T00:00:00.000Z" itemprop="datePublished">2015-11-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Baidu Hi iOS 技术周报-2015.11.09
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>感谢本期周报线索提供同学:张萌</p>
+<p>周报汇总 <a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">地址</a></p>
+<p>周报博客 <a href="http://baiduhidevios.github.io/">地址</a></p>
+<h3 id="文章："><a href="#文章：" class="headerlink" title="文章："></a>文章：</h3><p><a href="http://www.cocoachina.com/cms/wap.php?action=article&amp;id=13924" target="_blank" rel="external">Objective-C 的现代语法和新特性</a></p>
+<p><a href="http://blog.ibireme.com/2015/11/02/ios_image_tips/" target="_blank" rel="external">iOS 处理图片的一些小 Tip</a></p>
+<p><a href="http://blog.ibireme.com/2015/11/02/mobile_image_benchmark/" target="_blank" rel="external">移动端图片格式调研</a></p>
+<p>ReactiveCocoa系列：</p>
+<p><a href="http://tech.meituan.com/talk-about-reactivecocoas-cold-signal-and-hot-signal-part-1.html" target="_blank" rel="external">细说ReactiveCocoa的冷信号与热信号（一）</a></p>
+<p><a href="http://tech.meituan.com/talk-about-reactivecocoas-cold-signal-and-hot-signal-part-2.html" target="_blank" rel="external">细说ReactiveCocoa的冷信号与热信号（二）：为什么要区分冷热信号</a></p>
+<p><a href="http://tech.meituan.com/talk-about-reactivecocoas-cold-signal-and-hot-signal-part-3.html" target="_blank" rel="external">细说ReactiveCocoa的冷信号与热信号（三）：怎么处理冷信号与热信号</a></p>
+<p><a href="http://tech.meituan.com/RACSignalSubscription.html" target="_blank" rel="external">RACSignal的Subscription深入分析</a></p>
+<p>深入理解Objective-C</p>
+<p><a href="http://tech.meituan.com/DiveIntoCategory.html" target="_blank" rel="external">深入理解Objective-C：Category</a></p>
+<p><a href="http://tech.meituan.com/DiveIntoMethodCache.html" target="_blank" rel="external">深入理解Objective-C：方法缓存</a></p>
+<h3 id="开源代码："><a href="#开源代码：" class="headerlink" title="开源代码："></a>开源代码：</h3><p><a href="https://github.com/AliSoftware/SwiftGen" target="_blank" rel="external">SwiftGen</a>: This is a suite of tools written in Swift 2 to auto-generate Swift 2 code for various assets of your project:</p>
+<ul>
+<li>enums for your Assets Catalogs</li>
+<li>enums for your Localizable.strings strings.</li>
+<li>enums for your UIStoryboard and their Scenes</li>
+<li>enums for your UIColors.</li>
+</ul>
+<p><a href="https://github.com/ibireme/YYWebImage" target="_blank" rel="external">YYWebImage</a>:</p>
+<p>YYWebImage is an asynchronous image loading framework (a component of YYKit).It was created as an improved replacement for SDWebImage, PINRemoteImage and FLAnimatedImage.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://baiduhidevios.github.io/2015/11/09/20151109/" data-id="cizl15kvu000boajmugwaxoj1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/11/16/20151116/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Baidu Hi iOS 技术周报-2015.11.16
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/11/02/20151102/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Baidu Hi iOS 技术周报-2015.11.02</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/25/2017-02-25技术周报/">2017-02-25技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/19/2016-12-18技术周报/">2016-12-18技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/11/2016-12-11技术周报/">2016-12-11技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/04/2016-12-04技术周报/">2016-12-04技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/27/2016-11-27技术周报/">2016-11-27技术周报</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 BaiduHiDeviOS<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

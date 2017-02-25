@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>2016-12-18技术周报 | 百度Hi iOS团队技术周报</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本期周报内容来自: nolol时光机：周报汇总、周报博客、iOS puzzles
+
+Swift
+iOS界面布局的核心以及TangramKit介绍: TangramKit是iOS系统下用Swift编写的第三方界面布局框架。他集成了iOS的AutoLayout和SizeClass以及Android的五大容器布局体系以及HTML/CSS中的float和flex-box的布局功能和思想，目的是为iOS开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2016-12-18技术周报">
+<meta property="og:url" content="http://baiduhidevios.github.io/2016/12/19/2016-12-18技术周报/index.html">
+<meta property="og:site_name" content="百度Hi iOS团队技术周报">
+<meta property="og:description" content="本期周报内容来自: nolol时光机：周报汇总、周报博客、iOS puzzles
+
+Swift
+iOS界面布局的核心以及TangramKit介绍: TangramKit是iOS系统下用Swift编写的第三方界面布局框架。他集成了iOS的AutoLayout和SizeClass以及Android的五大容器布局体系以及HTML/CSS中的float和flex-box的布局功能和思想，目的是为iOS开发">
+<meta property="og:updated_time" content="2017-02-25T09:08:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2016-12-18技术周报">
+<meta name="twitter:description" content="本期周报内容来自: nolol时光机：周报汇总、周报博客、iOS puzzles
+
+Swift
+iOS界面布局的核心以及TangramKit介绍: TangramKit是iOS系统下用Swift编写的第三方界面布局框架。他集成了iOS的AutoLayout和SizeClass以及Android的五大容器布局体系以及HTML/CSS中的float和flex-box的布局功能和思想，目的是为iOS开发">
+  
+    <link rel="alternative" href="/atom.xml" title="百度Hi iOS团队技术周报" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">百度Hi iOS团队技术周报</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://baiduhidevios.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2016-12-18技术周报" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/12/19/2016-12-18技术周报/" class="article-date">
+  <time datetime="2016-12-18T16:09:02.000Z" itemprop="datePublished">2016-12-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2016-12-18技术周报
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h6 id="本期周报内容来自-nolol"><a href="#本期周报内容来自-nolol" class="headerlink" title="本期周报内容来自: nolol"></a>本期周报内容来自: <a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
+<hr>
+<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><ol>
+<li><a href="http://www.cocoachina.com/swift/20161201/18198.html" target="_blank" rel="external">iOS界面布局的核心以及TangramKit介绍</a>: <a href="https://github.com/youngsoft/TangramKit" target="_blank" rel="external">TangramKit</a>是iOS系统下用Swift编写的第三方界面布局框架。他集成了iOS的AutoLayout和SizeClass以及Android的五大容器布局体系以及HTML/CSS中的float和flex-box的布局功能和思想，目的是为iOS开发人员提供一套功能强大、多屏幕灵活适配、简单易用的UI布局解决方案</li>
+<li><a href="https://github.com/apple/swift-protobuf" target="_blank" rel="external">Swift Protobuf</a>: Plugin and runtime library for using protobuf with Swift</li>
+<li><a href="https://www.ibm.com/developerworks/cn/linux/l-cn-gpb/" target="_blank" rel="external">Google Protocol Buffer 的使用和原理 - IBM</a></li>
+<li><a href="http://www.cocoachina.com/swift/20161121/18144.html" target="_blank" rel="external">从 Swift 的面向协议编程说开去</a></li>
+</ol>
+<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ol>
+<li><a href="http://www.jianshu.com/p/92cd90e65d4c" target="_blank" rel="external">Xcode 8 Instruments 学习（一）</a></li>
+<li><a href="http://www.jianshu.com/p/9ac281228de2" target="_blank" rel="external">Xcode 8 Instruments 学习（二）</a></li>
+<li><a href="http://www.jianshu.com/p/b3443352169c" target="_blank" rel="external">Xcode 8 Instruments 学习（三）</a></li>
+<li><a href="http://www.jianshu.com/p/ca6e25bf4604" target="_blank" rel="external">Xcode 8 Instruments 学习（四）</a></li>
+<li><a href="http://www.jianshu.com/p/0783cb5e1a46" target="_blank" rel="external">Xcode 8 Instruments 学习（五）</a></li>
+<li><a href="https://github.com/Carthage/Carthage" target="_blank" rel="external">Carthage</a>: A simple, decentralized dependency manager for Cocoa</li>
+</ol>
+<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><ol>
+<li><a href="http://www.jianshu.com/p/856f0e26279d" target="_blank" rel="external">AFNetworking到底做了什么？</a></li>
+<li><a href="http://www.jianshu.com/p/f32bd79233da" target="_blank" rel="external">AFNetworking到底做了什么？(二)</a></li>
+<li><a href="https://wereadteam.github.io/2016/05/23/GYBootingProtection/" target="_blank" rel="external">iOS 启动连续闪退保护方案</a>: “如果某个实体表现出以下任何一种特性，它就具备自主性：自我修复、自我保护、自我维护、对目标的自我控制、自我改进。” —— 凯文·凯利</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://baiduhidevios.github.io/2016/12/19/2016-12-18技术周报/" data-id="cizl15kx1001loajmfc0rfmm2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/02/25/2017-02-25技术周报/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2017-02-25技术周报
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/12/11/2016-12-11技术周报/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2016-12-11技术周报</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/25/2017-02-25技术周报/">2017-02-25技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/19/2016-12-18技术周报/">2016-12-18技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/11/2016-12-11技术周报/">2016-12-11技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/04/2016-12-04技术周报/">2016-12-04技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/27/2016-11-27技术周报/">2016-11-27技术周报</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 BaiduHiDeviOS<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

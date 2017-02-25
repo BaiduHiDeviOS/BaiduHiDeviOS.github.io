@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>iOS应用文件目录结构简介 | 百度Hi iOS团队技术周报</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="iOS 标准目录结构出于安全考虑，iOS只有特定目录可以写入数据。 当一款应用安装在设备上后，系统会创建一些系统目录给应用使用，一款应用只有权限访问其自己的路径下的数据。
+AppName.app整个应用的bundle文件。此目录包含整个应用和其所使用到的所有资源。 此路径不能写， 只可读， 如果强行写入，会改变安装时在系统注册的该目录的签名，如果签名改变，系统会组织程序启动。
+Documents/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS应用文件目录结构简介">
+<meta property="og:url" content="http://baiduhidevios.github.io/2015/12/26/iOS应用文件目录结构简介/index.html">
+<meta property="og:site_name" content="百度Hi iOS团队技术周报">
+<meta property="og:description" content="iOS 标准目录结构出于安全考虑，iOS只有特定目录可以写入数据。 当一款应用安装在设备上后，系统会创建一些系统目录给应用使用，一款应用只有权限访问其自己的路径下的数据。
+AppName.app整个应用的bundle文件。此目录包含整个应用和其所使用到的所有资源。 此路径不能写， 只可读， 如果强行写入，会改变安装时在系统注册的该目录的签名，如果签名改变，系统会组织程序启动。
+Documents/">
+<meta property="og:updated_time" content="2017-02-25T09:08:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS应用文件目录结构简介">
+<meta name="twitter:description" content="iOS 标准目录结构出于安全考虑，iOS只有特定目录可以写入数据。 当一款应用安装在设备上后，系统会创建一些系统目录给应用使用，一款应用只有权限访问其自己的路径下的数据。
+AppName.app整个应用的bundle文件。此目录包含整个应用和其所使用到的所有资源。 此路径不能写， 只可读， 如果强行写入，会改变安装时在系统注册的该目录的签名，如果签名改变，系统会组织程序启动。
+Documents/">
+  
+    <link rel="alternative" href="/atom.xml" title="百度Hi iOS团队技术周报" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">百度Hi iOS团队技术周报</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://baiduhidevios.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-iOS应用文件目录结构简介" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/26/iOS应用文件目录结构简介/" class="article-date">
+  <time datetime="2015-12-26T07:24:51.000Z" itemprop="datePublished">2015-12-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      iOS应用文件目录结构简介
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="iOS-标准目录结构"><a href="#iOS-标准目录结构" class="headerlink" title="iOS 标准目录结构"></a>iOS 标准目录结构</h3><p>出于安全考虑，iOS只有特定目录可以写入数据。 当一款应用安装在设备上后，系统会创建一些系统目录给应用使用，一款应用只有权限访问其自己的路径下的数据。</p>
+<h2 id="AppName-app"><a href="#AppName-app" class="headerlink" title="AppName.app"></a>AppName.app</h2><p>整个应用的bundle文件。此目录包含整个应用和其所使用到的所有资源。 <em>此路径不能写， 只可读</em>， 如果强行写入，会改变安装时在系统注册的该目录的签名，如果签名改变，系统会组织程序启动。</p>
+<h2 id="Documents"><a href="#Documents" class="headerlink" title="Documents/"></a>Documents/</h2><p>用于存储用户产生的内容。 此目录会被iTunes<em>默认备份</em></p>
+<h2 id="Documents-Inbox"><a href="#Documents-Inbox" class="headerlink" title="Documents/Inbox"></a>Documents/Inbox</h2><p>此目录用于保存用于其他应用打开的文件。 例如，Mail应用汇将和此应用有关的附件保存于这个路径。 Documents interaction Controllers 也会放文件于此目录。</p>
+<p>自己应用可以读取和删除此目录文件，但是<em>不能创建新文件或者写入已经存在的文件</em>， 如果要对该目录文件进行修改，请将要修改的文件移除到其他目录。<br><em>此目录默认被iTunes备份</em></p>
+<h2 id="Library"><a href="#Library" class="headerlink" title="Library/"></a>Library/</h2><p>此目录用于保存非用户数据文件。 Library下的子目录可以用于保存那些不希望用户看到的数据文件。<em>不要用Library下的目录保存用户数据文件</em></p>
+<p>Library目录下(除了Caches目录及其子目录)会被<em>iTunes默认备份</em></p>
+<p>##tmp/<br>用于那些不需要在每次启动需要持久化的临时文件。手动删除那些此路径下不用的临时文件。当应用没有运行时，系统也许会删除此目录下的文件。</p>
+<p><em>此目录默认不会被iTunes备份</em></p>
+<h3 id="应用产生的文件应该放在哪"><a href="#应用产生的文件应该放在哪" class="headerlink" title="应用产生的文件应该放在哪"></a>应用产生的文件应该放在哪</h3><p>为了避免iOS设备间同步和备份流程耗时太久，应该对文件归属目录的选择特别注意。</p>
+<ul>
+<li>将用户数据保存于 Documents/. 用户数据包括那些需要让暴露给用户的文件 — 用户可以创建，删除，编辑的文件。 例如，对于视频和音频应用，用户数据包括用户下载过的文件等。</li>
+<li>将应用创建的文件保存于Library/Application support/路径下。此目录下，用于保存应用自身使用，不暴露给用户的数据文件。包括数据文件，配置文件，模板文件和版本特定的资源文件等。</li>
+<li>谨记保存于Documents/ 和 Application support/ 目录下的文件是<em>默认备份的</em>。可以使用<code>[NSURL setResourceValue:forKey:error:]</code>使用<code>NSURLIsExcludeFromBackupKey</code> key. <em>任何可以被重新下载的文件，一定不要进行备份</em>。</li>
+<li>将数据缓存数据保存于Library/Caches 目录下。 缓存数据是那些没用该数据，应用也可以正常运行的数据， 但如果有缓存数据，会提高应用的性能。 例如，数据库缓存文件，可以下载的内容等。 <em>注意：系统也许会删除Caches/下的文件，来释放磁盘空间</em></li>
+</ul>
+<p>参考: <a href="https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html" target="_blank" rel="external">File System programming guide</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://baiduhidevios.github.io/2015/12/26/iOS应用文件目录结构简介/" data-id="cizl15kxd001zoajmb7hy9j0h" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/12/27/20151228/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2015.12.28技术周报
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/12/20/20151221/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2015.12.21技术周报</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/25/2017-02-25技术周报/">2017-02-25技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/19/2016-12-18技术周报/">2016-12-18技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/11/2016-12-11技术周报/">2016-12-11技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/04/2016-12-04技术周报/">2016-12-04技术周报</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/27/2016-11-27技术周报/">2016-11-27技术周报</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 BaiduHiDeviOS<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
