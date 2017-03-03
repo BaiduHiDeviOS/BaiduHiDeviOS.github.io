@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baiduhidevios.github.io/"/>
-  <updated>2017-02-25T09:13:31.000Z</updated>
+  <updated>2017-03-03T13:26:23.000Z</updated>
   <id>http://baiduhidevios.github.io/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2017-03-03技术周报</title>
+    <link href="http://baiduhidevios.github.io/2017/03/03/2017-03-03%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
+    <id>http://baiduhidevios.github.io/2017/03/03/2017-03-03技术周报/</id>
+    <published>2017-03-03T13:22:31.000Z</published>
+    <updated>2017-03-03T13:26:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="本期周报内容来自-eggInBlack、GlareCH、DemoCooky"><a href="#本期周报内容来自-eggInBlack、GlareCH、DemoCooky" class="headerlink" title="本期周报内容来自: eggInBlack、GlareCH、DemoCooky"></a>本期周报内容来自: <a href="https://github.com/orgs/BaiduHiDeviOS/people/eggInBlack" target="_blank" rel="external">eggInBlack</a>、<a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
+<hr>
+<h1 id="Swift–基础"><a href="#Swift–基础" class="headerlink" title="Swift–基础"></a>Swift–基础</h1><p>1.<a href="https://onevcat.com/2017/02/ownership/" target="_blank" rel="external">所有权宣言 - Swift 官方文章 Ownership Manifesto 译文评注版</a></p>
+<p>2.<a href="http://nightfade.me/post/tech/2015-08-28-notes-on-using-swift-with-cocoa-and-objective-c" target="_blank" rel="external">《USING SWIFT WITH COCOA AND OBJECTIVE-C》学习笔记</a></p>
+<h1 id="Swift–实战"><a href="#Swift–实战" class="headerlink" title="Swift–实战"></a>Swift–实战</h1><p>1.<a href="http://www.appcoda.com/javascriptcore-swift/" target="_blank" rel="external">在Swift项目中使用JavaScript</a> [推荐]</p>
+<p>2.<a href="https://videos.raywenderlich.com/screencasts/server-side-swift-with-vapor-authentication-with-turnstile" target="_blank" rel="external">Server Side Swift with Vapor: Authentication with Turnstile</a> :视频讲解了如何通过Swift的Vapor来实现一个基于Turnstile库的登录和授权功能[推荐]</p>
+<p>3.<a href="http://www.jianshu.com/p/5ff2ba2192a7" target="_blank" rel="external">Swift 后台开发</a> :对于swift后台开发不太了解的同学，可以先参考这篇文章</p>
+<h1 id="编译原理"><a href="#编译原理" class="headerlink" title="编译原理"></a>编译原理</h1><p>1.<a href="http://awhisper.github.io/2017/02/26/%E6%89%AF%E6%B7%A1%EF%BC%9A%E5%A4%A7%E7%99%BD%E8%AF%9D%E8%81%8A%E8%81%8A%E7%BC%96%E8%AF%91%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF/" target="_blank" rel="external">大白话聊聊编译那点事儿</a></p>
+<h1 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h1><p>1.<a href="https://github.com/Draveness/iOS-Source-Code-Analyze" target="_blank" rel="external">关于iOS开源框架源代码解析的文章</a>:详解了一些优秀的开源库，作者会不断更新，建议收藏[推荐]</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6 id=&quot;本期周报内容来自-eggInBlack、GlareCH、DemoCooky&quot;&gt;&lt;a href=&quot;#本期周报内容来自-eggInBlack、GlareCH、DemoCooky&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: eggInBla
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>2017-02-25技术周报</title>
@@ -685,46 +712,6 @@
     
       &lt;p&gt;本期周报内容来自: &lt;a href=&quot;https://github.com/AnYuan&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;桉远&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;周报汇总 &lt;a href=&quot;https://github.com/BaiduHiDeviO
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2016.08.07技术周报</title>
-    <link href="http://baiduhidevios.github.io/2016/08/07/2016-08-07%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
-    <id>http://baiduhidevios.github.io/2016/08/07/2016-08-07技术周报/</id>
-    <published>2016-08-07T11:25:50.000Z</published>
-    <updated>2017-02-25T09:08:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>本期周报内容来自: <a href="https://github.com/SSSSSSnail" target="_blank" rel="external">新宁</a>, <a href="https://github.com/AnYuan" target="_blank" rel="external">桉远</a>。</p>
-<p>周报汇总 <a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">地址</a></p>
-<p>周报博客 <a href="http://baiduhidevios.github.io/">地址</a></p>
-<h3 id="swift"><a href="#swift" class="headerlink" title="swift:"></a>swift:</h3><p><a href="http://apple.github.io/swift-evolution/" target="_blank" rel="external">Swift Programming Language Evolution: Proposal Status</a>: 查看proposals的状态</p>
-<p><a href="https://github.com/apple/swift/blob/master/docs/OptimizationTips.rst" target="_blank" rel="external">Writing High-Performance Swift Code</a></p>
-<p><a href="http://www.jessesquires.com/migrating-to-swift-3/" target="_blank" rel="external">Migrating to swift 3</a></p>
-<p><a href="https://medium.com/swift-and-ios-writing/a-quick-look-at-gcd-and-swift-3-732bef6e1838#.bhqrecmpq" target="_blank" rel="external">Swift 3 Grand Central Dispatch</a>: Swift 3中GCD的变化</p>
-<h3 id="单测"><a href="#单测" class="headerlink" title="单测"></a>单测</h3><p><a href="https://medium.com/swift-programming/asynchronous-testing-e52db1b9b1fb#.ezgeue1i3" target="_blank" rel="external">Asynchronous Testing</a></p>
-<h3 id="Xcode新特性"><a href="#Xcode新特性" class="headerlink" title="Xcode新特性"></a>Xcode新特性</h3><p><a href="http://useyourloaf.com/blog/xcode-visual-memory-debugger/" target="_blank" rel="external">xcode visual memory debugger</a></p>
-<h3 id="iOS新特性"><a href="#iOS新特性" class="headerlink" title="iOS新特性"></a>iOS新特性</h3><p><a href="https://github.com/ChenYilong/iOS10AdaptationTips" target="_blank" rel="external">iOS 10 适配</a></p>
-<h3 id="技术实践"><a href="#技术实践" class="headerlink" title="技术实践"></a>技术实践</h3><p><a href="http://blog.devtang.com/2016/07/30/ios-memory-management/" target="_blank" rel="external">理解iOS的内存管理</a></p>
-<h3 id="开源代码："><a href="#开源代码：" class="headerlink" title="开源代码："></a>开源代码：</h3><p><a href="https://github.com/recruit-mp/RMPZoomTransitionAnimator" target="_blank" rel="external">RMPZoomTransitionAnimator</a>: A custom zooming transition animation for UIViewController</p>
-<p><a href="https://github.com/Ekhoo/Translucid" target="_blank" rel="external">Translucid</a>: Lightweight library to set an Image as text background. Written in swift.</p>
-<p><a href="https://github.com/marmelroy/Zip" target="_blank" rel="external">Zip</a>: Swift framework for zipping and unzipping files.</p>
-<p><a href="https://github.com/BeauNouvelle/AspectFillFaceAware" target="_blank" rel="external">AspectFillFaceAware</a>: An extension that gives UIImageView the ability to focus on faces within an image when using AspectFill.</p>
-<p><a href="https://github.com/lexrus/LTMorphingLabel" target="_blank" rel="external">LTMorphingLabel</a>: Graceful morphing effects for UILabel written in Swift.</p>
-<p><a href="https://github.com/yahoojapan/objc2swift" target="_blank" rel="external">objc2swift</a>: Open Source Obj-C to Swift Converter. <a href="http://objc2swift.yahoo-labs.jp" target="_blank" rel="external">http://objc2swift.yahoo-labs.jp</a></p>
-<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><p><a href="https://github.com/answer-huang/dSYMTools" target="_blank" rel="external">dSYMTools</a>: 开源的 dSYM 文件分析工具，可帮助开发者快速定位报错函数</p>
-<p><a href="https://stylemac.com/hirundo/" target="_blank" rel="external">hirundo</a>: Hirundo (Latin for ‘Swift’) is a convenient way to browse and follow the discussions in the Swift mailing lists like Swift-Evolution or Swift-Dev. You can even bookmark messages of threads because they contain important information</p>
-<h3 id="程序员的自我修养"><a href="#程序员的自我修养" class="headerlink" title="程序员的自我修养"></a>程序员的自我修养</h3><p><a href="http://bradfieldcs.com/diy/" target="_blank" rel="external">A DIY COMPUTER SCIENCE EDUCATION</a>: 应当如何自学计算机科学（CS），本文基于众多专业工程师自学的教育经验给出了一个简短的指南。</p>
-<p><a href="https://github.com/braydie/HowToBeAProgrammer" target="_blank" rel="external">How to be a programmer</a>: A guide on how to be a Programmer - originally published by Robert L Read <a href="https://braydie.gitbooks.io/how-to-be-a-programmer/content/" target="_blank" rel="external">https://braydie.gitbooks.io/how-to-be-a-programmer/content/</a></p>
-<h3 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h3><p><a href="http://www.iosinsight.com/" target="_blank" rel="external">iOS insight</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本期周报内容来自: &lt;a href=&quot;https://github.com/SSSSSSnail&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;新宁&lt;/a&gt;, &lt;a href=&quot;https://github.com/AnYuan&quot; target=&quot;_bla
     
     </summary>
     
