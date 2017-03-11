@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baiduhidevios.github.io/"/>
-  <updated>2017-03-03T13:26:23.000Z</updated>
+  <updated>2017-03-11T10:23:53.000Z</updated>
   <id>http://baiduhidevios.github.io/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2017-03-11技术周报</title>
+    <link href="http://baiduhidevios.github.io/2017/03/11/2017-03-11%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
+    <id>http://baiduhidevios.github.io/2017/03/11/2017-03-11技术周报/</id>
+    <published>2017-03-11T10:23:02.000Z</published>
+    <updated>2017-03-11T10:23:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="本期周报内容来自-GlareCH、DemoCooky、happyapper、nolol、jenglev"><a href="#本期周报内容来自-GlareCH、DemoCooky、happyapper、nolol、jenglev" class="headerlink" title="本期周报内容来自: GlareCH、DemoCooky、happyapper、nolol、jenglev"></a>本期周报内容来自: <a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>、<a href="https://github.com/happyapper" target="_blank" rel="external">happyapper</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a>、<a href="https://github.com/jenglev" target="_blank" rel="external">jenglev</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
+<hr>
+<h1 id="关于Swift"><a href="#关于Swift" class="headerlink" title="关于Swift"></a>关于Swift</h1><p>1.<a href="https://segmentfault.com/p/1210000008580163/read" target="_blank" rel="external">无论你是否主力 Swift, 这些事情你都可以了解一下</a> ：聊一聊关于Swift 能不能取代 Objective-C</p>
+<p>2.<a href="https://github.com/raywenderlich/swift-style-guide" target="_blank" rel="external">The Official raywenderlich.com Swift Style Guide</a> : 更具有风格的Swift3 指南【推荐】</p>
+<h1 id="iOS–实战"><a href="#iOS–实战" class="headerlink" title="iOS–实战"></a>iOS–实战</h1><p>1.[Swift]  <a href="http://www.jianshu.com/p/454b06590cf1?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=weibo&amp;url_type=39&amp;object_type=webpage&amp;pos=1" target="_blank" rel="external">导航栏的平滑显示和隐藏</a> 【推荐】</p>
+<p>2.[Object-C] <a href="http://www.cocoachina.com/ios/20170208/18651.html" target="_blank" rel="external">今日头条iOS客户端启动速度优化</a></p>
+<h1 id="单测"><a href="#单测" class="headerlink" title="单测"></a>单测</h1><p>1.<a href="http://draveness.me/http-mock/" target="_blank" rel="external">如何进行 HTTP Mock</a>:HTTP Mock 在测试中非常好用，我们可以在不需要后端 API 的情况下，在本地对 HTTP 请求进行拦截，返回想要的 json 数据，而 OHHTTPStubs 就为我们提供了这样一种解决方案。【推荐】</p>
+<h1 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h1><p>1.<a href="http://www.swiftytime.com/" target="_blank" rel="external">Swifty Time</a> : 一个收录了大量swift优秀源码的网站 【推荐】</p>
+<p>2.<a href="http://www.cnblogs.com/ludashi/p/5556088.html" target="_blank" rel="external">iOS开发之Alamofire源码解析前奏–NSURLSession全家桶</a></p>
+<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><p>1.<a href="http://www.oschina.net/news/77135/quic-google-protocol-web-platform-from-tcp-to-udp" target="_blank" rel="external">Google QUIC 协议：从 TCP 到 UDP 的 Web 平台</a> :QUIC（Quick UDP Internet Connections）协议是一种全新的基于UDP的web开发协议,开创性的使用了UDP协议作为底层传输协议，通过各种方式减少了网络延迟。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6 id=&quot;本期周报内容来自-GlareCH、DemoCooky、happyapper、nolol、jenglev&quot;&gt;&lt;a href=&quot;#本期周报内容来自-GlareCH、DemoCooky、happyapper、nolol、jenglev&quot; class=&quot;headerlin
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>2017-03-03技术周报</title>
@@ -672,40 +700,6 @@
 <h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p><a href="http://hujiaweibujidao.github.io/blog/2016/08/02/some-git-summary/" target="_blank" rel="external">some git summary</a></p>
 <h3 id="开源代码："><a href="#开源代码：" class="headerlink" title="开源代码："></a>开源代码：</h3><p><a href="https://github.com/aslanyanhaik/youtube-iOS" target="_blank" rel="external">仿youtube iOS客户端</a>： swift3 完整工程</p>
 <h3 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h3><p><a href="http://www.softwarehow.com/best-blogs-for-ios-developers/" target="_blank" rel="external">Top 100 Best Blogs for iOS Developers</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本期周报内容来自: &lt;a href=&quot;https://github.com/AnYuan&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;桉远&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;周报汇总 &lt;a href=&quot;https://github.com/BaiduHiDeviO
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2016.08.21技术周报</title>
-    <link href="http://baiduhidevios.github.io/2016/08/22/2016-08-21%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
-    <id>http://baiduhidevios.github.io/2016/08/22/2016-08-21技术周报/</id>
-    <published>2016-08-22T15:05:31.000Z</published>
-    <updated>2017-02-25T09:08:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>本期周报内容来自: <a href="https://github.com/AnYuan" target="_blank" rel="external">桉远</a>。</p>
-<p>周报汇总 <a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">地址</a></p>
-<p>周报博客 <a href="http://baiduhidevios.github.io/">地址</a></p>
-<h3 id="swift"><a href="#swift" class="headerlink" title="swift:"></a>swift:</h3><p><a href="http://blog.krzyzanowskim.com/2016/08/09/package-swift-manual/" target="_blank" rel="external">Package.swift - Manual</a>: Here is documentation for SPM manifest file Package.swift. I couldn’t find a list of possible configuration values for Package.swift, so I created one, for future reference. I put here all available settings, with examples of use.</p>
-<p><a href="http://chris.eidhof.nl/post/structs-and-mutation-in-swift/" target="_blank" rel="external">structs and mutation in swift</a></p>
-<h3 id="动画："><a href="#动画：" class="headerlink" title="动画："></a>动画：</h3><p><a href="https://www.raywenderlich.com/133224/how-to-create-an-uber-splash-screen" target="_blank" rel="external">How To Create an Uber Splash Screen</a></p>
-<h3 id="技术实践"><a href="#技术实践" class="headerlink" title="技术实践"></a>技术实践</h3><p><a href="http://szulctomasz.com/how-do-I-build-a-network-layer" target="_blank" rel="external">How do I build a Network Layer</a></p>
-<p><a href="https://github.com/WeMobileDev/article/blob/master/%E5%BE%AE%E4%BF%A1iOS%20SQLite%E6%BA%90%E7%A0%81%E4%BC%98%E5%8C%96%E5%AE%9E%E8%B7%B5.md" target="_blank" rel="external">微信iOS SQLite源码优化实践</a></p>
-<p><a href="https://www.objc.io/issues/2-concurrency/concurrency-apis-and-pitfalls/" target="_blank" rel="external">Concurrent Programming: APIs and Challenges</a></p>
-<p><a href="https://http2.github.io/http2-spec/" target="_blank" rel="external">Hypertext Transfer Protocol Version 2 (HTTP/2)</a>: This specification describes an optimized expression of the semantics of the Hypertext Transfer Protocol (HTTP), referred to as HTTP version 2 (HTTP/2). HTTP/2 enables a more efficient use of network resources and a reduced perception of latency by introducing header field compression and allowing multiple concurrent exchanges on the same connection. It also introduces unsolicited push of representations from servers to clients.<br>This specification is an alternative to, but does not obsolete, the HTTP/1.1 message syntax. HTTP’s existing semantics remain unchanged.</p>
-<p><a href="http://kamranahmed.info/blog/2016/08/13/http-in-depth/" target="_blank" rel="external">Journey to HTTP/2</a></p>
-<h3 id="开源代码："><a href="#开源代码：" class="headerlink" title="开源代码："></a>开源代码：</h3><p><a href="https://github.com/eBay/NMessenger" target="_blank" rel="external">NMessager</a>: A fast, lightweight messenger component built on AsyncDisplaykit and written in Swift</p>
-<p><a href="https://github.com/Yalantis/DisplaySwitcher" target="_blank" rel="external">DisplaySwitcher</a>: Custom transition between two collection view layouts <a href="https://yalantis.com" target="_blank" rel="external">https://yalantis.com</a></p>
-<p><a href="https://github.com/postmates/PMHTTP" target="_blank" rel="external">PMHTTP</a>: Swift/Obj-C HTTP framework with a focus on REST and JSON</p>
-<h3 id="工具："><a href="#工具：" class="headerlink" title="工具："></a>工具：</h3><p><a href="https://github.com/so-fancy/diff-so-fancy" target="_blank" rel="external">diff so fancy</a>: Good-lookin’ diffs. Actually… nah… The best-lookin’ diffs. 🎉</p>
 ]]></content>
     
     <summary type="html">
