@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baiduhidevios.github.io/"/>
-  <updated>2017-03-11T10:23:53.000Z</updated>
+  <updated>2017-03-18T10:34:17.000Z</updated>
   <id>http://baiduhidevios.github.io/</id>
   
   <author>
@@ -16,11 +16,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2017-03-18技术周报</title>
+    <link href="http://baiduhidevios.github.io/2017/03/18/2017-03-18%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
+    <id>http://baiduhidevios.github.io/2017/03/18/2017-03-18技术周报/</id>
+    <published>2017-03-18T09:32:12.000Z</published>
+    <updated>2017-03-18T10:34:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="本期周报内容来自-GlareCH、DemoCooky、nolol"><a href="#本期周报内容来自-GlareCH、DemoCooky、nolol" class="headerlink" title="本期周报内容来自: GlareCH、DemoCooky、nolol"></a>本期周报内容来自: <a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
+<hr>
+<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><p>1.<a href="https://github.com/zixun/GodEye/blob/master/README.md" target="_blank" rel="external">GodEye:基于Swift的日志监控系统</a> ：GodEye是一款基于Swift的功能强大的监控开源库，笔者在文末也推荐了自己写的一本书<a href="https://www.qingdan.us/product/25" target="_blank" rel="external">《iOS监控编程》</a>，想深入了解监控方向的童鞋可以尝试。</p>
+<p>2.<a href="http://www.appcoda.com/grand-central-dispatch/" target="_blank" rel="external">Swift 3使用GCD和DispatchQueues</a> —&gt;<a href="http://www.cocoachina.com/swift/20170223/18749.html" target="_blank" rel="external">翻译版戳我</a></p>
+<h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><p>1.<a href="http://www.cocoanetics.com/2011/10/avoiding-image-decompression-sickness/" target="_blank" rel="external"> iOS中如何避免图像解压缩的时间开销</a> —&gt;<a href="http://blog.csdn.net/tiantian1980/article/details/8854739" target="_blank" rel="external">翻译版戳我</a></p>
+<p>2.<a href="http://www.cocoachina.com/ios/20161205/18279.html" target="_blank" rel="external">正确使用@synchronized()</a></p>
+<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><h6 id="本期扩展内容主要涉足算法领域，看完后智商-2-手动滑稽"><a href="#本期扩展内容主要涉足算法领域，看完后智商-2-手动滑稽" class="headerlink" title="本期扩展内容主要涉足算法领域，看完后智商+2[手动滑稽]"></a>本期扩展内容主要涉足算法领域，看完后智商+2[手动滑稽]</h6><p>1.<a href="http://yanyiwu.com/work/2014/01/30/simhash-shi-xian-xiang-jie.html" target="_blank" rel="external">simhash算法，计算文本相似度</a> </p>
+<p>2.<a href="http://mp.weixin.qq.com/s/mVFBUUz0f1dSyouOVv7g3Q" target="_blank" rel="external">深度学习在美团点评的应用</a></p>
+<p>3.<a href="http://hugnew.com/?p=814" target="_blank" rel="external">浅谈指数退避算法</a>:退避算法就是网络上的节点在发送数据冲突后，等待一定时间后再发，等待时间是随指数增长，从而避免频繁的触发冲突.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6 id=&quot;本期周报内容来自-GlareCH、DemoCooky、nolol&quot;&gt;&lt;a href=&quot;#本期周报内容来自-GlareCH、DemoCooky、nolol&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: GlareCH、DemoCooky、
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>2017-03-11技术周报</title>
     <link href="http://baiduhidevios.github.io/2017/03/11/2017-03-11%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
     <id>http://baiduhidevios.github.io/2017/03/11/2017-03-11技术周报/</id>
     <published>2017-03-11T10:23:02.000Z</published>
-    <updated>2017-03-11T10:23:53.000Z</updated>
+    <updated>2017-03-11T10:26:22.000Z</updated>
     
     <content type="html"><![CDATA[<h6 id="本期周报内容来自-GlareCH、DemoCooky、happyapper、nolol、jenglev"><a href="#本期周报内容来自-GlareCH、DemoCooky、happyapper、nolol、jenglev" class="headerlink" title="本期周报内容来自: GlareCH、DemoCooky、happyapper、nolol、jenglev"></a>本期周报内容来自: <a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>、<a href="https://github.com/happyapper" target="_blank" rel="external">happyapper</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a>、<a href="https://github.com/jenglev" target="_blank" rel="external">jenglev</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
 <hr>
@@ -678,34 +705,6 @@
     <summary type="html">
     
       &lt;p&gt;记得那是2015年8月初，刚刚来到百度Hi团队。因为之前在百度音乐团队每周会有同学给大家整理技术音乐相关的资讯，觉得非常不错。来到Hi团队发现暂时没有这种技术资讯周报，准备开始做。并跟iOS leader happyapper探讨，得到happyapper同学的大力支持，于
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2016.08.14技术周报</title>
-    <link href="http://baiduhidevios.github.io/2016/08/22/2016-08-14%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
-    <id>http://baiduhidevios.github.io/2016/08/22/2016-08-14技术周报/</id>
-    <published>2016-08-22T15:07:47.000Z</published>
-    <updated>2017-02-25T09:08:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>本期周报内容来自: <a href="https://github.com/AnYuan" target="_blank" rel="external">桉远</a>。</p>
-<p>周报汇总 <a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">地址</a></p>
-<p>周报博客 <a href="http://baiduhidevios.github.io/">地址</a></p>
-<h3 id="swift"><a href="#swift" class="headerlink" title="swift:"></a>swift:</h3><p><a href="https://medium.com/@slavapestov/the-secret-life-of-types-in-swift-ff83c3c000a5#.yq90g5bq9" target="_blank" rel="external">The secret life of types in Swift</a>: swift team 员工写的关于swift 类型的讲解文章。</p>
-<p><a href="http://www.jessesquires.com/enums-as-configs/" target="_blank" rel="external">enums as configs</a></p>
-<h3 id="iOS-HotFix"><a href="#iOS-HotFix" class="headerlink" title="iOS HotFix"></a>iOS HotFix</h3><p><a href="http://jspatch.com/Docs/monitor?sukey=3997c0719f151520ab00603b2cde8a85e49ef9df3e5939d88d3508acfaf2ccf7b853de9807f35857be4a86e5f7fa8161" target="_blank" rel="external">JSPatch 平台新特性：实时监控</a></p>
-<h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p><a href="http://hujiaweibujidao.github.io/blog/2016/08/02/some-git-summary/" target="_blank" rel="external">some git summary</a></p>
-<h3 id="开源代码："><a href="#开源代码：" class="headerlink" title="开源代码："></a>开源代码：</h3><p><a href="https://github.com/aslanyanhaik/youtube-iOS" target="_blank" rel="external">仿youtube iOS客户端</a>： swift3 完整工程</p>
-<h3 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h3><p><a href="http://www.softwarehow.com/best-blogs-for-ios-developers/" target="_blank" rel="external">Top 100 Best Blogs for iOS Developers</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本期周报内容来自: &lt;a href=&quot;https://github.com/AnYuan&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;桉远&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;周报汇总 &lt;a href=&quot;https://github.com/BaiduHiDeviO
     
     </summary>
     
