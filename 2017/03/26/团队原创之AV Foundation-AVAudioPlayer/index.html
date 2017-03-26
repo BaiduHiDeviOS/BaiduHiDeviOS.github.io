@@ -3,14 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>百度Hi iOS团队技术周报</title>
+  <title>团队原创之AV Foundation-AVAudioPlayer | 百度Hi iOS团队技术周报</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="百度Hi iOS团队技术周报">
-<meta property="og:url" content="http://baiduhidevios.github.io/index.html">
+  <meta name="description" content="转自東引瓯越 技术博客
+开篇最近在学习AV Foundation 试图把学习内容记录下来 并参考一些博客文章本期的内容是AVAudioPlayer
+音频知识基础  
+音频文件的生成过程是将声音信息采样、量化和编码产生的数字信号的过程，人耳所能听到的声音，最低的频率是从20Hz起一直到最高频率20KHZ，因此音频文件格式的最大带宽是20KHZ。根据奈奎斯特的理论，只有采样频率高于声音信号最高频率的两">
+<meta property="og:type" content="article">
+<meta property="og:title" content="团队原创之AV Foundation-AVAudioPlayer">
+<meta property="og:url" content="http://baiduhidevios.github.io/2017/03/26/团队原创之AV Foundation-AVAudioPlayer/index.html">
 <meta property="og:site_name" content="百度Hi iOS团队技术周报">
+<meta property="og:description" content="转自東引瓯越 技术博客
+开篇最近在学习AV Foundation 试图把学习内容记录下来 并参考一些博客文章本期的内容是AVAudioPlayer
+音频知识基础  
+音频文件的生成过程是将声音信息采样、量化和编码产生的数字信号的过程，人耳所能听到的声音，最低的频率是从20Hz起一直到最高频率20KHZ，因此音频文件格式的最大带宽是20KHZ。根据奈奎斯特的理论，只有采样频率高于声音信号最高频率的两">
+<meta property="og:image" content="https://developer.apple.com/library/content/documentation/MusicAudio/Conceptual/CoreAudioOverview/Art/core_audio_layers_2x.png">
+<meta property="og:image" content="http://msching.github.io/images/iOS-audio/audioUnitPlay.jpg">
+<meta property="og:image" content="https://developer.apple.com/library/content/documentation/Audio/Conceptual/AudioSessionProgrammingGuide/Art/aspg_intro_2x.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sunyazhou13/sunyazhou13.github.io-images/master/Learning%20AV%20Foundation2AVAudioPlayer/AVAudioPlayer_category.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sunyazhou13/sunyazhou13.github.io-images/master/Learning%20AV%20Foundation2AVAudioPlayer/MacHi%202017-03-19%2022-43-36.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sunyazhou13/sunyazhou13.github.io-images/master/Learning%20AV%20Foundation2AVAudioPlayer/MacHi%202017-03-19%2022-44-05.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sunyazhou13/sunyazhou13.github.io-images/master/Learning%20AV%20Foundation2AVAudioPlayer/MacHi%202017-03-19%2021-22-43.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sunyazhou13/sunyazhou13.github.io-images/master/Learning%20AV%20Foundation2AVAudioPlayer/IMG_2090.PNG">
+<meta property="og:updated_time" content="2017-03-26T04:33:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="百度Hi iOS团队技术周报">
+<meta name="twitter:title" content="团队原创之AV Foundation-AVAudioPlayer">
+<meta name="twitter:description" content="转自東引瓯越 技术博客
+开篇最近在学习AV Foundation 试图把学习内容记录下来 并参考一些博客文章本期的内容是AVAudioPlayer
+音频知识基础  
+音频文件的生成过程是将声音信息采样、量化和编码产生的数字信号的过程，人耳所能听到的声音，最低的频率是从20Hz起一直到最高频率20KHZ，因此音频文件格式的最大带宽是20KHZ。根据奈奎斯特的理论，只有采样频率高于声音信号最高频率的两">
+<meta name="twitter:image" content="https://developer.apple.com/library/content/documentation/MusicAudio/Conceptual/CoreAudioOverview/Art/core_audio_layers_2x.png">
   
     <link rel="alternative" href="/atom.xml" title="百度Hi iOS团队技术周报" type="application/atom+xml">
   
@@ -56,9 +78,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="learning-团队原创之AV Foundation-AVAudioPlayer" class="article article-type-learning" itemscope itemprop="blogPost">
+        <section id="main"><article id="learning-团队原创之AV Foundation-AVAudioPlayer" class="article article-type-learning" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/03/26/团队原创之AV Foundation-AVAudioPlayer/" class="article-date">
   <time datetime="2017-03-26T04:26:34.000Z" itemprop="datePublished">2017-03-26</time>
@@ -71,8 +91,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/26/团队原创之AV Foundation-AVAudioPlayer/">团队原创之AV Foundation-AVAudioPlayer</a>
+    <h1 class="article-title" itemprop="name">
+      团队原创之AV Foundation-AVAudioPlayer
     </h1>
   
 
@@ -212,462 +232,20 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-2017-03-26技术周报" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/26/2017-03-26技术周报/" class="article-date">
-  <time datetime="2017-03-26T02:56:20.000Z" itemprop="datePublished">2017-03-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/26/2017-03-26技术周报/">2017-03-26技术周报</a>
-    </h1>
+    <a href="/2017/03/26/2017-03-26技术周报/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2017-03-26技术周报</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="本期周报内容来自-孙亚洲、GlareCH、DemoCooky、nolol"><a href="#本期周报内容来自-孙亚洲、GlareCH、DemoCooky、nolol" class="headerlink" title="本期周报内容来自: 孙亚洲、GlareCH、DemoCooky、nolol"></a>本期周报内容来自: <a href="http://sunyazhou.com/" target="_blank" rel="external">孙亚洲</a>、<a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
-<hr>
-<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><p>1.<a href="https://www.raywenderlich.com/150015/callkit-tutorial-ios" target="_blank" rel="external">CallKit 之旅</a> ：swift CallKit 之旅</p>
-<p>2.<a href="http://mp.weixin.qq.com/s/WPXzYQrw1bihLNjjPmIKwA" target="_blank" rel="external">简单点，理解iOS与函数式编程</a></p>
-<h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><h6 id="本期iOS相关主要集中介绍一下AV-Foundation框架，并附上两篇团队同学孙亚洲的两篇原创博客（感谢-），希望对你有所帮助！"><a href="#本期iOS相关主要集中介绍一下AV-Foundation框架，并附上两篇团队同学孙亚洲的两篇原创博客（感谢-），希望对你有所帮助！" class="headerlink" title="本期iOS相关主要集中介绍一下AV Foundation框架，并附上两篇团队同学孙亚洲的两篇原创博客（感谢~~），希望对你有所帮助！"></a>本期iOS相关主要集中介绍一下AV Foundation框架，并附上两篇团队同学<a href="http://sunyazhou.com/" target="_blank" rel="external">孙亚洲</a>的两篇原创博客（感谢~~），希望对你有所帮助！</h6><h1 id="开源库"><a href="#开源库" class="headerlink" title="开源库"></a>开源库</h1><h6 id="介绍两个Swfit中管理资源的开源库："><a href="#介绍两个Swfit中管理资源的开源库：" class="headerlink" title="介绍两个Swfit中管理资源的开源库："></a>介绍两个Swfit中管理资源的开源库：</h6><p>1.<a href="https://github.com/mac-cain13/R.swift" target="_blank" rel="external">R.swift</a> : 在Swift中更安全、方便的使用各类资源</p>
-<p>2.<a href="https://github.com/SwiftGen/SwiftGen" target="_blank" rel="external">SwiftGen</a>: SwiftGen是一个为你的项目资源自动生成代码的工具</p>
-<p>3.<a href="https://github.com/ReactKit/SwiftTask" target="_blank" rel="external">SwiftTask</a>:    Promise + progress + pause + cancel + retry for Swift.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2017/03/26/2017-03-26技术周报/" data-id="cj0q6xbo7001xwcjm1g5kuy3j" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
 
-
-  
-    <article id="post-2017-03-18技术周报" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/18/2017-03-18技术周报/" class="article-date">
-  <time datetime="2017-03-18T09:32:12.000Z" itemprop="datePublished">2017-03-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/18/2017-03-18技术周报/">2017-03-18技术周报</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="本期周报内容来自-GlareCH、DemoCooky、nolol"><a href="#本期周报内容来自-GlareCH、DemoCooky、nolol" class="headerlink" title="本期周报内容来自: GlareCH、DemoCooky、nolol"></a>本期周报内容来自: <a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
-<hr>
-<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><p>1.<a href="https://github.com/zixun/GodEye/blob/master/README.md" target="_blank" rel="external">GodEye:基于Swift的日志监控系统</a> ：GodEye是一款基于Swift的功能强大的监控开源库，笔者在文末也推荐了自己写的一本书<a href="https://www.qingdan.us/product/25" target="_blank" rel="external">《iOS监控编程》</a>，想深入了解监控方向的童鞋可以尝试。</p>
-<p>2.<a href="http://www.appcoda.com/grand-central-dispatch/" target="_blank" rel="external">Swift 3使用GCD和DispatchQueues</a> —&gt;<a href="http://www.cocoachina.com/swift/20170223/18749.html" target="_blank" rel="external">翻译版戳我</a></p>
-<h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><p>1.<a href="http://www.cocoanetics.com/2011/10/avoiding-image-decompression-sickness/" target="_blank" rel="external"> iOS中如何避免图像解压缩的时间开销</a> —&gt;<a href="http://blog.csdn.net/tiantian1980/article/details/8854739" target="_blank" rel="external">翻译版戳我</a></p>
-<p>2.<a href="http://www.cocoachina.com/ios/20161205/18279.html" target="_blank" rel="external">正确使用@synchronized()</a></p>
-<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><h6 id="本期扩展内容主要涉足算法领域，看完后智商-2-手动滑稽"><a href="#本期扩展内容主要涉足算法领域，看完后智商-2-手动滑稽" class="headerlink" title="本期扩展内容主要涉足算法领域，看完后智商+2[手动滑稽]"></a>本期扩展内容主要涉足算法领域，看完后智商+2[手动滑稽]</h6><p>1.<a href="http://yanyiwu.com/work/2014/01/30/simhash-shi-xian-xiang-jie.html" target="_blank" rel="external">simhash算法，计算文本相似度</a> </p>
-<p>2.<a href="http://mp.weixin.qq.com/s/mVFBUUz0f1dSyouOVv7g3Q" target="_blank" rel="external">深度学习在美团点评的应用</a></p>
-<p>3.<a href="http://hugnew.com/?p=814" target="_blank" rel="external">浅谈指数退避算法</a>:退避算法就是网络上的节点在发送数据冲突后，等待一定时间后再发，等待时间是随指数增长，从而避免频繁的触发冲突.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2017/03/18/2017-03-18技术周报/" data-id="cj0q6xbo90020wcjmp9iaytgo" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2017-03-11技术周报" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/11/2017-03-11技术周报/" class="article-date">
-  <time datetime="2017-03-11T10:23:02.000Z" itemprop="datePublished">2017-03-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/11/2017-03-11技术周报/">2017-03-11技术周报</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="本期周报内容来自-GlareCH、DemoCooky、happyapper、nolol、jenglev"><a href="#本期周报内容来自-GlareCH、DemoCooky、happyapper、nolol、jenglev" class="headerlink" title="本期周报内容来自: GlareCH、DemoCooky、happyapper、nolol、jenglev"></a>本期周报内容来自: <a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>、<a href="https://github.com/happyapper" target="_blank" rel="external">happyapper</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a>、<a href="https://github.com/jenglev" target="_blank" rel="external">jenglev</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
-<hr>
-<h1 id="关于Swift"><a href="#关于Swift" class="headerlink" title="关于Swift"></a>关于Swift</h1><p>1.<a href="https://segmentfault.com/p/1210000008580163/read" target="_blank" rel="external">无论你是否主力 Swift, 这些事情你都可以了解一下</a> ：聊一聊关于Swift 能不能取代 Objective-C</p>
-<p>2.<a href="https://github.com/raywenderlich/swift-style-guide" target="_blank" rel="external">The Official raywenderlich.com Swift Style Guide</a> : 更具有风格的Swift3 指南【推荐】</p>
-<h1 id="iOS–实战"><a href="#iOS–实战" class="headerlink" title="iOS–实战"></a>iOS–实战</h1><p>1.[Swift]  <a href="http://www.jianshu.com/p/454b06590cf1?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=weibo&amp;url_type=39&amp;object_type=webpage&amp;pos=1" target="_blank" rel="external">导航栏的平滑显示和隐藏</a> 【推荐】</p>
-<p>2.[Object-C] <a href="http://www.cocoachina.com/ios/20170208/18651.html" target="_blank" rel="external">今日头条iOS客户端启动速度优化</a></p>
-<h1 id="单测"><a href="#单测" class="headerlink" title="单测"></a>单测</h1><p>1.<a href="http://draveness.me/http-mock/" target="_blank" rel="external">如何进行 HTTP Mock</a>:HTTP Mock 在测试中非常好用，我们可以在不需要后端 API 的情况下，在本地对 HTTP 请求进行拦截，返回想要的 json 数据，而 OHHTTPStubs 就为我们提供了这样一种解决方案。【推荐】</p>
-<h1 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h1><p>1.<a href="http://www.swiftytime.com/" target="_blank" rel="external">Swifty Time</a> : 一个收录了大量swift优秀源码的网站 【推荐】</p>
-<p>2.<a href="http://www.cnblogs.com/ludashi/p/5556088.html" target="_blank" rel="external">iOS开发之Alamofire源码解析前奏–NSURLSession全家桶</a></p>
-<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><p>1.<a href="http://www.oschina.net/news/77135/quic-google-protocol-web-platform-from-tcp-to-udp" target="_blank" rel="external">Google QUIC 协议：从 TCP 到 UDP 的 Web 平台</a> :QUIC（Quick UDP Internet Connections）协议是一种全新的基于UDP的web开发协议,开创性的使用了UDP协议作为底层传输协议，通过各种方式减少了网络延迟。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2017/03/11/2017-03-11技术周报/" data-id="cj0q6xbo8001zwcjmblygkd88" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2017-03-03技术周报" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/03/2017-03-03技术周报/" class="article-date">
-  <time datetime="2017-03-03T13:22:31.000Z" itemprop="datePublished">2017-03-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/03/2017-03-03技术周报/">2017-03-03技术周报</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="本期周报内容来自-eggInBlack、GlareCH、DemoCooky"><a href="#本期周报内容来自-eggInBlack、GlareCH、DemoCooky" class="headerlink" title="本期周报内容来自: eggInBlack、GlareCH、DemoCooky"></a>本期周报内容来自: <a href="https://github.com/orgs/BaiduHiDeviOS/people/eggInBlack" target="_blank" rel="external">eggInBlack</a>、<a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
-<hr>
-<h1 id="Swift–基础"><a href="#Swift–基础" class="headerlink" title="Swift–基础"></a>Swift–基础</h1><p>1.<a href="https://onevcat.com/2017/02/ownership/" target="_blank" rel="external">所有权宣言 - Swift 官方文章 Ownership Manifesto 译文评注版</a></p>
-<p>2.<a href="http://nightfade.me/post/tech/2015-08-28-notes-on-using-swift-with-cocoa-and-objective-c" target="_blank" rel="external">《USING SWIFT WITH COCOA AND OBJECTIVE-C》学习笔记</a></p>
-<h1 id="Swift–实战"><a href="#Swift–实战" class="headerlink" title="Swift–实战"></a>Swift–实战</h1><p>1.<a href="http://www.appcoda.com/javascriptcore-swift/" target="_blank" rel="external">在Swift项目中使用JavaScript</a> [推荐]</p>
-<p>2.<a href="https://videos.raywenderlich.com/screencasts/server-side-swift-with-vapor-authentication-with-turnstile" target="_blank" rel="external">Server Side Swift with Vapor: Authentication with Turnstile</a> :视频讲解了如何通过Swift的Vapor来实现一个基于Turnstile库的登录和授权功能[推荐]</p>
-<p>3.<a href="http://www.jianshu.com/p/5ff2ba2192a7" target="_blank" rel="external">Swift 后台开发</a> :对于swift后台开发不太了解的同学，可以先参考这篇文章</p>
-<h1 id="编译原理"><a href="#编译原理" class="headerlink" title="编译原理"></a>编译原理</h1><p>1.<a href="http://awhisper.github.io/2017/02/26/%E6%89%AF%E6%B7%A1%EF%BC%9A%E5%A4%A7%E7%99%BD%E8%AF%9D%E8%81%8A%E8%81%8A%E7%BC%96%E8%AF%91%E9%82%A3%E7%82%B9%E4%BA%8B%E5%84%BF/" target="_blank" rel="external">大白话聊聊编译那点事儿</a></p>
-<h1 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h1><p>1.<a href="https://github.com/Draveness/iOS-Source-Code-Analyze" target="_blank" rel="external">关于iOS开源框架源代码解析的文章</a>:详解了一些优秀的开源库，作者会不断更新，建议收藏[推荐]</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2017/03/03/2017-03-03技术周报/" data-id="cj0q6xbo7001ywcjmwnpma3ve" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2017-02-25技术周报" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/25/2017-02-25技术周报/" class="article-date">
-  <time datetime="2017-02-25T07:28:32.000Z" itemprop="datePublished">2017-02-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/25/2017-02-25技术周报/">2017-02-25技术周报</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本期周报内容来自: <a href="https://github.com/orgs/BaiduHiDeviOS/people/eggInBlack" target="_blank" rel="external">eggInBlack</a>、<a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a></p>
-<p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
-<hr>
-<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>是的！我们的技术周报又开始更新了~首先，和大家道个歉，在2017年伊始，由于组内同学都忙于各自的项目中，以至于冷落了这里，也陆续收到了一些『催更』的吐槽邮件，说明大家还在关注我们哈~再次表示感激！！本周起我们会继续给大家提供高质量的博客文章，也希望各位大牛参与我们的投稿，同时更加欢迎热爱技术的你对我们的周报提出宝贵的意见与建议~好啦，话不多说，精彩内容往下戳哦~</p>
-<h1 id="Objective-C"><a href="#Objective-C" class="headerlink" title="Objective-C"></a>Objective-C</h1><p>1.<a href="http://www.jianshu.com/p/addd4eac54ed" target="_blank" rel="external">漫谈iOS AOP编程之路</a><br>2.<a href="http://mp.weixin.qq.com/s?__biz=MzA3ODkzOTQ2NA==&amp;mid=2651911406&amp;idx=1&amp;sn=c047d58f4e1bf7c37fa24d32d82e1143&amp;chksm=845f40c9b328c9df7d53e03fb5127248a5ab536000cc2365d86207b3e33d23e4c2d2dee708c2&amp;scene=21#wechat_redirect" target="_blank" rel="external">聊聊AOP模式与ObjC对它的实现</a></p>
-<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><p>1.<a href="https://www.raywenderlich.com/150322/swift-json-tutorial-2" target="_blank" rel="external">Swift JSON Tutorial: Working with JSON</a></p>
-<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><p>1.<a href="https://zhuanlan.zhihu.com/p/22590949?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">谈谈GIF格式</a><br>2.<a href="http://blog.leichunfeng.com/blog/2017/02/20/talking-about-the-decompression-of-the-image-in-ios/#jtss-tsina" target="_blank" rel="external">谈谈iOS中图片的解压缩</a></p>
-<h1 id="精华贴"><a href="#精华贴" class="headerlink" title="精华贴"></a>精华贴</h1><p>1.<a href="http://www.jianshu.com/p/69ce01e15042" target="_blank" rel="external">iOS无埋点数据SDK实践之路</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2017/02/25/2017-02-25技术周报/" data-id="cj0q6xbo6001wwcjmi6wc5z99" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2016-12-18技术周报" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/19/2016-12-18技术周报/" class="article-date">
-  <time datetime="2016-12-18T16:09:02.000Z" itemprop="datePublished">2016-12-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/19/2016-12-18技术周报/">2016-12-18技术周报</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="本期周报内容来自-nolol"><a href="#本期周报内容来自-nolol" class="headerlink" title="本期周报内容来自: nolol"></a>本期周报内容来自: <a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
-<hr>
-<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><ol>
-<li><a href="http://www.cocoachina.com/swift/20161201/18198.html" target="_blank" rel="external">iOS界面布局的核心以及TangramKit介绍</a>: <a href="https://github.com/youngsoft/TangramKit" target="_blank" rel="external">TangramKit</a>是iOS系统下用Swift编写的第三方界面布局框架。他集成了iOS的AutoLayout和SizeClass以及Android的五大容器布局体系以及HTML/CSS中的float和flex-box的布局功能和思想，目的是为iOS开发人员提供一套功能强大、多屏幕灵活适配、简单易用的UI布局解决方案</li>
-<li><a href="https://github.com/apple/swift-protobuf" target="_blank" rel="external">Swift Protobuf</a>: Plugin and runtime library for using protobuf with Swift</li>
-<li><a href="https://www.ibm.com/developerworks/cn/linux/l-cn-gpb/" target="_blank" rel="external">Google Protocol Buffer 的使用和原理 - IBM</a></li>
-<li><a href="http://www.cocoachina.com/swift/20161121/18144.html" target="_blank" rel="external">从 Swift 的面向协议编程说开去</a></li>
-</ol>
-<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ol>
-<li><a href="http://www.jianshu.com/p/92cd90e65d4c" target="_blank" rel="external">Xcode 8 Instruments 学习（一）</a></li>
-<li><a href="http://www.jianshu.com/p/9ac281228de2" target="_blank" rel="external">Xcode 8 Instruments 学习（二）</a></li>
-<li><a href="http://www.jianshu.com/p/b3443352169c" target="_blank" rel="external">Xcode 8 Instruments 学习（三）</a></li>
-<li><a href="http://www.jianshu.com/p/ca6e25bf4604" target="_blank" rel="external">Xcode 8 Instruments 学习（四）</a></li>
-<li><a href="http://www.jianshu.com/p/0783cb5e1a46" target="_blank" rel="external">Xcode 8 Instruments 学习（五）</a></li>
-<li><a href="https://github.com/Carthage/Carthage" target="_blank" rel="external">Carthage</a>: A simple, decentralized dependency manager for Cocoa</li>
-</ol>
-<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><ol>
-<li><a href="http://www.jianshu.com/p/856f0e26279d" target="_blank" rel="external">AFNetworking到底做了什么？</a></li>
-<li><a href="http://www.jianshu.com/p/f32bd79233da" target="_blank" rel="external">AFNetworking到底做了什么？(二)</a></li>
-<li><a href="https://wereadteam.github.io/2016/05/23/GYBootingProtection/" target="_blank" rel="external">iOS 启动连续闪退保护方案</a>: “如果某个实体表现出以下任何一种特性，它就具备自主性：自我修复、自我保护、自我维护、对目标的自我控制、自我改进。” —— 凯文·凯利</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2016/12/19/2016-12-18技术周报/" data-id="cj0q6xbns001lwcjman1p8ror" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2016-12-11技术周报" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/11/2016-12-11技术周报/" class="article-date">
-  <time datetime="2016-12-11T13:47:21.000Z" itemprop="datePublished">2016-12-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/11/2016-12-11技术周报/">2016-12-11技术周报</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="本期周报内容来自-nolol"><a href="#本期周报内容来自-nolol" class="headerlink" title="本期周报内容来自: nolol"></a>本期周报内容来自: <a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
-<hr>
-<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ol>
-<li><a href="http://www.jpsim.com/uncovering-sourcekit/" target="_blank" rel="external">SOURCEKIT</a>: SourceKit is the set of tools that enables most of Swift’s source code manipulation features: source code parsing, syntax highlighting, typesetting, autocomplete, cross-language header generation, and lots more.</li>
-<li><a href="https://github.com/realm/SwiftLint" target="_blank" rel="external">SwiftLint</a>: A tool to enforce Swift style and conventions, loosely based on GitHub’s Swift Style Guide.</li>
-<li><a href="https://github.com/ashen-zhao/ReadChinese" target="_blank" rel="external">ReadChinese</a>: 读取项目中的所有中文，并且将这些中文按照国际化格式写入文件中，可以直接拿来实现国际化</li>
-</ol>
-<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><ol>
-<li><a href="http://github.ibireme.com/github/list/ios/" target="_blank" rel="external">Github-iOS备忘-超实用</a>: ibireme收集整理的iOS开发相关第三方库和使用工具</li>
-</ol>
-<h1 id="开源代码"><a href="#开源代码" class="headerlink" title="开源代码"></a>开源代码</h1><ol>
-<li><a href="https://github.com/apple/swift-protobuf" target="_blank" rel="external">swift-protobuf</a>: Plugin and runtime library for using protobuf with Swift</li>
-<li><a href="https://github.com/Quick/Quick" target="_blank" rel="external">Quick</a>: Quick is a behavior-driven development framework for Swift and Objective-C. Inspired by RSpec, Specta, and Ginkgo.</li>
-<li><a href="https://github.com/xmartlabs/Eureka" target="_blank" rel="external">Eureka</a>: Elegant iOS form builder in Swift</li>
-<li><a href="https://github.com/Moya/Moya" target="_blank" rel="external">Moya</a>: Network abstraction layer written in Swift.</li>
-<li><a href="https://github.com/twostraws/HackingWithSwift" target="_blank" rel="external">HackingWithSwift</a>: This is the source code to accompany Hacking with Swift, a free tutorial series that teaches Swift coding for iOS.</li>
-<li><a href="http://ios.jobbole.com/84684/?utm_source=blog.jobbole.com&amp;utm_medium=relatedPosts" target="_blank" rel="external">Github 上的 iOS 开源项目</a>: 在 Github 上 Star 太多了，有时候很难找到自己想要的开源库，所以在此记录下来。便于自己开发使用，也顺便分享给大家。</li>
-<li><a href="http://ios.jobbole.com/84388/" target="_blank" rel="external">GitHub 上 iOS 开源库 Top 100</a>: 主要对当前 GitHub 排名前 100 的项目做一个简单的简介, 方便初学者快速了解到当前 Objective-C 在 GitHub 的情况.</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2016/12/11/2016-12-11技术周报/" data-id="cj0q6xbnv001owcjmy2z0v6q3" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2016-12-04技术周报" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/04/2016-12-04技术周报/" class="article-date">
-  <time datetime="2016-12-04T13:58:18.000Z" itemprop="datePublished">2016-12-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/04/2016-12-04技术周报/">2016-12-04技术周报</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="本期周报内容来自-GlareCH、nolol"><a href="#本期周报内容来自-GlareCH、nolol" class="headerlink" title="本期周报内容来自: GlareCH、nolol"></a>本期周报内容来自: <a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
-<hr>
-<h1 id="技术实践"><a href="#技术实践" class="headerlink" title="技术实践"></a>技术实践</h1><ol>
-<li><a href="https://realm.io/news/tryswift-amy-dyer-incremental-swift/" target="_blank" rel="external">Incremental Swift</a>: 当你想升级到 Swift，但是重写所有的 Objective-C 代码根本不现实的时候，你要怎么做？Amy Dyer 讲述了他们在 Etsy 应用上的实践经验。  </li>
-<li><a href="https://oleb.net/blog/2016/11/rawrepresentable/" target="_blank" rel="external">The RawRepresentable Protocol in Swift</a><br><a href="http://chris.eidhof.nl/post/protocol-oriented-programming/" target="_blank" rel="external">Protocol Oriented Programming is Not a Silver Bullet</a></li>
-<li><a href="http://blog.benjamin-encz.de/post/understanding-data-race-detection-by-implementing-in-swift" target="_blank" rel="external">Understanding Data Race Detection by Implementing it in Swift</a>: Benjamin Encz wanted to understand the Thread Sanitizer better and so he implemented a version of it.</li>
-<li><a href="http://dev.qq.com/topic/583ccfecb5f2ebea6e610f90" target="_blank" rel="external">Bugly热更新SDK你需要知道的一些事</a>: 热更新能力是Bugly为解决开发者紧急修复线上Bug，而无需重新发版让用户无感知就能把问题修复的一项能力。</li>
-</ol>
-<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ol>
-<li><a href="https://eject.herokuapp.com" target="_blank" rel="external">Eject from Interface Builder</a>: 当界面复杂到不再适合使用IB时，可以将xib文件转成loadView方法。</li>
-</ol>
-<h1 id="开源"><a href="#开源" class="headerlink" title="开源"></a>开源</h1><ol>
-<li><a href="https://github.com/aschuch/StatefulViewController" target="_blank" rel="external">StatefulViewController</a>: 基于内容状态（加载中、错误、空）的占位符实用视图组件。</li>
-<li><a href="https://github.com/Onix-Systems/RainyRefreshControl" target="_blank" rel="external">RainyRefreshControl</a>: 下雨要撑伞动效下拉刷新组件。</li>
-<li><a href="https://github.com/Cosmo/TinyConsole" target="_blank" rel="external">TinyConsole</a>: A tiny log console to display information while using your iOS app. Written in Swift 3.</li>
-<li><a href="https://github.com/facebookincubator/Keyframes" target="_blank" rel="external">Keyframes</a>: A library for converting Adobe AE shape based animations to a data format and playing it back on Android and iOS devices.</li>
-<li><a href="https://github.com/Ramotion/adaptive-tab-bar" target="_blank" rel="external">Adaptive Tab Bar</a>: 这个库提供了一个很有意思的产品设计思路，让界面随着用户使用时长的变化而变化。</li>
-</ol>
-<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><ol>
-<li><a href="http://weibo.com/swiftlanguage" target="_blank" rel="external">SwiftLanguage</a>: 让我们以开发者的视角追随、跟踪它的一举一动。dev.swiftguide.cn｜非官方微博</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2016/12/04/2016-12-04技术周报/" data-id="cj0q6xbnr001kwcjmvev8s3as" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2016-11-27技术周报" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/11/27/2016-11-27技术周报/" class="article-date">
-  <time datetime="2016-11-27T15:08:26.000Z" itemprop="datePublished">2016-11-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/27/2016-11-27技术周报/">2016-11-27技术周报</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="本期周报内容来自-GlareCH、nolol"><a href="#本期周报内容来自-GlareCH、nolol" class="headerlink" title="本期周报内容来自: GlareCH、nolol"></a>本期周报内容来自: <a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
-<hr>
-<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><ol>
-<li><a href="https://www.objc.io/issues/15-testing/mocking-stubbing/" target="_blank" rel="external">Test Doubles: Mocks, Stubs, and More</a></li>
-<li><a href="https://www.objc.io/issues/15-testing/dependency-injection/" target="_blank" rel="external">Dependency Injection</a></li>
-<li><a href="https://www.objc.io/issues/15-testing/bad-testing-practices/" target="_blank" rel="external">Bad Testing Practices</a></li>
-</ol>
-<h1 id="技术实践"><a href="#技术实践" class="headerlink" title="技术实践"></a>技术实践</h1><ol>
-<li><a href="http://blog.ibireme.com/2015/11/02/mobile_image_benchmark/" target="_blank" rel="external">移动端图片格式调研</a>: <a href="https://github.com/ibireme" target="_blank" rel="external">ibireme</a> 在做YYImage时的调研成果</li>
-<li><a href="http://blog.ibireme.com/2015/11/02/ios_image_tips/" target="_blank" rel="external">iOS 处理图片的一些小 Tip</a>: <a href="https://github.com/ibireme" target="_blank" rel="external">ibireme</a> 在做YYImage时的调研成果</li>
-<li><a href="http://www.programering.com/a/MTN1ATNwATQ.html" target="_blank" rel="external">To speed up the XCode compile and link speed (200%+)</a>: 如何加快XCode编译速度？</li>
-</ol>
-<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ol>
-<li><a href="https://github.com/Flipboard/FLEX" target="_blank" rel="external">FLEX</a>: FLEX (Flipboard Explorer) is a set of in-app debugging and exploration tools for iOS development. When presented, FLEX shows a toolbar that lives in a window above your application. From this toolbar, you can view and modify nearly every piece of state in your running application.</li>
-<li><a href="http://www.freebuf.com/sectool/119680.html" target="_blank" rel="external">静态分析工具大集合</a>: 静态程序分析（Static program analysis）是指在不运行计算机程序的条件下，进行程序分析的方法。有些程序分析需要在程序运行时才能进行，这种程序分析称为动态程序分析。大部分的静态程序分析的对象是针对特定版本的源代码，也有些静态程序分析的对象是目标代码。静态程序分析一词多半是指配合静态程序分析工具进行的分析，人工进行的分析一般称为程序理解或代码审查。</li>
-</ol>
-<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><ol>
-<li><a href="https://www.objc.io/about/" target="_blank" rel="external">objc.io</a>: objc.io was founded 2013 in Berlin by Chris Eidhof, Daniel Eggert, and Florian Kugler. We started objc.io to create a platform for in-depth technical topics relevant to all iOS and OS X developers.</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2016/11/27/2016-11-27技术周报/" data-id="cj0q6xbno001iwcjmwcqubvbu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
 </section>
         
           <aside id="sidebar">
