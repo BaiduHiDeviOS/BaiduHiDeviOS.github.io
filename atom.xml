@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baiduhidevios.github.io/"/>
-  <updated>2017-03-18T10:34:17.000Z</updated>
+  <updated>2017-03-26T04:03:47.000Z</updated>
   <id>http://baiduhidevios.github.io/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2017-03-26技术周报</title>
+    <link href="http://baiduhidevios.github.io/2017/03/26/2017-03-26%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
+    <id>http://baiduhidevios.github.io/2017/03/26/2017-03-26技术周报/</id>
+    <published>2017-03-26T02:56:20.000Z</published>
+    <updated>2017-03-26T04:03:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="本期周报内容来自-孙亚洲、GlareCH、DemoCooky、nolol"><a href="#本期周报内容来自-孙亚洲、GlareCH、DemoCooky、nolol" class="headerlink" title="本期周报内容来自: 孙亚洲、GlareCH、DemoCooky、nolol"></a>本期周报内容来自: <a href="http://sunyazhou.com/" target="_blank" rel="external">孙亚洲</a>、<a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
+<hr>
+<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><p>1.<a href="https://www.raywenderlich.com/150015/callkit-tutorial-ios" target="_blank" rel="external">CallKit 之旅</a> ：swift CallKit 之旅</p>
+<p>2.<a href="http://mp.weixin.qq.com/s/WPXzYQrw1bihLNjjPmIKwA" target="_blank" rel="external">简单点，理解iOS与函数式编程</a></p>
+<h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><h6 id="本期iOS相关主要集中介绍一下AV-Foundation框架，并附上两篇团队同学孙亚洲的两篇原创博客（感谢-），希望对你有所帮助！"><a href="#本期iOS相关主要集中介绍一下AV-Foundation框架，并附上两篇团队同学孙亚洲的两篇原创博客（感谢-），希望对你有所帮助！" class="headerlink" title="本期iOS相关主要集中介绍一下AV Foundation框架，并附上两篇团队同学孙亚洲的两篇原创博客（感谢~~），希望对你有所帮助！"></a>本期iOS相关主要集中介绍一下AV Foundation框架，并附上两篇团队同学<a href="http://sunyazhou.com/" target="_blank" rel="external">孙亚洲</a>的两篇原创博客（感谢~~），希望对你有所帮助！</h6><p>1.<a href="http://sunyazhou.com/2017/03/11/Learning-AV-Foundation(%E4%B8%80" target="_blank" rel="external"> Learning AV Foundation(一)汉字语音朗读</a>%E6%B1%89%E5%AD%97%E8%AF%AD%E9%9F%B3%E6%9C%97%E8%AF%BB/) </p>
+<p>2.<a href="http://sunyazhou.com/2017/03/17/Learning%20AV%20Foundation(%E4%BA%8C" target="_blank" rel="external">Learning AV Foundation(二)AVAudioPlayer</a>AVAudioPlayer/)</p>
+<h1 id="开源库"><a href="#开源库" class="headerlink" title="开源库"></a>开源库</h1><h6 id="介绍两个Swfit中管理资源的开源库："><a href="#介绍两个Swfit中管理资源的开源库：" class="headerlink" title="介绍两个Swfit中管理资源的开源库："></a>介绍两个Swfit中管理资源的开源库：</h6><p>1.<a href="https://github.com/mac-cain13/R.swift" target="_blank" rel="external">R.swift</a> : 在Swift中更安全、方便的使用各类资源</p>
+<p>2.<a href="https://github.com/SwiftGen/SwiftGen" target="_blank" rel="external">SwiftGen</a>: SwiftGen是一个为你的项目资源自动生成代码的工具</p>
+<p>3.<a href="https://github.com/ReactKit/SwiftTask" target="_blank" rel="external">SwiftTask</a>:    Promise + progress + pause + cancel + retry for Swift.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6 id=&quot;本期周报内容来自-孙亚洲、GlareCH、DemoCooky、nolol&quot;&gt;&lt;a href=&quot;#本期周报内容来自-孙亚洲、GlareCH、DemoCooky、nolol&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: 孙亚洲、GlareC
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>2017-03-18技术周报</title>
@@ -645,66 +672,6 @@
     
       &lt;p&gt;本期周报内容来自: &lt;a href=&quot;https://github.com/AnYuan&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;桉远&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/BaiduHiDeviOS/iOS
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>技术周报一周年小结</title>
-    <link href="http://baiduhidevios.github.io/2016/08/22/%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5%E4%B8%80%E5%91%A8%E5%B9%B4%E5%B0%8F%E7%BB%93/"/>
-    <id>http://baiduhidevios.github.io/2016/08/22/技术周报一周年小结/</id>
-    <published>2016-08-22T15:17:37.000Z</published>
-    <updated>2017-02-25T09:08:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>记得那是2015年8月初，刚刚来到百度Hi团队。因为之前在百度音乐团队每周会有同学给大家整理技术音乐相关的资讯，觉得非常不错。来到Hi团队发现暂时没有这种技术资讯周报，准备开始做。并跟iOS leader happyapper探讨，得到happyapper同学的大力支持，于是这个技术周报就诞生了。。。</p>
-<p>之所以没有写到百度内网Wiki上，而是选择放到Github上出于几点考虑：</p>
-<ul>
-<li>大家不需要内网环境就可以方便的访问到，比较方便。</li>
-<li>希望周报不单单服务于组内同学。</li>
-<li>希望有外部的同学也可以给我们投稿，做成一个不只是我们自己人投稿的周报，希望能集思广益。</li>
-<li>希望组内的同学多多参与开源的东西，多上Github看看。</li>
-<li>不涉及到不能公开的东西，纯技术资讯。</li>
-</ul>
-<p>转眼间，技术周报一岁了。。。没想到可以坚持了一年。。。</p>
-<p>小小总结下：</p>
-<ul>
-<li>Star数 352</li>
-<li>Fork数 71</li>
-<li>Watcher 37</li>
-<li>贡献者 11位（2位非组内成员， 3位未直接提交）</li>
-<li>579次 commit</li>
-<li>52期技术周报，3篇原创文章。</li>
-</ul>
-<p>对未来的小展望：</p>
-<ul>
-<li>更多同学参与到周报投稿，众人拾柴火焰高。</li>
-<li>分类更细致，提升日后查找相关资料效率。</li>
-<li>更多原创文章，组内技术点分享，总结等。</li>
-<li>更多开源代码。</li>
-</ul>
-<p>再次感谢所有的提交者，没有你们，周报不会坚持到现在，多谢！</p>
-<ul>
-<li><a href="https://github.com/nightfade" target="_blank" rel="external">nightfade</a></li>
-<li><a href="https://github.com/eggInBlack" target="_blank" rel="external">黑蛋</a></li>
-<li><a href="https://github.com/gxingmin" target="_blank" rel="external">兴民</a></li>
-<li><a href="https://github.com/GlareCH" target="_blank" rel="external">GlareCH</a></li>
-<li><a href="https://github.com/superleexpert" target="_blank" rel="external">superleexpert</a></li>
-<li><a href="https://github.com/cuichunjian" target="_blank" rel="external">春建</a></li>
-<li><a href="https://github.com/ReadmeCritic" target="_blank" rel="external">ReadmeCritic</a></li>
-<li><a href="https://github.com/SSSSSSnail" target="_blank" rel="external">SSSSSSnail</a></li>
-<li><a href="https://github.com/wgyihui" target="_blank" rel="external">wgyihui</a></li>
-<li><a href="https://github.com/orgs/BaiduHiDeviOS/people/happyapper" target="_blank" rel="external">happyapper</a></li>
-<li><a href="https://github.com/AnYuan" target="_blank" rel="external">AnYuan</a></li>
-</ul>
-<p>最后的寄语大家一句话：</p>
-<h4 id="Stay-hungry-stay-foolish"><a href="#Stay-hungry-stay-foolish" class="headerlink" title="Stay hungry, stay foolish."></a>Stay hungry, stay foolish.</h4><h4 id="求知若渴，虚心若愚"><a href="#求知若渴，虚心若愚" class="headerlink" title="求知若渴，虚心若愚"></a>求知若渴，虚心若愚</h4><p>enjoy~~~ Have fun！！！</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;记得那是2015年8月初，刚刚来到百度Hi团队。因为之前在百度音乐团队每周会有同学给大家整理技术音乐相关的资讯，觉得非常不错。来到Hi团队发现暂时没有这种技术资讯周报，准备开始做。并跟iOS leader happyapper探讨，得到happyapper同学的大力支持，于
     
     </summary>
     
