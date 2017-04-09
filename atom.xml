@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baiduhidevios.github.io/"/>
-  <updated>2017-03-26T04:33:05.000Z</updated>
+  <updated>2017-04-09T05:59:47.000Z</updated>
   <id>http://baiduhidevios.github.io/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2017-4-09技术周报</title>
+    <link href="http://baiduhidevios.github.io/2017/04/09/2017-04-09%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
+    <id>http://baiduhidevios.github.io/2017/04/09/2017-04-09技术周报/</id>
+    <published>2017-04-09T05:36:58.000Z</published>
+    <updated>2017-04-09T05:59:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="本期周报内容来自-GlareCH、DemoCooky、nolol"><a href="#本期周报内容来自-GlareCH、DemoCooky、nolol" class="headerlink" title="本期周报内容来自: GlareCH、DemoCooky、nolol"></a>本期周报内容来自: <a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
+<hr>
+<h6 id="好啦-清明过后，也该收收心继续前行了-本期内容同样精彩-速速来围观吧"><a href="#好啦-清明过后，也该收收心继续前行了-本期内容同样精彩-速速来围观吧" class="headerlink" title="好啦~清明过后，也该收收心继续前行了~本期内容同样精彩 速速来围观吧^_^"></a>好啦~清明过后，也该收收心继续前行了~本期内容同样精彩 速速来围观吧^_^</h6><h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><p>1.<a href="https://talk.objc.io/" target="_blank" rel="external">Swift Talk</a> ：推荐一个不错的swift学习网站</p>
+<h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><p>1.<a href="http://mp.weixin.qq.com/s/v0pffOhjFWnVbU2lXjuEmw" target="_blank" rel="external">舞动的表情包——浅析GIF格式图片的存储和压缩</a></p>
+<p>2.<a href="http://mp.weixin.qq.com/s/LC4J20wVeuGW4QnBd5OeQQ" target="_blank" rel="external">iOS持续集成大比拼：Xcode Server、Jenkins、Travis和fastlane</a></p>
+<p>3.<a href="http://www.jianshu.com/p/37ab0397fec7" target="_blank" rel="external">【iOS程序启动与运转】- RunLoop个人小结</a> [推荐]</p>
+<p>4.<a href="http://wereadteam.github.io/2017/03/13/Signature/" target="_blank" rel="external">iOS App 签名的原理</a></p>
+<h1 id="开源库"><a href="#开源库" class="headerlink" title="开源库"></a>开源库</h1><h6 id="介绍一个内存泄露检测工具："><a href="#介绍一个内存泄露检测工具：" class="headerlink" title="介绍一个内存泄露检测工具："></a>介绍一个内存泄露检测工具：</h6><p>1.<a href="http://wereadteam.github.io/2016/02/22/MLeaksFinder/" target="_blank" rel="external">MLeaksFinder：精准 iOS 内存泄露检测工具</a> </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6 id=&quot;本期周报内容来自-GlareCH、DemoCooky、nolol&quot;&gt;&lt;a href=&quot;#本期周报内容来自-GlareCH、DemoCooky、nolol&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: GlareCH、DemoCooky、
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>团队原创之AV Foundation-AVAudioPlayer</title>
@@ -161,22 +187,21 @@
     <link href="http://baiduhidevios.github.io/2017/03/26/2017-03-26%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
     <id>http://baiduhidevios.github.io/2017/03/26/2017-03-26技术周报/</id>
     <published>2017-03-26T02:56:20.000Z</published>
-    <updated>2017-03-26T05:24:25.000Z</updated>
+    <updated>2017-04-09T05:58:59.000Z</updated>
     
-    <content type="html"><![CDATA[<h6 id="本期周报内容来自-孙亚洲、GlareCH、DemoCooky、nolol"><a href="#本期周报内容来自-孙亚洲、GlareCH、DemoCooky、nolol" class="headerlink" title="本期周报内容来自: 孙亚洲、GlareCH、DemoCooky、nolol"></a>本期周报内容来自: <a href="http://sunyazhou.com/" target="_blank" rel="external">孙亚洲</a>、<a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
+    <content type="html"><![CDATA[<h6 id="本期周报内容来自-GlareCH、DemoCooky、nolol"><a href="#本期周报内容来自-GlareCH、DemoCooky、nolol" class="headerlink" title="本期周报内容来自: GlareCH、DemoCooky、nolol"></a>本期周报内容来自: <a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
 <hr>
-<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><p>1.<a href="https://www.raywenderlich.com/150015/callkit-tutorial-ios" target="_blank" rel="external">CallKit 之旅</a> ：swift CallKit 之旅</p>
-<p>2.<a href="http://mp.weixin.qq.com/s/WPXzYQrw1bihLNjjPmIKwA" target="_blank" rel="external">简单点，理解iOS与函数式编程</a></p>
-<h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><h6 id="本期iOS相关主要集中介绍一下AV-Foundation框架，并附上团队同学孙亚洲的两篇原创博客（感谢-），希望对你有所帮助！"><a href="#本期iOS相关主要集中介绍一下AV-Foundation框架，并附上团队同学孙亚洲的两篇原创博客（感谢-），希望对你有所帮助！" class="headerlink" title="本期iOS相关主要集中介绍一下AV Foundation框架，并附上团队同学孙亚洲的两篇原创博客（感谢~~），希望对你有所帮助！"></a>本期iOS相关主要集中介绍一下AV Foundation框架，并附上团队同学<a href="http://sunyazhou.com/" target="_blank" rel="external">孙亚洲</a>的两篇原创博客（感谢~~），希望对你有所帮助！</h6><p>1.<a href="http://sunyazhou.com/2017/03/11/Learning-AV-Foundation%E4%B8%80%E6%B1%89%E5%AD%97%E8%AF%AD%E9%9F%B3%E6%9C%97%E8%AF%BB/" target="_blank" rel="external">Learning AV Foundation一汉字语音朗读</a></p>
-<p>2.<a href="http://sunyazhou.com/2017/03/17/Learning%20AV%20Foundation%E4%BA%8CAVAudioPlayer/" target="_blank" rel="external">Learning AV Foundation二AVAudioPlayer</a></p>
-<h1 id="开源库"><a href="#开源库" class="headerlink" title="开源库"></a>开源库</h1><h6 id="介绍两个Swfit中管理资源的开源库："><a href="#介绍两个Swfit中管理资源的开源库：" class="headerlink" title="介绍两个Swfit中管理资源的开源库："></a>介绍两个Swfit中管理资源的开源库：</h6><p>1.<a href="https://github.com/mac-cain13/R.swift" target="_blank" rel="external">R.swift</a> : 在Swift中更安全、方便的使用各类资源</p>
-<p>2.<a href="https://github.com/SwiftGen/SwiftGen" target="_blank" rel="external">SwiftGen</a>: SwiftGen是一个为你的项目资源自动生成代码的工具</p>
-<p>3.<a href="https://github.com/ReactKit/SwiftTask" target="_blank" rel="external">SwiftTask</a>:    Promise + progress + pause + cancel + retry for Swift.</p>
+<h6 id="好啦-清明过后，也该收收心继续前行了-本期内容同样精彩-速速来围观吧"><a href="#好啦-清明过后，也该收收心继续前行了-本期内容同样精彩-速速来围观吧" class="headerlink" title="好啦~清明过后，也该收收心继续前行了~本期内容同样精彩 速速来围观吧^_^"></a>好啦~清明过后，也该收收心继续前行了~本期内容同样精彩 速速来围观吧^_^</h6><h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><p>1.<a href="https://talk.objc.io/" target="_blank" rel="external">Swift Talk</a> ：推荐一个不错的swift学习网站</p>
+<h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><p>1.<a href="http://mp.weixin.qq.com/s/v0pffOhjFWnVbU2lXjuEmw" target="_blank" rel="external">舞动的表情包——浅析GIF格式图片的存储和压缩</a></p>
+<p>2.<a href="http://mp.weixin.qq.com/s/LC4J20wVeuGW4QnBd5OeQQ" target="_blank" rel="external">iOS持续集成大比拼：Xcode Server、Jenkins、Travis和fastlane</a></p>
+<p>3.<a href="http://www.jianshu.com/p/37ab0397fec7" target="_blank" rel="external">【iOS程序启动与运转】- RunLoop个人小结</a> [推荐]</p>
+<p>4.<a href="http://wereadteam.github.io/2017/03/13/Signature/" target="_blank" rel="external">iOS App 签名的原理</a></p>
+<h1 id="开源库"><a href="#开源库" class="headerlink" title="开源库"></a>开源库</h1><h6 id="介绍一个内存泄露检测工具："><a href="#介绍一个内存泄露检测工具：" class="headerlink" title="介绍一个内存泄露检测工具："></a>介绍一个内存泄露检测工具：</h6><p>1.<a href="http://wereadteam.github.io/2016/02/22/MLeaksFinder/" target="_blank" rel="external">MLeaksFinder：精准 iOS 内存泄露检测工具</a> </p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h6 id=&quot;本期周报内容来自-孙亚洲、GlareCH、DemoCooky、nolol&quot;&gt;&lt;a href=&quot;#本期周报内容来自-孙亚洲、GlareCH、DemoCooky、nolol&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: 孙亚洲、GlareC
+      &lt;h6 id=&quot;本期周报内容来自-GlareCH、DemoCooky、nolol&quot;&gt;&lt;a href=&quot;#本期周报内容来自-GlareCH、DemoCooky、nolol&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: GlareCH、DemoCooky、
     
     </summary>
     
@@ -752,36 +777,6 @@
     <summary type="html">
     
       &lt;p&gt;本期周报内容来自: &lt;a href=&quot;https://github.com/SSSSSSnail&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;新宁&lt;/a&gt; ,&lt;a href=&quot;https://github.com/GlareCH&quot; target=&quot;_bl
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2016.09.04技术周报</title>
-    <link href="http://baiduhidevios.github.io/2016/09/04/2016-09-04%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
-    <id>http://baiduhidevios.github.io/2016/09/04/2016-09-04技术周报/</id>
-    <published>2016-09-04T09:46:50.000Z</published>
-    <updated>2017-02-25T09:08:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>本期周报内容来自: <a href="https://github.com/AnYuan" target="_blank" rel="external">桉远</a>。</p>
-<p><a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
-<p>周报汇总 <a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">地址</a></p>
-<p>周报博客 <a href="http://baiduhidevios.github.io/">地址</a></p>
-<h3 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h3><p><a href="http://iphonedevwiki.net/index.php/Main_Page" target="_blank" rel="external">iPhoneDevWiki</a>: Our goal is to share the sum of all human[1] knowledge about jailbroken iOS development. In other words, this is a collection of documentation written by developers to help each other write extensions (tweaks) for jailbroken iOS, and you’re invited to learn from it and contribute to it too.</p>
-<h3 id="视频："><a href="#视频：" class="headerlink" title="视频："></a>视频：</h3><p><a href="https://realm.io/news/altconf-michael-gray-futures-promises-gcd/" target="_blank" rel="external">Futures and Promises, or how I learned to stop worrying and love the GCD</a></p>
-<h3 id="技术实践"><a href="#技术实践" class="headerlink" title="技术实践"></a>技术实践</h3><p><a href="https://medium.com/ios-os-x-development/perfect-smooth-scrolling-in-uitableviews-fd609d5275a5#.bea54yg1r" target="_blank" rel="external">Perfect smooth scrolling in UITableViews</a></p>
-<h3 id="iOS架构相关"><a href="#iOS架构相关" class="headerlink" title="iOS架构相关"></a>iOS架构相关</h3><p><a href="https://sharpfivesoftware.com/2016/07/20/mvvm-is-lipstick-on-a-pig/" target="_blank" rel="external">MVVM is lipstick on a pig</a>: MVVM is not a step in the right direction. It’s an additional layer of confusion.</p>
-<h3 id="开源代码："><a href="#开源代码：" class="headerlink" title="开源代码："></a>开源代码：</h3><p><a href="https://github.com/Pluto-Y/iOS-Echarts" target="_blank" rel="external">iOS Echarts</a></p>
-<p><a href="https://github.com/FutureKit/FutureKit" target="_blank" rel="external">FutureKit</a>: A Swift based Future/Promises Library for IOS and OS X.</p>
-<p><a href="https://github.com/Nike-Inc/Willow" target="_blank" rel="external">Willow</a>: Willow is a powerful, yet lightweight logging library written in Swift.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本期周报内容来自: &lt;a href=&quot;https://github.com/AnYuan&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;桉远&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/BaiduHiDeviOS/iOS
     
     </summary>
     
