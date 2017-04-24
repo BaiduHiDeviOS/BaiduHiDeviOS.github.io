@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baiduhidevios.github.io/"/>
-  <updated>2017-04-09T05:59:47.000Z</updated>
+  <updated>2017-04-24T01:53:34.000Z</updated>
   <id>http://baiduhidevios.github.io/</id>
   
   <author>
@@ -16,11 +16,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2017-04-24技术周报</title>
+    <link href="http://baiduhidevios.github.io/2017/04/24/2017-04-24%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
+    <id>http://baiduhidevios.github.io/2017/04/24/2017-04-24技术周报/</id>
+    <published>2017-04-24T01:39:39.000Z</published>
+    <updated>2017-04-24T01:53:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="本期周报内容来自-GlareCH、DemoCooky、nolol"><a href="#本期周报内容来自-GlareCH、DemoCooky、nolol" class="headerlink" title="本期周报内容来自: GlareCH、DemoCooky、nolol"></a>本期周报内容来自: <a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
+<hr>
+<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><p>1.<a href="https://www.raizlabs.com/dev/2016/12/swift-method-dispatch/?utm_campaign=This%2BWeek%2Bin%2BSwift&amp;utm_medium=email&amp;utm_source=This_Week_in_Swift_114" target="_blank" rel="external">深入理解 Swift 派发机制</a></p>
+<p>2.<a href="http://swiftdoc.org" target="_blank" rel="external">Auto-generated documentation for Swift. Command-click no more.</a></p>
+<h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><p>1.<a href="http://www.mrpeak.cn/blog/ios-thread-safety/" target="_blank" rel="external">iOS多线程到底不安全在哪里？</a></p>
+<p>2.<a href="http://www.5neo.be/understanding-ios-exception-types/" target="_blank" rel="external">Understanding iOS Exception Types</a></p>
+<p>3.<a href="http://www.tuicool.com/articles/QF3mEz" target="_blank" rel="external">怎么实现一个 Airplay 服务端（盒子端） 初步讲解</a> </p>
+<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><p>1.<a href="https://github.com/tib/awesome-xcode-extensions" target="_blank" rel="external">awesome native xcode extensions</a> ：【推荐】</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6 id=&quot;本期周报内容来自-GlareCH、DemoCooky、nolol&quot;&gt;&lt;a href=&quot;#本期周报内容来自-GlareCH、DemoCooky、nolol&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: GlareCH、DemoCooky、
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>2017-4-09技术周报</title>
     <link href="http://baiduhidevios.github.io/2017/04/09/2017-04-09%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
     <id>http://baiduhidevios.github.io/2017/04/09/2017-04-09技术周报/</id>
     <published>2017-04-09T05:36:58.000Z</published>
-    <updated>2017-04-09T05:59:47.000Z</updated>
+    <updated>2017-04-24T01:54:40.000Z</updated>
     
     <content type="html"><![CDATA[<h6 id="本期周报内容来自-GlareCH、DemoCooky、nolol"><a href="#本期周报内容来自-GlareCH、DemoCooky、nolol" class="headerlink" title="本期周报内容来自: GlareCH、DemoCooky、nolol"></a>本期周报内容来自: <a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
 <hr>
@@ -738,44 +764,6 @@
     <summary type="html">
     
       &lt;p&gt;本期周报内容来自: &lt;a href=&quot;https://github.com/DemoCooky&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DemoCooky&lt;/a&gt;, &lt;a href=&quot;https://github.com/AnYuan&quot; target
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2016.09.11技术周报</title>
-    <link href="http://baiduhidevios.github.io/2016/09/13/2016-09-11%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
-    <id>http://baiduhidevios.github.io/2016/09/13/2016-09-11技术周报/</id>
-    <published>2016-09-12T16:34:32.000Z</published>
-    <updated>2017-02-25T09:08:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>本期周报内容来自: <a href="https://github.com/SSSSSSnail" target="_blank" rel="external">新宁</a> ,<a href="https://github.com/GlareCH" target="_blank" rel="external">GlareCH</a>, <a href="https://github.com/AnYuan" target="_blank" rel="external">桉远</a>。</p>
-<hr>
-<h4 id="百度Hi-iOS团队招聘啦："><a href="#百度Hi-iOS团队招聘啦：" class="headerlink" title="百度Hi iOS团队招聘啦："></a>百度Hi iOS团队招聘啦：</h4><p>职位： 高级iOS研发工程师</p>
-<p>感兴趣的小伙伴请投递 —&gt; wangping05@baidu.com</p>
-<hr>
-<p><a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
-<p>周报汇总 <a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">地址</a></p>
-<p>周报博客 <a href="http://baiduhidevios.github.io/">地址</a></p>
-<h3 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h3><p><a href="https://github.com/100mango/zen" target="_blank" rel="external">zen</a>: iOS心得</p>
-<p><a href="https://www.hackerrank.com/domains?h_r=logo" target="_blank" rel="external">Hacker rank</a></p>
-<p><a href="https://engineering.pinterest.com/blog" target="_blank" rel="external">Pinterest Engineering blog</a></p>
-<p><a href="https://github.com/wg689/Solve-App-Store-Review-Problem" target="_blank" rel="external">Solve-App-Store-Review-Problem</a>: a collection to solve app store review problem (ipv6,ipv6被拒绝,后台定位等审核问题的终极解决方案汇总)</p>
-<h3 id="Objective-C"><a href="#Objective-C" class="headerlink" title="Objective-C"></a>Objective-C</h3><p><a href="https://bestswifter.com/deep-gcd/" target="_blank" rel="external">深入理解GCD</a></p>
-<h3 id="iOS-10-特性"><a href="#iOS-10-特性" class="headerlink" title="iOS 10 特性"></a>iOS 10 特性</h3><p><a href="https://nabla-c0d3.github.io/blog/2016/08/14/ats-enforced-2017/" target="_blank" rel="external">Getting Ready for ATS Enforcement in 2017</a></p>
-<h3 id="Swift-3-适配"><a href="#Swift-3-适配" class="headerlink" title="Swift 3 适配"></a>Swift 3 适配</h3><p><a href="https://buildingvts.com/a-mostly-comprehensive-list-of-swift-3-0-and-2-3-changes-193b904bb5b1#.gewf1wa13" target="_blank" rel="external">A (mostly) comprehensive list of Swift 3.0 and 2.3 changes</a></p>
-<h3 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h3><p><a href="https://medium.com/@cocotutch/swift-custom-fonts-slightly-less-awful-f235e20027f3#.ug9qnblxr" target="_blank" rel="external">Swift: Custom Fonts. Slightly Less Awful.</a></p>
-<h3 id="iOS架构相关"><a href="#iOS架构相关" class="headerlink" title="iOS架构相关"></a>iOS架构相关</h3><p><a href="https://engineering.pinterest.com/blog/immutable-models-and-data-consistency-our-ios-app" target="_blank" rel="external">Immutable models and data consistency in our iOS App</a></p>
-<h3 id="开源代码："><a href="#开源代码：" class="headerlink" title="开源代码："></a>开源代码：</h3><p><a href="https://github.com/hackiftekhar/IQKeyboardManager" target="_blank" rel="external">IQKeyboardManager</a>: Codeless drop-in universal library allows to prevent issues of keyboard sliding up and cover UITextField/UITextView. Neither need to write any code nor any setup required and much more.</p>
-<p><a href="https://github.com/100mango/SwiftTimer" target="_blank" rel="external">SwiftTimer</a>: Simple and Elegant Timer</p>
-<p><a href="https://github.com/ReactKit/SwiftTask" target="_blank" rel="external">SwiftTask</a>: Promise + progress + pause + cancel + retry for Swift.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本期周报内容来自: &lt;a href=&quot;https://github.com/SSSSSSnail&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;新宁&lt;/a&gt; ,&lt;a href=&quot;https://github.com/GlareCH&quot; target=&quot;_bl
     
     </summary>
     
