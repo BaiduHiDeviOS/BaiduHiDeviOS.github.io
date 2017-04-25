@@ -15,7 +15,7 @@ Documents/">
 <meta property="og:description" content="iOS 标准目录结构出于安全考虑，iOS只有特定目录可以写入数据。 当一款应用安装在设备上后，系统会创建一些系统目录给应用使用，一款应用只有权限访问其自己的路径下的数据。
 AppName.app整个应用的bundle文件。此目录包含整个应用和其所使用到的所有资源。 此路径不能写， 只可读， 如果强行写入，会改变安装时在系统注册的该目录的签名，如果签名改变，系统会组织程序启动。
 Documents/">
-<meta property="og:updated_time" content="2017-02-25T09:08:33.000Z">
+<meta property="og:updated_time" content="2017-04-24T01:59:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS应用文件目录结构简介">
 <meta name="twitter:description" content="iOS 标准目录结构出于安全考虑，iOS只有特定目录可以写入数据。 当一款应用安装在设备上后，系统会创建一些系统目录给应用使用，一款应用只有权限访问其自己的路径下的数据。
@@ -102,7 +102,7 @@ var _hmt = _hmt || [];
 <p>自己应用可以读取和删除此目录文件，但是<em>不能创建新文件或者写入已经存在的文件</em>， 如果要对该目录文件进行修改，请将要修改的文件移除到其他目录。<br><em>此目录默认被iTunes备份</em></p>
 <h2 id="Library"><a href="#Library" class="headerlink" title="Library/"></a>Library/</h2><p>此目录用于保存非用户数据文件。 Library下的子目录可以用于保存那些不希望用户看到的数据文件。<em>不要用Library下的目录保存用户数据文件</em></p>
 <p>Library目录下(除了Caches目录及其子目录)会被<em>iTunes默认备份</em></p>
-<p>##tmp/<br>用于那些不需要在每次启动需要持久化的临时文件。手动删除那些此路径下不用的临时文件。当应用没有运行时，系统也许会删除此目录下的文件。</p>
+<h2 id="tmp"><a href="#tmp" class="headerlink" title="tmp/"></a>tmp/</h2><p>用于那些不需要在每次启动需要持久化的临时文件。手动删除那些此路径下不用的临时文件。当应用没有运行时，系统也许会删除此目录下的文件。</p>
 <p><em>此目录默认不会被iTunes备份</em></p>
 <h3 id="应用产生的文件应该放在哪"><a href="#应用产生的文件应该放在哪" class="headerlink" title="应用产生的文件应该放在哪"></a>应用产生的文件应该放在哪</h3><p>为了避免iOS设备间同步和备份流程耗时太久，应该对文件归属目录的选择特别注意。</p>
 <ul>
@@ -116,7 +116,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2015/12/26/iOS应用文件目录结构简介/" data-id="cj1vgwhfy0024wsjm6hdmv8vt" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2015/12/26/iOS应用文件目录结构简介/" data-id="cj1x6z5i50024qxjmcjn1x5e8" class="article-share-link">Share</a>
       
       
     </footer>
