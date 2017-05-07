@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baiduhidevios.github.io/"/>
-  <updated>2017-04-25T06:50:27.000Z</updated>
+  <updated>2017-05-07T10:11:06.000Z</updated>
   <id>http://baiduhidevios.github.io/</id>
   
   <author>
@@ -16,11 +16,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2017-05-07技术周报</title>
+    <link href="http://baiduhidevios.github.io/2017/05/07/2017-05-07%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
+    <id>http://baiduhidevios.github.io/2017/05/07/2017-05-07技术周报/</id>
+    <published>2017-05-07T09:50:56.000Z</published>
+    <updated>2017-05-07T10:11:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="本期周报内容来自-eggInBlack、DemoCooky"><a href="#本期周报内容来自-eggInBlack、DemoCooky" class="headerlink" title="本期周报内容来自: eggInBlack、DemoCooky"></a>本期周报内容来自: <a href="https://github.com/orgs/BaiduHiDeviOS/people/eggInBlack" target="_blank" rel="external">eggInBlack</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
+<hr>
+<h1 id="iOS–UI性能优化"><a href="#iOS–UI性能优化" class="headerlink" title="iOS–UI性能优化"></a>iOS–UI性能优化</h1><h6 id="近期组内黑蛋童鞋在搞UI优化（赞美黑蛋），本期主题以此为主"><a href="#近期组内黑蛋童鞋在搞UI优化（赞美黑蛋），本期主题以此为主" class="headerlink" title="近期组内黑蛋童鞋在搞UI优化（赞美黑蛋），本期主题以此为主 ^_^"></a>近期组内黑蛋童鞋在搞UI优化（赞美黑蛋），本期主题以此为主 ^_^</h6><p>1.<a href="http://blog.csdn.net/ggghub/article/details/49251449" target="_blank" rel="external"> iOS9中UIStackView的使用</a></p>
+<p>2.<a href="http://blog.cnbang.net/tech/2578/" target="_blank" rel="external">iOS图片加载速度极限优化—FastImageCache解析</a></p>
+<p>3.<a href="https://markpospesel.wordpress.com/2012/04/03/on-the-importance-of-setting-shadowpath/" target="_blank" rel="external">On the importance of setting shadowPath 关于阴影的绘制</a> </p>
+<p>4.<a href="http://www.jianshu.com/p/71cba1711de0" target="_blank" rel="external">小科普：脑洞大开：为啥帧率达到 60 fps 就流畅</a>：【推荐】</p>
+<p>5.<a href="http://draveness.me/layout-performance.html?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">从 Auto Layout 的布局算法谈性能</a></p>
+<p>6.<a href="http://sonnewilling.com/blog/2016/10/19/iostu-xing-yuan-li-yu-chi-ping-xuan-ran/" target="_blank" rel="external">iOS图形原理与离屏渲染</a>：【推荐】</p>
+<h1 id="iOS–数据缓存优化"><a href="#iOS–数据缓存优化" class="headerlink" title="iOS–数据缓存优化"></a>iOS–数据缓存优化</h1><p>1.<a href="http://blog.cnbang.net/tech/3262/" target="_blank" rel="external"> APP 缓存数据线程安全问题探讨</a>：介绍了两种解决APP缓存数据线程安全问题的方案</p>
+<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><p>1.<a href="http://www.cnblogs.com/lucky-star-star/p/5652447.html" target="_blank" rel="external">iOS很好的开源库</a> ：一个开源库全家桶~赞美</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6 id=&quot;本期周报内容来自-eggInBlack、DemoCooky&quot;&gt;&lt;a href=&quot;#本期周报内容来自-eggInBlack、DemoCooky&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: eggInBlack、DemoCooky&quot;&gt;&lt;/
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>2017-04-24技术周报</title>
     <link href="http://baiduhidevios.github.io/2017/04/24/2017-04-24%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
     <id>http://baiduhidevios.github.io/2017/04/24/2017-04-24技术周报/</id>
     <published>2017-04-24T01:39:39.000Z</published>
-    <updated>2017-04-25T06:50:27.000Z</updated>
+    <updated>2017-05-07T10:07:29.000Z</updated>
     
     <content type="html"><![CDATA[<h6 id="本期周报内容来自-GlareCH、DemoCooky、nolol"><a href="#本期周报内容来自-GlareCH、DemoCooky、nolol" class="headerlink" title="本期周报内容来自: GlareCH、DemoCooky、nolol"></a>本期周报内容来自: <a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
 <hr>
@@ -46,7 +74,7 @@
     <link href="http://baiduhidevios.github.io/2017/04/09/2017-04-09%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
     <id>http://baiduhidevios.github.io/2017/04/09/2017-04-09技术周报/</id>
     <published>2017-04-09T05:36:58.000Z</published>
-    <updated>2017-04-24T01:54:40.000Z</updated>
+    <updated>2017-05-07T10:07:29.000Z</updated>
     
     <content type="html"><![CDATA[<h6 id="本期周报内容来自-GlareCH、DemoCooky、nolol"><a href="#本期周报内容来自-GlareCH、DemoCooky、nolol" class="headerlink" title="本期周报内容来自: GlareCH、DemoCooky、nolol"></a>本期周报内容来自: <a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
 <hr>
@@ -732,38 +760,6 @@
     <summary type="html">
     
       &lt;p&gt;本期周报内容来自: &lt;a href=&quot;https://github.com/SSSSSSnail&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;新宁&lt;/a&gt;, &lt;a href=&quot;https://github.com/AnYuan&quot; target=&quot;_bla
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2016.09.18技术周报</title>
-    <link href="http://baiduhidevios.github.io/2016/09/19/2016-09-18%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
-    <id>http://baiduhidevios.github.io/2016/09/19/2016-09-18技术周报/</id>
-    <published>2016-09-19T02:21:32.000Z</published>
-    <updated>2017-02-25T09:08:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>本期周报内容来自: <a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>, <a href="https://github.com/AnYuan" target="_blank" rel="external">桉远</a>。</p>
-<hr>
-<h4 id="百度Hi-iOS团队招聘啦："><a href="#百度Hi-iOS团队招聘啦：" class="headerlink" title="百度Hi iOS团队招聘啦："></a>百度Hi iOS团队招聘啦：</h4><p>职位： 高级iOS研发工程师</p>
-<p>感兴趣的小伙伴请投递 —&gt; wangping05@baidu.com</p>
-<hr>
-<p><a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
-<p>周报汇总 <a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">地址</a></p>
-<p>周报博客 <a href="http://baiduhidevios.github.io/">地址</a></p>
-<h3 id="技术实践"><a href="#技术实践" class="headerlink" title="技术实践"></a>技术实践</h3><p><a href="http://blog.sunnyxx.com/2015/05/17/cell-height-calculation/" target="_blank" rel="external">AutoLayout–优化UITableViewCell高度计算的那些事</a>:使用AutoLayout动态计算UITableViewCell高度）</p>
-<p><a href="https://github.com/nixzhu/dev-blog/blob/master/autolayout-tips.md#tip-2" target="_blank" rel="external">AutoLayout Tips</a>: Tip 1.两个不等宽的View，彼此相邻，并“共同”居中于 Superview   Tip2.让 AutoLayout 与 UIScrollView 合作无间)</p>
-<h3 id="iOS-10-特性"><a href="#iOS-10-特性" class="headerlink" title="iOS 10 特性"></a>iOS 10 特性</h3><p><a href="https://github.com/JaviSoto/iOS10-Runtime-Headers" target="_blank" rel="external">iOS 10 Runtime Headers</a></p>
-<h3 id="Swift-3"><a href="#Swift-3" class="headerlink" title="Swift 3"></a>Swift 3</h3><p><a href="https://realm.io/news/whats-new-in-swift-3-part-1/" target="_blank" rel="external">What’s new in swift 3 – realm</a>:</p>
-<p><a href="https://developer.apple.com/swift/blog/?id=37" target="_blank" rel="external">Working with JSON in Swift</a></p>
-<h3 id="开源代码："><a href="#开源代码：" class="headerlink" title="开源代码："></a>开源代码：</h3><p><a href="https://github.com/johnlui/JSONNeverDie" target="_blank" rel="external">JSONNeverDie</a>: Auto reflection tool from JSON to Model, user friendly JSON encoder / decoder, aims to never die</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本期周报内容来自: &lt;a href=&quot;https://github.com/DemoCooky&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DemoCooky&lt;/a&gt;, &lt;a href=&quot;https://github.com/AnYuan&quot; target
     
     </summary>
     
