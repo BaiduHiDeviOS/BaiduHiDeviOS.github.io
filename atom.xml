@@ -42,20 +42,21 @@
   </entry>
   
   <entry>
-    <title>2017-06-26期技术周报</title>
+    <title>2017-06-26技术周报</title>
     <link href="http://baiduhidevios.github.io/2017/06/26/2017-06-26%E6%9C%9F%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
     <id>http://baiduhidevios.github.io/2017/06/26/2017-06-26期技术周报/</id>
     <published>2017-06-26T12:31:07.000Z</published>
-    <updated>2017-07-14T08:54:43.000Z</updated>
+    <updated>2017-07-20T02:18:38.000Z</updated>
     
     <content type="html"><![CDATA[<h6 id="本期周报内容来自-nolol、DemoCooky"><a href="#本期周报内容来自-nolol、DemoCooky" class="headerlink" title="本期周报内容来自: nolol、DemoCooky"></a>本期周报内容来自: <a href="https://github.com/nolol" target="_blank" rel="external">nolol</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
 <hr>
-<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><p>1.<a href="http://www.cocoachina.com/swift/20170630/19691.html" target="_blank" rel="external">Swift 4 JSON 解析指南</a>: Apple在Swift4的 Foundation 的模块中添加了对 JSON 解析的原生支持，快来看看吧~</p>
-<h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><p>1.<a href="http://www.cocoachina.com/ios/20170629/19680.html" target="_blank" rel="external"> iOS 性能监控方案（上篇）</a>: 介绍了CPU 占用率、内存使用情况、FPS、冷启动、热启动时间，耗电量等基础性能指标</p>
-<p>2.<a href="http://www.cocoachina.com/ios/20170630/19683.html" target="_blank" rel="external"> iOS 性能监控方案（下篇</a>：介绍了在 iOS 中如何实现网络监控</p>
-<p>3.<a href="http://www.cocoachina.com/ios/20170707/19769.html" target="_blank" rel="external">iOS多线程全套</a>：包括线程生命周期，多线程的四种解决方案，线程安全问题，GCD的使用，NSOperation的使用</p>
-<h1 id="iOS与机器学习"><a href="#iOS与机器学习" class="headerlink" title="iOS与机器学习"></a>iOS与机器学习</h1><p>1.<a href="http://www.jianshu.com/p/6c2dff59eaaf" target="_blank" rel="external">Core ML 文档翻译</a> ：Core ML是一个全新的机器学习基础框架</p>
-<p>2.<a href="http://www.jianshu.com/p/93173062ebb4" target="_blank" rel="external">ARKit 文档翻译</a> : ARKit 将 iOS 设备的摄像头和设备动作检测 (Motion) 功能，集成到您的应用或者游戏当中，从而为用户提供增强现实体验</p>
+<h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><p>1.<a href="http://www.qingpingshan.com/rjbc/ios/262889.html" target="_blank" rel="external"> iOS多线程读写崩溃分析</a>:【推荐】</p>
+<p>2.<a href="http://www.jianshu.com/p/a84237b07611" target="_blank" rel="external"> AFNetworking之于https认证</a></p>
+<p>3.<a href="http://www.jianshu.com/p/9e573607be13" target="_blank" rel="external">AFNetworking 3.0与服务端 自签名证书 https双向认证</a>：对https双向认证讲解比较详细，感兴趣的同学可以看看</p>
+<h1 id="组件化"><a href="#组件化" class="headerlink" title="组件化"></a>组件化</h1><p>1.<a href="http://mp.weixin.qq.com/s/cnhuEodJGIbdodh0IxNeXQ" target="_blank" rel="external">微信终端跨平台组件 mars 系列（一） - 高性能日志模块xlog</a></p>
+<p>2.<a href="http://mp.weixin.qq.com/s/PnICVDyVuMSyvpvTrdEpSQ" target="_blank" rel="external">微信终端跨平台组件 mars 系列(二) - 信令传输超时设计</a> </p>
+<p>3.<a href="http://mp.weixin.qq.com/s/8FjDqPtXWWqOInsiV79Chg" target="_blank" rel="external">微信iOS SQLite源码优化实践</a></p>
+<h1 id="开源"><a href="#开源" class="headerlink" title="开源"></a>开源</h1><p>1.<a href="http://www.jianshu.com/p/d75a9a8d13b5" target="_blank" rel="external">33 个 2017 年必须了解的 iOS 开源库</a> ：持续更新，建议收藏哦~</p>
 ]]></content>
     
     <summary type="html">
