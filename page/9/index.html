@@ -65,6 +65,109 @@ var _hmt = _hmt || [];
       <div class="outer">
         <section id="main">
   
+    <article id="post-20150914" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/09/14/20150914/" class="article-date">
+  <time datetime="2015-09-14T00:00:00.000Z" itemprop="datePublished">2015-09-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/14/20150914/">Baidu Hi iOS 技术周报-2015.09.14</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Apple-3D-Touch-Demo"><a href="#Apple-3D-Touch-Demo" class="headerlink" title="Apple 3D Touch Demo"></a>Apple 3D Touch Demo</h2><p><a href="https://developer.apple.com/ios/3d-touch/" target="_blank" rel="external">https://developer.apple.com/ios/3d-touch/</a></p>
+<h2 id="开源完整IM："><a href="#开源完整IM：" class="headerlink" title="开源完整IM："></a>开源完整IM：</h2><p>MessageDisplayKit 模仿微信样式的开源IM<br><a href="https://github.com/xhzengAIB/MessageDisplayKit" target="_blank" rel="external">MessageDisplayKit</a></p>
+<p>蘑菇街开源IM<br><a href="https://github.com/mogujie/TeamTalk" target="_blank" rel="external">TeamTalk</a></p>
+<h2 id="开源聊天界面组件："><a href="#开源聊天界面组件：" class="headerlink" title="开源聊天界面组件："></a>开源聊天界面组件：</h2><p><a href="https://github.com/jessesquires/JSQMessagesViewController" target="_blank" rel="external">JSQMessagesViewController</a></p>
+<h2 id="Code-Formatter"><a href="#Code-Formatter" class="headerlink" title="Code Formatter"></a>Code Formatter</h2><p>《<a href="http://tonyarnold.com/2014/05/31/autoformatting-your-code.html" target="_blank" rel="external">Automatically Formatting Your Objective-C</a>》</p>
+<h2 id="两篇CALayer动画的教程"><a href="#两篇CALayer动画的教程" class="headerlink" title="两篇CALayer动画的教程"></a>两篇CALayer动画的教程</h2><p>《<a href="http://www.csdn.net/article/2015-09-07/2825633/1" target="_blank" rel="external">CALayer Animation实践（一）：让应用灵动起来！</a>》</p>
+<p>《<a href="http://www.csdn.net/article/2015-09-09/2825659/2" target="_blank" rel="external">CALayer动画实践（二）：CAReplicatorLayer的用法</a>》</p>
+<h2 id="iOS-7-9-新特性"><a href="#iOS-7-9-新特性" class="headerlink" title="iOS 7 - 9 新特性"></a>iOS 7 - 9 新特性</h2><h3 id="iOS-7"><a href="#iOS-7" class="headerlink" title="iOS 7"></a>iOS 7</h3><ol>
+<li><a href="https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009542" target="_blank" rel="external">Text Kit</a><ul>
+<li>文字排版相关</li>
+</ul>
+</li>
+<li>多任务<ul>
+<li>设置<code>UIBackgroundModes</code>为<code>fetch</code>来进行定期后台下载。</li>
+<li>设置<code>UIBackgroundModes</code>为<code>remote-notification</code>, 用远程推送的方式，来让应用在后台进行下载内容。</li>
+</ul>
+</li>
+<li>NSURLSession 用来替代NSURLConnection，配合多任务后台下载使用。</li>
+<li>AirDrop<br> 附近设备分享传输文件，不需要网络。</li>
+<li>新Framework:<ul>
+<li>GameController.framework - 与游戏硬件通信</li>
+<li>SpriteKit.framework - 游戏图形渲染和动画</li>
+<li>Multipeer connectivity framework - 点对点网络</li>
+<li>JavaScriptCore.framework - JavaScript对象的oc封装</li>
+<li>MediaAccessibility.framework</li>
+<li>SafariServices.framework - 用程序添加URL到用户Safari的阅读列表等</li>
+</ul>
+</li>
+</ol>
+<h3 id="iOS-8"><a href="#iOS-8" class="headerlink" title="iOS 8"></a>iOS 8</h3><ol>
+<li><p>Swift 1.0</p>
+</li>
+<li><p><a href="https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214" target="_blank" rel="external">App Extension</a></p>
+<ul>
+<li>Share， 在系统提供的分享选项中添加自己</li>
+<li>Action, 对于选中内容可以执行一个action</li>
+<li>Today， 通知中心的widget</li>
+<li>Photo editinig. </li>
+<li>Storage provider. 与其他应用共享文件存储位置</li>
+<li>自定义键盘</li>
+</ul>
+</li>
+<li><a href="https://developer.apple.com/library/ios/samplecode/KeychainTouchID/Introduction/Intro.html#//apple_ref/doc/uid/TP40014530" target="_blank" rel="external">Touch ID</a></li>
+<li>Photos Framework</li>
+<li>AV Audio Engine: Core Audio 更上层的封装。</li>
+<li>HealthKit Framework</li>
+<li>HomeKit Framework</li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/Handoff/HandoffFundamentals/HandoffFundamentals.html#//apple_ref/doc/uid/TP40014338" target="_blank" rel="external">Handoff</a></li>
+<li>Size class</li>
+<li>Metal - 替代OpenGL ES</li>
+</ol>
+<h3 id="iOS-9"><a href="#iOS-9" class="headerlink" title="iOS 9"></a>iOS 9</h3><ol>
+<li>Swift 2.0: 错误处理，Availability, Protocol extensions等</li>
+<li>iPad 多任务</li>
+<li>watchOS2</li>
+<li>UI Test</li>
+<li>App Thinning</li>
+<li>Search API可以搜索App内容</li>
+<li>新系统字体San francisco</li>
+<li>Safari View Controller</li>
+<li>Contacts Framework</li>
+<li>3D Touch</li>
+<li>Live Photo</li>
+<li>UIStackView</li>
+</ol>
+<p>参考资料：<br>1.<a href="https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS7.html" target="_blank" rel="external">https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS7.html</a></p>
+<p>2.<a href="https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS8.html#//apple_ref/doc/uid/TP40014205-SW1" target="_blank" rel="external">https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS8.html#//apple_ref/doc/uid/TP40014205-SW1</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://baiduhidevios.github.io/2015/09/14/20150914/" data-id="cj5ghx5qs0003tfjmu4uao1hp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-20150906" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/09/07/20150906/" class="article-date">
@@ -98,7 +201,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2015/09/07/20150906/" data-id="cj5bt3q300003whjmzonymjmm" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2015/09/07/20150906/" data-id="cj5ghx5qt0004tfjmetxjm1gm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -155,7 +258,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2015/08/29/20150829/" data-id="cj5bt3q2t0001whjmwdqrylzg" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2015/08/29/20150829/" data-id="cj5ghx5qm0001tfjmfwa2zf82" class="article-share-link">Share</a>
       
       
     </footer>
@@ -198,7 +301,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2015/08/22/20150822/" data-id="cj5bt3q2y0002whjmjigqpr90" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2015/08/22/20150822/" data-id="cj5ghx5qq0002tfjmg07pbqy8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -227,7 +330,7 @@ var _hmt = _hmt || [];
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -237,6 +340,10 @@ var _hmt = _hmt || [];
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/07/23/2017-07-23技术周报/">2017-07-23技术周报</a>
+          </li>
         
           <li>
             <a href="/2017/07/14/2017-07-14技术周报/">2017-07-14技术周报</a>
@@ -252,10 +359,6 @@ var _hmt = _hmt || [];
         
           <li>
             <a href="/2017/05/07/2017-05-07技术周报/">2017-05-07技术周报</a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/24/2017-04-24技术周报/">2017-04-24技术周报</a>
           </li>
         
       </ul>

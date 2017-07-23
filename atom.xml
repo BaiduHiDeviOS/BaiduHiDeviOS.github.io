@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baiduhidevios.github.io/"/>
-  <updated>2017-07-14T09:04:38.000Z</updated>
+  <updated>2017-07-23T08:48:03.000Z</updated>
   <id>http://baiduhidevios.github.io/</id>
   
   <author>
@@ -16,20 +16,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2017-07-23技术周报</title>
+    <link href="http://baiduhidevios.github.io/2017/07/23/2017-07-23%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
+    <id>http://baiduhidevios.github.io/2017/07/23/2017-07-23技术周报/</id>
+    <published>2017-07-23T08:48:03.000Z</published>
+    <updated>2017-07-23T08:48:03.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>2017-07-14技术周报</title>
     <link href="http://baiduhidevios.github.io/2017/07/14/2017-07-14%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
     <id>http://baiduhidevios.github.io/2017/07/14/2017-07-14技术周报/</id>
     <published>2017-07-14T08:45:21.000Z</published>
-    <updated>2017-07-14T09:04:38.000Z</updated>
+    <updated>2017-07-23T09:02:59.000Z</updated>
     
     <content type="html"><![CDATA[<h6 id="本期周报内容来自-DemoCooky"><a href="#本期周报内容来自-DemoCooky" class="headerlink" title="本期周报内容来自: DemoCooky"></a>本期周报内容来自: <a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
 <hr>
-<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><p>1.<a href="http://www.cocoachina.com/swift/20170630/19691.html" target="_blank" rel="external">Swift 4 JSON 解析指南</a>: Apple在Swift4的 Foundation 的模块中添加了对 JSON 解析的原生支持，快来看看吧~</p>
-<h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><p>1.<a href="http://www.cocoachina.com/ios/20170629/19680.html" target="_blank" rel="external"> iOS 性能监控方案（上篇）</a>: 介绍了CPU 占用率、内存使用情况、FPS、冷启动、热启动时间，耗电量等基础性能指标</p>
-<p>2.<a href="http://www.cocoachina.com/ios/20170630/19683.html" target="_blank" rel="external"> iOS 性能监控方案（下篇)</a> ：介绍了在 iOS 中如何实现网络监控</p>
-<p>3.<a href="http://www.cocoachina.com/ios/20170707/19769.html" target="_blank" rel="external">iOS多线程全套</a> ：包括线程生命周期，多线程的四种解决方案，线程安全问题，GCD的使用，NSOperation的使用</p>
-<h1 id="新鲜的原生库"><a href="#新鲜的原生库" class="headerlink" title="新鲜的原生库"></a>新鲜的原生库</h1><p>1.<a href="http://www.jianshu.com/p/6c2dff59eaaf" target="_blank" rel="external">Core ML 文档翻译</a> ：Core ML是一个全新的机器学习基础框架</p>
-<p>2.<a href="http://www.jianshu.com/p/93173062ebb4" target="_blank" rel="external">ARKit 文档翻译</a> : ARKit 将 iOS 设备的摄像头和设备动作检测 (Motion) 功能，集成到您的应用或者游戏当中，从而为用户提供增强现实体验</p>
+<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><p>1.<a href="http://www.jianshu.com/p/c6ae28964ad5" target="_blank" rel="external">30天学习编写30个Swift小程序</a>:心动不如行动~写起来</p>
+<h1 id="Objective-C"><a href="#Objective-C" class="headerlink" title="Objective-C"></a>Objective-C</h1><p>1.<a href="http://www.jianshu.com/p/ed2030920ec4" target="_blank" rel="external">NSMutableArray使用中忽视的问题</a>：推荐</p>
+<h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><p>1.<a href="https://blog.wilddog.com/?p=974" target="_blank" rel="external">移动网络下的性能优化之网络篇</a></p>
+<p>2.<a href="http://www.jianshu.com/p/2cb9136c837a" target="_blank" rel="external">AFNetworking 3 批量上传图片的 3 种方法</a> </p>
+<h1 id="原来还有这种操作"><a href="#原来还有这种操作" class="headerlink" title="原来还有这种操作"></a>原来还有这种操作</h1><p>1.<a href="http://www.jianshu.com/p/7d184d68b0d5" target="_blank" rel="external">你还在写for循环求和吗？</a></p>
 ]]></content>
     
     <summary type="html">
@@ -713,40 +726,6 @@
     <summary type="html">
     
       &lt;h6 id=&quot;本期周报内容来自-桉远、nolol&quot;&gt;&lt;a href=&quot;#本期周报内容来自-桉远、nolol&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: 桉远、nolol&quot;&gt;&lt;/a&gt;本期周报内容来自: &lt;a href=&quot;https://github.
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2016.10.16技术周报</title>
-    <link href="http://baiduhidevios.github.io/2016/10/16/2016-10-16%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
-    <id>http://baiduhidevios.github.io/2016/10/16/2016-10-16技术周报/</id>
-    <published>2016-10-16T13:44:55.000Z</published>
-    <updated>2017-02-25T09:08:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>本期周报内容来自: <a href="https://github.com/AnYuan" target="_blank" rel="external">桉远</a>。</p>
-<p><a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
-<p>周报汇总 <a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">地址</a></p>
-<p>周报博客 <a href="http://baiduhidevios.github.io/">地址</a></p>
-<h3 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h3><p><a href="http://technology.meronapps.com/2016/09/27/swift-3-0-unsafe-world-2/" target="_blank" rel="external">Swift 3.0 Unsafe World</a>: 目前看过写的最好的关于讲如何用 Swift 3 来操作 C 指针的文章《Swift 3.0 Unsafe World》</p>
-<p><a href="https://realm.io/cn/news/altconf-hector-matos-type-erasure-magic/" target="_blank" rel="external">Type Erasure Magic</a></p>
-<h3 id="技术实践"><a href="#技术实践" class="headerlink" title="技术实践"></a>技术实践</h3><p><a href="http://www.jianshu.com/p/0042d8eb67c0" target="_blank" rel="external">WebView与JS的几种交互</a></p>
-<p><a href="http://www.zoomfeng.com/blog/ipa-size-thin.html" target="_blank" rel="external">iOS安装包瘦身指南</a></p>
-<p><a href="http://www.jianshu.com/p/932699e3450e" target="_blank" rel="external">浅谈JavaScript Core</a></p>
-<p>通过Xcodeproj深入探究Xcode工程文件<a href="http://www.tomorjm.com/2016/10/05/%E9%80%9A%E8%BF%87Xcodeproj%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%A9%B6Xcode%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6%20%E4%B8%80/" target="_blank" rel="external">一</a><a href="http://www.tomorjm.com/2016/10/06/%E9%80%9A%E8%BF%87Xcodeproj%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%A9%B6Xcode%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6%20%E4%BA%8C/" target="_blank" rel="external">二</a></p>
-<h3 id="源码阅读"><a href="#源码阅读" class="headerlink" title="源码阅读"></a>源码阅读</h3><p><a href="http://www.jianshu.com/p/fb3676a3d5f7" target="_blank" rel="external">苹果示例源码阅读：Reachability</a></p>
-<h3 id="开源代码："><a href="#开源代码：" class="headerlink" title="开源代码："></a>开源代码：</h3><p><a href="https://github.com/shenAlexy/MVVM" target="_blank" rel="external">MVVM</a>: MVVM architecture of a practice, rewrite the iOS headlines for the client（MVVM架构的一次实践，重写iOS头条客户端）</p>
-<p><a href="https://medium.com/app-coder-io/27-ios-open-source-libraries-to-skyrocket-your-development-301b67d3124c#.3x91edx40" target="_blank" rel="external">27 iOS open source libraries to skyrocket your development.</a>: You don’t want to miss them. Really.</p>
-<p><a href="https://github.com/PerfectFreeze/PFWebViewController" target="_blank" rel="external">PFWebViewController</a>: A light-weight webview controller using WKWebView.</p>
-<p><a href="https://github.com/Instagram/IGListKit" target="_blank" rel="external">IGListKit</a>: A data-driven UICollectionView framework for building fast and flexible lists. <a href="https://instagram.github.io/IGListKit/" target="_blank" rel="external">https://instagram.github.io/IGListKit/</a>, <a href="https://engineering.instagram.com/open-sourcing-iglistkit-3d66f1e4e9aa#.wz770vndk" target="_blank" rel="external">blog</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本期周报内容来自: &lt;a href=&quot;https://github.com/AnYuan&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;桉远&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/BaiduHiDeviOS/iOS
     
     </summary>
     
