@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baiduhidevios.github.io/"/>
-  <updated>2017-07-23T09:04:15.000Z</updated>
+  <updated>2017-08-14T02:32:16.000Z</updated>
   <id>http://baiduhidevios.github.io/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2017-08-14技术周报</title>
+    <link href="http://baiduhidevios.github.io/2017/08/14/2017-08-14%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
+    <id>http://baiduhidevios.github.io/2017/08/14/2017-08-14技术周报/</id>
+    <published>2017-08-14T02:20:08.000Z</published>
+    <updated>2017-08-14T02:32:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="本期周报内容来自-DemoCooky、nolol"><a href="#本期周报内容来自-DemoCooky、nolol" class="headerlink" title="本期周报内容来自: DemoCooky、nolol"></a>本期周报内容来自: <a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
+<hr>
+<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><h6 id="什么是ABI？"><a href="#什么是ABI？" class="headerlink" title="什么是ABI？"></a>什么是ABI？</h6><h6 id="ABI是Application-Binary-Interface的缩写，它是一个规范，通过这个规范，所有被独立编译的二进制实体才能被链接在一起并执行"><a href="#ABI是Application-Binary-Interface的缩写，它是一个规范，通过这个规范，所有被独立编译的二进制实体才能被链接在一起并执行" class="headerlink" title="ABI是Application Binary Interface的缩写，它是一个规范，通过这个规范，所有被独立编译的二进制实体才能被链接在一起并执行"></a>ABI是Application Binary Interface的缩写，它是一个规范，通过这个规范，所有被独立编译的二进制实体才能被链接在一起并执行</h6><p>1.<a href="https://www.boxueio.com/black-board/1" target="_blank" rel="external">Swift ABI (一)</a>:</p>
+<p>2.<a href="https://www.boxueio.com/black-board/2" target="_blank" rel="external">Swift ABI (二)</a></p>
+<p>3.<a href="https://www.boxueio.com/black-board/5" target="_blank" rel="external">Swift ABI (三)</a></p>
+<p>4.<a href="https://www.boxueio.com/black-board/12" target="_blank" rel="external">Swift ABI (完)</a></p>
+<p>5.<a href="https://onevcat.com/2017/07/state-based-viewcontroller/" target="_blank" rel="external">单向数据流动的函数式 View Controller</a>：推荐</p>
+<h1 id="Objective-C"><a href="#Objective-C" class="headerlink" title="Objective-C"></a>Objective-C</h1><p>1.<a href="http://www.cocoachina.com/ios/20160129/15170.html" target="_blank" rel="external">起底多线程同步锁(iOS)</a></p>
+<h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><p>1.<a href="http://blog.cnbang.net/tech/3386/" target="_blank" rel="external">iOS App 签名的原理</a>:推荐</p>
+<h1 id="开源库"><a href="#开源库" class="headerlink" title="开源库"></a>开源库</h1><p>1.<a href="https://juejin.im/post/5987cc536fb9a03c4b374bec" target="_blank" rel="external">AsyncDisplayKit近一年的使用体会及疑难点</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6 id=&quot;本期周报内容来自-DemoCooky、nolol&quot;&gt;&lt;a href=&quot;#本期周报内容来自-DemoCooky、nolol&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: DemoCooky、nolol&quot;&gt;&lt;/a&gt;本期周报内容来自: &lt;a 
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>2017-07-23技术周报</title>
@@ -694,50 +722,6 @@
     <summary type="html">
     
       &lt;h6 id=&quot;本期周报内容来自-nolol&quot;&gt;&lt;a href=&quot;#本期周报内容来自-nolol&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: nolol&quot;&gt;&lt;/a&gt;本期周报内容来自: &lt;a href=&quot;https://github.com/nolol
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2016-10-30技术周报</title>
-    <link href="http://baiduhidevios.github.io/2016/10/30/2016-10-30%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
-    <id>http://baiduhidevios.github.io/2016/10/30/2016-10-30技术周报/</id>
-    <published>2016-10-30T14:58:30.000Z</published>
-    <updated>2017-02-25T09:08:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<h6 id="本期周报内容来自-桉远、nolol"><a href="#本期周报内容来自-桉远、nolol" class="headerlink" title="本期周报内容来自: 桉远、nolol"></a>本期周报内容来自: <a href="https://github.com/AnYuan" target="_blank" rel="external">桉远</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><h6 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h6><h6 id="1-增加RSS支持"><a href="#1-增加RSS支持" class="headerlink" title="1. 增加RSS支持"></a>1. 增加RSS支持</h6><h6 id="2-增加分享支持"><a href="#2-增加分享支持" class="headerlink" title="2. 增加分享支持"></a>2. 增加分享支持</h6><hr>
-<p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
-<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><h3 id="展望-Swift-4"><a href="#展望-Swift-4" class="headerlink" title="展望 Swift 4"></a>展望 Swift 4</h3><p>Yep，Swift 4 开始开发了，在 Swift 4 的 GitHub <a href="https://github.com/apple/swift-evolution#development-major-version--swift-40" target="_blank" rel="external">主页</a>上，苹果公布了 Swift 4 的 主要目标，并计划在 2017 年晚些时候正式发布 Swift 4。苹果希望将 Swift 4 的开发分为两个阶段：</p>
-<ul>
-<li>第一阶段：关注于核心的一些需求，以及 ABI 的稳定性。苹果不希望在 Swift 4 中引入 ABI-breaking 的改变。</li>
-<li>第二阶段：该阶段希望在 2017 年春能够开始讨论，在第一阶段的任务完成后，可以增加一些或大或小的新特性。</li>
-</ul>
-<p><a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/" target="_blank" rel="external">The Swift Programming Language (Swift 3)</a><br><a href="http://www.jianshu.com/p/9e874eefa59d?open_source=weibo_search" target="_blank" rel="external">Swift译:《宣告Swift3结束和Swift4开启》</a></p>
-<h1 id="Objectiv-C"><a href="#Objectiv-C" class="headerlink" title="Objectiv-C"></a>Objectiv-C</h1><ol>
-<li><a href="http://www.jianshu.com/p/9d649ce6d0b8" target="_blank" rel="external">神经病院Objective-C Runtime入院第一天——isa和Class</a></li>
-<li><a href="http://www.jianshu.com/p/4d619b097e20" target="_blank" rel="external">神经病院Objective-C Runtime住院第二天——消息发送与转发</a></li>
-<li><a href="http://www.jianshu.com/p/db6dc23834e3" target="_blank" rel="external">神经病院Objective-C Runtime出院第三天——如何正确使用Runtime</a></li>
-</ol>
-<h1 id="Xcode-8"><a href="#Xcode-8" class="headerlink" title="Xcode 8"></a>Xcode 8</h1><h3 id="新特性"><a href="#新特性" class="headerlink" title="新特性"></a>新特性</h3><p>在 Xcode 8 中，优化或新增了包括 Interface Builder、Signing Manager、Xcode Source Editor Extension、Debug Memory Graph 在内的很多新特性。</p>
-<p><a href="http://www.cocoachina.com/ios/20161024/17830.html" target="_blank" rel="external">Xcode 8带来的新特性和坑</a><br><a href="https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/WhatsNewXcode/introduction.html" target="_blank" rel="external">What’s New in Xcode</a></p>
-<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><h3 id="fastlane-系列工具"><a href="#fastlane-系列工具" class="headerlink" title="fastlane 系列工具"></a><a href="https://fastlane.tools" target="_blank" rel="external">fastlane 系列工具</a></h3><p>fastlane is the tool to release your iOS and Android app.<br>It handles all tedious tasks, like generating screenshots, dealing with code signing, and releasing your application.</p>
-<h1 id="视野拓展"><a href="#视野拓展" class="headerlink" title="视野拓展"></a>视野拓展</h1><ol>
-<li><a href="http://dev.qq.com/topic/5809bb47cc5e52161640c5c8" target="_blank" rel="external">【Dev Club 分享第十二期】深度学习在OCR中的应用</a>: OCR技术旨在从图片中检测并识别文字信息，本次分享将介绍我们在OCR技术研发过程中的一些方法和经验总结。</li>
-<li><a href="http://dev.qq.com/topic/58009392302e4725036142fc" target="_blank" rel="external">【Dev Club 分享第十一期】QQ电话适配iOS10 Callkit框架分享</a>: 苹果在iOS 10开放了系统电话权限，全新的Callkit框架能够让音视频的第三方应用获得系统级的通话体验，本次分享将主要介绍如何应用Callkit框架和一些适配经验。</li>
-<li><a href="http://dev.qq.com/topic/57ff5932cde42f1f03de29b1" target="_blank" rel="external">微信终端跨平台组件 mars 系列（一） - 高性能日志模块xlog</a>: mars 是微信官方的终端基础组件，是一个使用 C++ 编写的业务性无关，平台性无关的基础组件。目前已接入微信 Android、iOS、Mac、Windows、WP 等客户端。现正在筹备开源中。</li>
-</ol>
-<h1 id="开源代码"><a href="#开源代码" class="headerlink" title="开源代码"></a>开源代码</h1><ol>
-<li><a href="http://www.cocoachina.com/swift/20160802/17224.html" target="_blank" rel="external">Swift—高仿单糖App</a>    </li>
-<li><a href="http://tech.meituan.com/ReactiveCocoaSignalFlow.html" target="_blank" rel="external">ReactiveCocoa核心元素与信号流</a>: ReactiveCocoa是一个函数响应式编程框架，它能让我们脱离Cocoa API的束缚，能在宏观层面上提升代码易读性与稳定性，让程序员写出富有“诗意”的代码。本文略过ReactiveCocoa的基本概念与基础使用，着重介绍RAC数据流与RAC核心元素，并从数据流的角度切入，介绍RACComand与RACChannel。</li>
-<li><a href="http://www.cocoachina.com/swift/20161014/17758.html" target="_blank" rel="external">21个高质量的Swift开源iOS App</a>: 原文：<a href="https://medium.com/m/global-identity?redirectUrl=https://medium.mybridge.co/21-amazing-open-source-ios-apps-written-in-swift-5e835afee98e#.oag5khxpe" target="_blank" rel="external">21 Amazing Open Source iOS Apps Written in Swift</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h6 id=&quot;本期周报内容来自-桉远、nolol&quot;&gt;&lt;a href=&quot;#本期周报内容来自-桉远、nolol&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: 桉远、nolol&quot;&gt;&lt;/a&gt;本期周报内容来自: &lt;a href=&quot;https://github.
     
     </summary>
     
