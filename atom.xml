@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baiduhidevios.github.io/"/>
-  <updated>2017-08-14T02:32:16.000Z</updated>
+  <updated>2017-09-17T12:44:55.000Z</updated>
   <id>http://baiduhidevios.github.io/</id>
   
   <author>
@@ -16,11 +16,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2017-09-17技术周报</title>
+    <link href="http://baiduhidevios.github.io/2017/09/17/2017-09-17%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
+    <id>http://baiduhidevios.github.io/2017/09/17/2017-09-17技术周报/</id>
+    <published>2017-09-17T12:28:11.000Z</published>
+    <updated>2017-09-17T12:44:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="本期周报内容来自-DemoCooky、nolol"><a href="#本期周报内容来自-DemoCooky、nolol" class="headerlink" title="本期周报内容来自: DemoCooky、nolol"></a>本期周报内容来自: <a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
+<hr>
+<h1 id="Objective-C"><a href="#Objective-C" class="headerlink" title="Objective-C"></a>Objective-C</h1><p>1.<a href="http://www.cnblogs.com/beckwang0912/p/7212075.html" target="_blank" rel="external">iOS 图文并茂的带你了解深拷贝与浅拷贝</a></p>
+<h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><p>1.<a href="http://jeffreysambells.com/2013/01/31/generate-xcode-warnings-from-todo-comments" target="_blank" rel="external">Generate Xcode Warnings from TODO Comments</a></p>
+<p>2.<a href="http://www.jianshu.com/p/3e0a399380df" target="_blank" rel="external">iOS音频掌柜– AVAudioSession</a></p>
+<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><p>1.<a href="https://codingstyle.cn/topics/51" target="_blank" rel="external">闯过这 54 关，点亮你的 Git 技能树</a>：推荐</p>
+<p>#扩展<br>1.<a href="https://learnopengl-cn.github.io/" target="_blank" rel="external">Welcome to OpenGL</a>: 学习（和使用）现代OpenGL需要用户对图形编程以及OpenGL的幕后运作有非常高的理解才能在编程中有很好的发挥。这篇教程将告诉我们核心的图形概念，OpenGL怎样画像素到屏幕上，还有如何利用黑科技做出一些很酷的效果。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6 id=&quot;本期周报内容来自-DemoCooky、nolol&quot;&gt;&lt;a href=&quot;#本期周报内容来自-DemoCooky、nolol&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: DemoCooky、nolol&quot;&gt;&lt;/a&gt;本期周报内容来自: &lt;a 
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>2017-08-14技术周报</title>
     <link href="http://baiduhidevios.github.io/2017/08/14/2017-08-14%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
     <id>http://baiduhidevios.github.io/2017/08/14/2017-08-14技术周报/</id>
     <published>2017-08-14T02:20:08.000Z</published>
-    <updated>2017-08-14T02:32:16.000Z</updated>
+    <updated>2017-09-17T12:45:32.000Z</updated>
     
     <content type="html"><![CDATA[<h6 id="本期周报内容来自-DemoCooky、nolol"><a href="#本期周报内容来自-DemoCooky、nolol" class="headerlink" title="本期周报内容来自: DemoCooky、nolol"></a>本期周报内容来自: <a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
 <hr>
@@ -686,42 +711,6 @@
     <summary type="html">
     
       &lt;h6 id=&quot;本期周报内容来自-DemoCooky、nolol&quot;&gt;&lt;a href=&quot;#本期周报内容来自-DemoCooky、nolol&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: DemoCooky、nolol&quot;&gt;&lt;/a&gt;本期周报内容来自: &lt;a 
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2016-11-06技术周报</title>
-    <link href="http://baiduhidevios.github.io/2016/11/06/2016-11-06%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
-    <id>http://baiduhidevios.github.io/2016/11/06/2016-11-06技术周报/</id>
-    <published>2016-11-06T14:44:52.000Z</published>
-    <updated>2017-02-25T09:08:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<h6 id="本期周报内容来自-nolol"><a href="#本期周报内容来自-nolol" class="headerlink" title="本期周报内容来自: nolol"></a>本期周报内容来自: <a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a>  </p>
-<hr>
-<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><h3 id="Whole-Module-Optimization-in-Swift-3"><a href="#Whole-Module-Optimization-in-Swift-3" class="headerlink" title="Whole-Module Optimization in Swift 3"></a><a href="https://swift.org/blog/whole-module-optimizations/" target="_blank" rel="external">Whole-Module Optimization in Swift 3</a></h3><h1 id="Objectiv-C"><a href="#Objectiv-C" class="headerlink" title="Objectiv-C"></a>Objectiv-C</h1><ol>
-<li><a href="http://justsee.iteye.com/blog/2163777" target="_blank" rel="external">Objective-C Runtime Note</a></li>
-<li><a href="http://www.tuicool.com/articles/MvI7fu3" target="_blank" rel="external">position与anchorPoint</a></li>
-</ol>
-<h1 id="Xcode-8"><a href="#Xcode-8" class="headerlink" title="Xcode 8"></a>Xcode 8</h1><h3 id="Xcode8调试黑科技：Memory-Graph实战解决闭包引用循环问题"><a href="#Xcode8调试黑科技：Memory-Graph实战解决闭包引用循环问题" class="headerlink" title="Xcode8调试黑科技：Memory Graph实战解决闭包引用循环问题"></a><a href="http://www.jianshu.com/p/f792f9aa2e45" target="_blank" rel="external">Xcode8调试黑科技：Memory Graph实战解决闭包引用循环问题</a></h3><p>Memory Graph 实战演练。</p>
-<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><h3 id="CocoaPods-1-1-0-Xcode-8-support-improved-support-for-new-Swift-versions-extensions-frameworks-and-more"><a href="#CocoaPods-1-1-0-Xcode-8-support-improved-support-for-new-Swift-versions-extensions-frameworks-and-more" class="headerlink" title="CocoaPods 1.1.0 - Xcode 8 support, improved support for new Swift versions, extensions, frameworks, and more"></a><a href="http://blog.cocoapods.org/CocoaPods-1.1.0/" target="_blank" rel="external">CocoaPods 1.1.0 - Xcode 8 support, improved support for new Swift versions, extensions, frameworks, and more</a></h3><p>CocoaPods 1.1.0 has been released!</p>
-<h3 id="UniBeast-Install-macOS-Sierra-on-Any-Supported-Intel-based-PC"><a href="#UniBeast-Install-macOS-Sierra-on-Any-Supported-Intel-based-PC" class="headerlink" title="UniBeast: Install macOS Sierra on Any Supported Intel-based PC"></a><a href="https://www.tonymacx86.com/threads/unibeast-install-macos-sierra-on-any-supported-intel-based-pc.200564/" target="_blank" rel="external">UniBeast: Install macOS Sierra on Any Supported Intel-based PC</a></h3><p>The following guide is a complete walkthrough for updating to or installing a fresh version of macOS Sierra. It requires no experience and all of the basic installation and post-installation tools are available on tonymacx86.com.</p>
-<h1 id="视野拓展"><a href="#视野拓展" class="headerlink" title="视野拓展"></a>视野拓展</h1><ol>
-<li><a href="http://www.freebuf.com/vuls/119055.html" target="_blank" rel="external">【漏洞预警】GitLab未授权访问漏洞可导致远程命令执行</a>: GitLab是一个利用Ruby on Rails开发的开源应用程序，实现一个自托管的Git项目仓库，可通过Web界面进行访问公开的或者私人项目。2016年11月3日，美国众测平台HackerOne公布了GitLab的目录遍历漏洞。漏洞的发现者为Jobert Abma，同时表示该漏洞可导致远程命令执行。</li>
-<li><a href="http://www.freebuf.com/articles/terminal/118211.html" target="_blank" rel="external">Malloc两种内存获取方式的区别</a>: 既然你正在看这篇文章，那么你就应该知道malloc函数是通过syscall调用从操作系统获取内存的。 如下图所示，malloc是通过调用brk或mmap这两种syscall之一来获取内存的。</li>
-<li><a href="http://dev.qq.com/topic/581301b146dfb1456904df8d" target="_blank" rel="external">【Dev Club 分享第十三期】腾讯验证码的十二年</a>: 验证码的诞生就是用来对抗自动机，但随着OCR技术的发展，腾讯验证码怎么发展让它能够有效持续对抗自动机。</li>
-<li><a href="http://dev.qq.com/topic/581c2c46bef1702a2db3ae53" target="_blank" rel="external">【Dev Club 分享第十四期】微信mars 的高性能日志模块 xlog</a>: 苹果在iOS 10开放了系统电话权限，全新的Callkit框架能够让音视频的第三方应用获得系统级的通话体验，本次分享将主要介绍如何应用Callkit框架和一些适配经验。</li>
-</ol>
-<h1 id="开源代码"><a href="#开源代码" class="headerlink" title="开源代码"></a>开源代码</h1><ol>
-<li><a href="http://www.jianshu.com/p/8bd6aeb719ff" target="_blank" rel="external">WebViewJavascriptBridge机制解析</a>    </li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h6 id=&quot;本期周报内容来自-nolol&quot;&gt;&lt;a href=&quot;#本期周报内容来自-nolol&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: nolol&quot;&gt;&lt;/a&gt;本期周报内容来自: &lt;a href=&quot;https://github.com/nolol
     
     </summary>
     
