@@ -65,6 +65,164 @@ var _hmt = _hmt || [];
       <div class="outer">
         <section id="main">
   
+    <article id="learning-团队原创之AV Foundation-AVAudioPlayer" class="article article-type-learning" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/26/团队原创之AV Foundation-AVAudioPlayer/" class="article-date">
+  <time datetime="2017-03-26T04:26:34.000Z" itemprop="datePublished">2017-03-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/26/团队原创之AV Foundation-AVAudioPlayer/">团队原创之AV Foundation-AVAudioPlayer</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>转自<a href="http://sunyazhou.com/" target="_blank" rel="external">東引瓯越</a> 技术博客</p>
+<h2 id="开篇"><a href="#开篇" class="headerlink" title="开篇"></a>开篇</h2><p>最近在学习<code>AV Foundation</code> 试图把学习内容记录下来 并参考一些博客文章<br>本期的内容是<code>AVAudioPlayer</code></p>
+<h2 id="音频知识基础"><a href="#音频知识基础" class="headerlink" title="音频知识基础  "></a>音频知识基础  </h2><blockquote>
+<p>音频文件的生成过程是将声音信息<strong>采样</strong>、<strong>量化</strong>和<strong>编码</strong>产生的数字信号的过程，<strong>人耳所能听到的声音，最低的频率是从20Hz起一直到最高频率20KHZ</strong>，因此音频文件格式的最大带宽是20KHZ。根据<a href="https://zh.wikipedia.org/wiki/%E5%A5%88%E5%A5%8E%E6%96%AF%E7%89%B9%E9%A2%91%E7%8E%87" target="_blank" rel="external">奈奎斯特</a>的理论，只有采样频率高于声音信号最高频率的两倍时，才能把数字信号表示的声音还原成为原来的声音，所以音频文件的采样率一般在<strong>40~50KHZ</strong>，比如最常见的CD音质采样率<strong>44.1KHZ</strong>。 (所以一般大家都觉得CD音质是最好的.) 对声音进行采样、量化过程被称为<a href="https://zh.wikipedia.org/wiki/%E8%84%88%E8%A1%9D%E7%B7%A8%E8%99%9F%E8%AA%BF%E8%AE%8A" target="_blank" rel="external">脉冲编码调制</a>（Pulse Code Modulation），简称PCM。PCM数据是最原始的音频数据完全无损，所以PCM数据虽然音质优秀但体积庞大，为了解决这个问题先后诞生了一系列的音频格式，这些音频格式运用不同的方法对音频数据进行压缩，其中有无损压缩（ALAC、APE、FLAC）和有损压缩（MP3、AAC、OGG、WMA）两种 来源:<a href="http://msching.github.io/blog/2014/07/07/audio-in-ios/" target="_blank" rel="external">iOS音频播放 (一)：概述</a> by <a href="http://msching.github.io/" target="_blank" rel="external">码农人生</a></p>
+</blockquote>
+<p>–</p>
+<p>我觉得程寅大牛的处理音频说的很明白<br>大神列出一个经典的音频播放流程（以MP3为例）</p>
+<ol>
+<li>读取MP3文件</li>
+<li>解析采样率、码率、时长等信息，分离MP3中的音频帧</li>
+<li>对分离出来的音频帧解码得到PCM数据</li>
+<li>对PCM数据进行音效处理（均衡器、混响器等，非必须）</li>
+<li>把PCM数据解码成音频信号</li>
+<li>把音频信号交给硬件播放</li>
+<li>重复1-6步直到播放完成</li>
+</ol>
+<p>在iOS系统中apple对上述的流程进行了封装并提供了不同层次的接口<br><img src="https://developer.apple.com/library/content/documentation/MusicAudio/Conceptual/CoreAudioOverview/Art/core_audio_layers_2x.png" alt="">  </p>
+<blockquote>
+<p>这是CoreAudio的接口层次  </p>
+</blockquote>
+<p>下面对其中的中高层接口进行功能说明：</p>
+<ul>
+<li>Audio File Services：读写音频数据，可以完成播放流程中的第2步；</li>
+<li>Audio File Stream Services：对音频进行解码，可以完成播放流程中的第2步；</li>
+<li>Audio Converter services：音频数据转换，可以完成播放流程中的第3步；</li>
+<li>Audio Processing Graph Services：音效处理模块，可以完成播放流程中的第4步；</li>
+<li>Audio Unit Services：播放音频数据：可以完成播放流程中的第5步、第6步；</li>
+<li>Extended Audio File Services：Audio File Services和Audio   </li>
+<li>Converter services的结合体；</li>
+<li>AVAudioPlayer/AVPlayer(AVFoundation)：高级接口，可以完成整个音频播放的过程（包括本地文件和网络流播放，第4步除外）；</li>
+<li>Audio Queue Services：高级接口，可以进行录音和播放，可以完成播放流程中的第3、5、6步；</li>
+<li>OpenAL：用于游戏音频播放，暂不讨论</li>
+</ul>
+<p>可以看到apple提供的接口类型非常丰富，可以满足各种类别类需求：  </p>
+<ul>
+<li><p>如果你只是想实现音频的播放，没有其他需求AVFoundation会很好的满足你的需求。它的接口使用简单、不用关心其中的细节；</p>
+</li>
+<li><p>如果你的app需要对音频进行流播放并且同时存储，那么AudioFileStreamer加AudioQueue能够帮到你，你可以先把音频数据下载到本地，一边下载一边用NSFileHandler等接口读取本地音频文件并交给AudioFileStreamer或者AudioFile解析分离音频帧，分离出来的音频帧可以送给AudioQueue进行解码和播放。如果是本地文件直接读取文件解析即可。（这两个都是比较直接的做法，这类需求也可以用AVFoundation+本地server的方式实现，AVAudioPlayer会把请求发送给本地server，由本地server转发出去，获取数据后在本地server中存储并转送给AVAudioPlayer。另一个比较trick的做法是先把音频下载到文件中，在下载到一定量的数据后把文件路径给AVAudioPlayer播放，当然这种做法在音频seek后就回有问题了。）</p>
+</li>
+<li>如果你正在开发一个专业的音乐播放软件，需要对音频施加音效（均衡器、混响器），那么除了数据的读取和解析以外还需要用到AudioConverter来把音频数据转换成PCM数据，再由AudioUnit+AUGraph来进行音效处理和播放（但目前多数带音效的app都是自己开发音效模块来坐PCM数据的处理，这部分功能自行开发在自定义性和扩展性上会比较强一些。PCM数据通过音效器处理完成后就可以使用AudioUnit播放了，当然AudioQueue也支持直接使对PCM数据进行播放。）。下图描述的就是使用AudioFile + AudioConverter + AudioUnit进行音频播放的流程</li>
+</ul>
+<p><img src="http://msching.github.io/images/iOS-audio/audioUnitPlay.jpg" alt=""></p>
+<p>以上内容均转自<a href="http://msching.github.io/blog/2014/07/07/audio-in-ios/" target="_blank" rel="external">码农人生</a> 希望大神不要介意 如果有问题 我可立即清除</p>
+<h2 id="使用AVAudioPlayer之前对AudioSession简介"><a href="#使用AVAudioPlayer之前对AudioSession简介" class="headerlink" title="使用AVAudioPlayer之前对AudioSession简介"></a>使用<code>AVAudioPlayer</code>之前对AudioSession简介</h2><blockquote>
+<p><code>AVAudioSession</code>负责管理音频会话 它是个单例 在应用程序和操作系统之间负责中间人的角色 <a href="http://msching.github.io/blog/2014/07/08/audio-in-ios-2/" target="_blank" rel="external">AudioSession参考</a> </p>
+</blockquote>
+<p><code>AVAudioSession</code>主要功能包括以下几点：</p>
+<ul>
+<li>app是如何使用的音频服务 播放 还是录制 之类的</li>
+<li>控制协调app输入输出设备（比如 麦克风，耳机、手机外放比如蓝牙连接一个外置音响 或airplay）</li>
+<li>协调你的app的音频播放和系统以及其他app行为（例如有电话时需要打断，电话结束时需要恢复，按下静音按钮时是否歌曲也要静音等）</li>
+</ul>
+<p><img src="https://developer.apple.com/library/content/documentation/Audio/Conceptual/AudioSessionProgrammingGuide/Art/aspg_intro_2x.png" alt=""></p>
+<p><em>注：AVAudioSession iOS6以后使用 以前叫AudioSession__</em></p>
+<h2 id="如何使用AVAudioPlayer"><a href="#如何使用AVAudioPlayer" class="headerlink" title="如何使用AVAudioPlayer"></a>如何使用<code>AVAudioPlayer</code></h2><p>在我的博客里面我尽量使用code胜过千言万语<br>使用<code>AVAudioPlayer</code>之前需要在<code>AppDelegate</code>里面导入<code>#import &lt;AVFoundation/AVFoundation.h&gt;</code><br>并且启动音频会话</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application didFinishLaunchingWithOptions:(<span class="built_in">NSDictionary</span> *)launchOptions &#123;</div><div class="line"></div><div class="line"><span class="built_in">AVAudioSession</span> *session = [<span class="built_in">AVAudioSession</span> sharedInstance];</div><div class="line"><span class="built_in">NSError</span> *error;</div><div class="line"><span class="keyword">if</span> (![session setCategory:<span class="built_in">AVAudioSessionCategoryPlayback</span> error:&amp;error]) &#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"Category Error: %@"</span>, [error localizedDescription]);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (![session setActive:<span class="literal">YES</span> error:&amp;error]) &#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"Activation Error: %@"</span>, [error localizedDescription]);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">return</span> <span class="literal">YES</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上边已经介绍了<code>AVAudioSession</code>  </p>
+<p>这里面说一下<code>[session setCategory:AVAudioSessionCategoryPlayback error:&amp;error]</code> 里面的<code>AVAudioSessionCategoryPlayback</code></p>
+<p><img src="https://raw.githubusercontent.com/sunyazhou13/sunyazhou13.github.io-images/master/Learning%20AV%20Foundation2AVAudioPlayer/AVAudioPlayer_category.png" alt="音频会话分类"></p>
+<p>这是这几种分类的列表大家可以看下</p>
+<p>记得开启后台播放<br><img src="https://raw.githubusercontent.com/sunyazhou13/sunyazhou13.github.io-images/master/Learning%20AV%20Foundation2AVAudioPlayer/MacHi%202017-03-19%2022-43-36.png" alt=""><br>或者在plist里面修改<br><img src="https://raw.githubusercontent.com/sunyazhou13/sunyazhou13.github.io-images/master/Learning%20AV%20Foundation2AVAudioPlayer/MacHi%202017-03-19%2022-44-05.png" alt="">  </p>
+<p>下面就是创建音频播放器代码</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#import <span class="meta-string">"ViewController.h"</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;Masonry/Masonry.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="meta">#import <span class="meta-string">"THControlKnob.h"</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">"THPlayButton.h"</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;AVFoundation/AVFoundation.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">ViewController</span> ()</span></div><div class="line"></div><div class="line"><span class="comment">//三个控制推子</span></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> THOrangeControlKnob *panKnob;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> THOrangeControlKnob *volumnKnob;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> THGreenControlKnob *rateKnob;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> THPlayButton *playButton;</div><div class="line"></div><div class="line"><span class="comment">//音乐播放器</span></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">AVAudioPlayer</span> *musicPlayer;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">getter</span> = isPlaying) <span class="built_in">BOOL</span> playing; <span class="comment">//播放状态</span></div><div class="line"></div><div class="line"><span class="comment">//无关代码</span></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UILabel</span> *LeftRightRoundDec;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UILabel</span> *voiceDec;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UILabel</span> *rateDec;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UILabel</span> *trackDescrption;</div><div class="line"></div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>导入几个第三方控件的类用于音乐播放</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/sunyazhou13/sunyazhou13.github.io-images/master/Learning%20AV%20Foundation2AVAudioPlayer/MacHi%202017-03-19%2021-22-43.png" alt=""></p>
+<p>这上边的三个旋钮就是导入的开源库</p>
+<p>下面创建播放器<code>AVAudioPlayer</code><br>创建时需要一个<code>NSURL</code>代表要播放的文件路径 这里简单从bundle中拖了一首歌进去了</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#pragma mark -</span></div><div class="line"><span class="meta">#pragma mark - 创建AVAudioPlayer与播放状态控制</span></div><div class="line"><span class="comment">/**</span></div><div class="line">创建音乐播放器</div><div class="line"></div><div class="line">@param fileName 文件名</div><div class="line">@param fileExtension 文件扩展名</div><div class="line">@return 播放器实例</div><div class="line">*/</div><div class="line">- (<span class="built_in">AVAudioPlayer</span> *)createPlayForFile:(<span class="built_in">NSString</span> *)fileName</div><div class="line">withExtension:(<span class="built_in">NSString</span> *)fileExtension&#123;</div><div class="line"><span class="built_in">NSURL</span> *url = [[<span class="built_in">NSBundle</span> mainBundle] URLForResource:fileName withExtension:fileExtension];</div><div class="line"><span class="built_in">NSError</span> *error = <span class="literal">nil</span>;</div><div class="line"><span class="built_in">AVAudioPlayer</span> *audioPlayer = [[<span class="built_in">AVAudioPlayer</span> alloc] initWithContentsOfURL:url error:&amp;error];</div><div class="line"><span class="keyword">if</span> (audioPlayer) &#123;</div><div class="line">audioPlayer.numberOfLoops = <span class="number">-1</span>; <span class="comment">//-1无限循环</span></div><div class="line">audioPlayer.enableRate = <span class="literal">YES</span>; <span class="comment">//启动倍速控制</span></div><div class="line">[audioPlayer prepareToPlay];</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"Error creating player: %@"</span>,[error localizedDescription]);</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> audioPlayer;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>numberOfLoops</code> = -1; 代表本首歌 无限循环 其它常数代表循环次数<br><code>enableRate</code> 代表是否启用倍速调节 0.5x 1.0x 2.0x 等倍速 1.0代表正常速度</p>
+<p>这里说一下<code>[audioPlayer prepareToPlay]</code><br><strong>调用这个函数是为了取得需要的音频硬件并预加载<code>Audio Queue</code>的缓冲区.</strong> 当然也可以不调用这个方法直接调用 <code>[audioPlayer play]</code>，但当  <strong>调用<code>play</code>方法时也会隐性激活</strong>,调用<code>prepareToPlay</code>是为了减少 创建播放器时预设加载和听到声音输出之间的延时 </p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span></span></div><div class="line"></div><div class="line">- (<span class="keyword">instancetype</span>)initWithNibName:(<span class="built_in">NSString</span> *)nibNameOrNil bundle:(<span class="built_in">NSBundle</span> *)nibBundleOrNil &#123;</div><div class="line"><span class="keyword">self</span> = [<span class="keyword">super</span> initWithNibName:nibNameOrNil bundle:nibBundleOrNil];</div><div class="line"><span class="keyword">if</span> (<span class="keyword">self</span>) &#123;</div><div class="line"><span class="keyword">if</span> (<span class="keyword">self</span>.musicPlayer == <span class="literal">nil</span>) &#123;</div><div class="line"><span class="keyword">self</span>.musicPlayer = [<span class="keyword">self</span> createPlayForFile:<span class="string">@"384551_1438267683"</span> withExtension:<span class="string">@"mp3"</span>];</div><div class="line">&#125;</div><div class="line">[<span class="keyword">self</span> setupNotifications];</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> <span class="keyword">self</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)awakeFromNib&#123;</div><div class="line">[<span class="keyword">super</span> awakeFromNib];</div><div class="line"><span class="keyword">if</span> (<span class="keyword">self</span>.musicPlayer == <span class="literal">nil</span>) &#123;</div><div class="line"><span class="keyword">self</span>.musicPlayer = [<span class="keyword">self</span> createPlayForFile:<span class="string">@"384551_1438267683"</span> withExtension:<span class="string">@"mp3"</span>];</div><div class="line">&#125;</div><div class="line">[<span class="keyword">self</span> setupNotifications];</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>在<code>initWithNibName</code>或<code>awakeFromNib</code>时候调用一下创建播放器的代码<br>这个<code>[self setupNotifications];</code>后面说  </p>
+</blockquote>
+<p>先添加一些常见的方法封装 比如 <strong>播放、暂停、停止</strong><br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">- (<span class="keyword">void</span>)play &#123;</div><div class="line"><span class="keyword">if</span> (<span class="keyword">self</span>.musicPlayer == <span class="literal">nil</span>) &#123; <span class="keyword">return</span>; &#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (!<span class="keyword">self</span>.playing) &#123;</div><div class="line"><span class="built_in">NSTimeInterval</span> delayTime = [<span class="keyword">self</span>.musicPlayer deviceCurrentTime] + <span class="number">0.01</span>;</div><div class="line">[<span class="keyword">self</span>.musicPlayer playAtTime:delayTime];</div><div class="line"><span class="keyword">self</span>.playing = <span class="literal">YES</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">self</span>.trackDescrption.text = [<span class="keyword">self</span>.musicPlayer.url absoluteString];</div><div class="line">[<span class="keyword">self</span> configNowPlayingInfoCenter]; <span class="comment">//配置后台播放的页面信息</span></div><div class="line">&#125;</div><div class="line">- (<span class="keyword">void</span>)stop &#123;</div><div class="line"><span class="keyword">if</span> (<span class="keyword">self</span>.musicPlayer == <span class="literal">nil</span>) &#123; <span class="keyword">return</span>; &#125;</div><div class="line"><span class="keyword">if</span> (<span class="keyword">self</span>.playing) &#123;</div><div class="line">[<span class="keyword">self</span>.musicPlayer stop];</div><div class="line"><span class="keyword">self</span>.musicPlayer.currentTime = <span class="number">0.0</span>f;</div><div class="line"><span class="keyword">self</span>.playing = <span class="literal">NO</span>;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)pause &#123;</div><div class="line"><span class="keyword">if</span> (<span class="keyword">self</span>.musicPlayer == <span class="literal">nil</span>) &#123; <span class="keyword">return</span>; &#125;</div><div class="line"><span class="keyword">if</span> (<span class="keyword">self</span>.playing) &#123;</div><div class="line">[<span class="keyword">self</span>.musicPlayer pause];</div><div class="line"><span class="keyword">self</span>.playing = <span class="literal">NO</span>;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这里看到<code>[self.musicPlayer deviceCurrentTime] + 0.01</code> 加了 -0.01的延时, 是为了以后大家做播放器的时候 有可能暂停或者歌曲切换时 有可能 向前向后做片段衔接, 也是为了使用 <code>playAtTime</code>去播放 指定位置的音乐用于 意外暂停或者播放上次播放的配置信息使用 这里看到我写了一个<br><code>[self configNowPlayingInfoCenter];</code>配置后台播放的页面信息<br>这个主要用于播放音乐在后台时 锁屏显示的屏幕信息  请看下面代码</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//设置锁屏状态，显示的歌曲信息</span></div><div class="line">-(<span class="keyword">void</span>)configNowPlayingInfoCenter&#123;</div><div class="line"><span class="keyword">if</span> (<span class="built_in">NSClassFromString</span>(<span class="string">@"MPNowPlayingInfoCenter"</span>)) &#123;</div><div class="line"><span class="built_in">NSMutableDictionary</span> *dict = [[<span class="built_in">NSMutableDictionary</span> alloc] init];</div><div class="line"></div><div class="line"><span class="comment">//歌曲名称</span></div><div class="line">[dict setObject:<span class="string">@"歌曲名称"</span> forKey:<span class="built_in">MPMediaItemPropertyTitle</span>];</div><div class="line"></div><div class="line"><span class="comment">//演唱者</span></div><div class="line">[dict setObject:<span class="string">@"演唱者"</span> forKey:<span class="built_in">MPMediaItemPropertyArtist</span>];</div><div class="line"></div><div class="line"><span class="comment">//专辑名</span></div><div class="line">[dict setObject:<span class="string">@"专辑名"</span> forKey:<span class="built_in">MPMediaItemPropertyAlbumTitle</span>];</div><div class="line"></div><div class="line"><span class="comment">//专辑缩略图</span></div><div class="line"><span class="built_in">UIImage</span> *image = [<span class="built_in">UIImage</span> imageNamed:<span class="string">@"sunyazhou"</span>];</div><div class="line"><span class="built_in">MPMediaItemArtwork</span> *artwork = [[<span class="built_in">MPMediaItemArtwork</span> alloc] initWithImage:image];</div><div class="line">[dict setObject:artwork forKey:<span class="built_in">MPMediaItemPropertyArtwork</span>];</div><div class="line"></div><div class="line"><span class="comment">//音乐剩余时长</span></div><div class="line">[dict setObject:@<span class="number">20</span> forKey:<span class="built_in">MPMediaItemPropertyPlaybackDuration</span>];</div><div class="line"></div><div class="line"><span class="comment">//音乐当前播放时间 在计时器中修改</span></div><div class="line"><span class="comment">// [dict setObject:[NSNumber numberWithDouble:100.0] forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];</span></div><div class="line"></div><div class="line"><span class="comment">//设置锁屏状态下屏幕显示播放音乐信息</span></div><div class="line">[[<span class="built_in">MPNowPlayingInfoCenter</span> defaultCenter] setNowPlayingInfo:dict];</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果需要在计时器中不断刷新锁屏状态下的播放进度条请写如下代码</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//计时器修改进度</span></div><div class="line">- (<span class="keyword">void</span>)changeProgress:(<span class="built_in">NSTimer</span> *)sender&#123;</div><div class="line"><span class="keyword">if</span>(<span class="keyword">self</span>.player)&#123;</div><div class="line"><span class="comment">//当前播放时间</span></div><div class="line"><span class="built_in">NSMutableDictionary</span> *dict = [<span class="built_in">NSMutableDictionary</span> dictionaryWithDictionary:[[<span class="built_in">MPNowPlayingInfoCenter</span> defaultCenter] nowPlayingInfo]];</div><div class="line">[dict setObject:[<span class="built_in">NSNumber</span> numberWithDouble:<span class="keyword">self</span>.player.currentTime] forKey:<span class="built_in">MPNowPlayingInfoPropertyElapsedPlaybackTime</span>]; <span class="comment">//音乐当前已经过时间</span></div><div class="line">[[<span class="built_in">MPNowPlayingInfoCenter</span> defaultCenter] setNowPlayingInfo:dict];</div><div class="line"></div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>参考<a href="http://www.iliunian.com/2831.html" target="_blank" rel="external">IOS后台运行 之 后台播放音乐</a> </p>
+</blockquote>
+<p>下面我们来介绍一下<br><code>[self setupNotifications];</code>注册监听 音频意外中断和耳机拔出时要暂停音乐播放<br>实现代码如下</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">播放的通知处理</div><div class="line">*/</div><div class="line">- (<span class="keyword">void</span>)setupNotifications &#123;</div><div class="line"><span class="built_in">NSNotificationCenter</span> *nsnc = [<span class="built_in">NSNotificationCenter</span> defaultCenter];</div><div class="line"></div><div class="line"><span class="comment">//添加意外中断音频播放的通知</span></div><div class="line">[nsnc addObserver:<span class="keyword">self</span></div><div class="line">selector:<span class="keyword">@selector</span>(handleInterruption:)</div><div class="line">name:<span class="built_in">AVAudioSessionInterruptionNotification</span></div><div class="line">object:[<span class="built_in">AVAudioSession</span> sharedInstance]];</div><div class="line"></div><div class="line"><span class="comment">//添加线路变化通知</span></div><div class="line">[nsnc addObserver:<span class="keyword">self</span></div><div class="line">selector:<span class="keyword">@selector</span>(hanldeRouteChange:)</div><div class="line">name:<span class="built_in">AVAudioSessionRouteChangeNotification</span></div><div class="line">object:[<span class="built_in">AVAudioSession</span> sharedInstance]];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><em>注：记得在delloc里面<code>[[NSNotificationCenter defaultCenter] removeObserver:self]</code></em></p>
+<p>意外中断音频发生的场景 例如 听歌过程中来电话或者 按住home键使用siri </p>
+<p>下面是具体方法实现</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">音频意外打断处理</div><div class="line"></div><div class="line">@param notification 通知信息</div><div class="line">*/</div><div class="line">- (<span class="keyword">void</span>)handleInterruption:(<span class="built_in">NSNotification</span> *)notification &#123;</div><div class="line"><span class="built_in">NSDictionary</span> *info = notification.userInfo;</div><div class="line"><span class="built_in">AVAudioSessionInterruptionType</span> type = [info[<span class="built_in">AVAudioSessionInterruptionTypeKey</span>] unsignedIntegerValue];</div><div class="line"><span class="keyword">if</span> (type == <span class="built_in">AVAudioSessionInterruptionTypeBegan</span>) &#123;</div><div class="line"><span class="comment">//Handle AVAudioSessionInterruptionTypeBegan</span></div><div class="line">[<span class="keyword">self</span> pause];</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line"><span class="comment">//Handle AVAudioSessionInterruptionTypeEnded</span></div><div class="line"><span class="built_in">AVAudioSessionInterruptionOptions</span> options = [info[<span class="built_in">AVAudioSessionInterruptionTypeKey</span>] unsignedIntegerValue];</div><div class="line"><span class="built_in">NSError</span> *error = <span class="literal">nil</span>;</div><div class="line"><span class="comment">//激活音频会话 允许外接音响</span></div><div class="line">[[<span class="built_in">AVAudioSession</span> sharedInstance] setCategory:<span class="built_in">AVAudioSessionCategoryPlayback</span></div><div class="line">withOptions:<span class="built_in">AVAudioSessionCategoryOptionAllowBluetooth</span> error:<span class="literal">nil</span>];</div><div class="line">[[<span class="built_in">AVAudioSession</span> sharedInstance] setActive:<span class="literal">YES</span> withOptions:<span class="built_in">AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation</span> error:&amp;error];</div><div class="line"><span class="keyword">if</span> (options == <span class="built_in">AVAudioSessionInterruptionOptionShouldResume</span>) &#123;</div><div class="line">[<span class="keyword">self</span> play];</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">[<span class="keyword">self</span> play];</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">self</span>.playButton.selected = <span class="literal">YES</span>;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (error) &#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"AVAudioSessionInterruptionOptionShouldResume失败:%@"</span>,[error localizedDescription]);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>先说<code>handleInterruption</code>意外情况下中断比如我按住home键使用siri<br>我会收到意外打断的通知当 type == <code>AVAudioSessionInterruptionTypeBegan</code>时 我们停止音乐播放或者暂停.<br>当type != <code>AVAudioSessionInterruptionTypeBegan</code>的时候一定是<code>AVAudioSessionInterruptionTypeEnded</code>这个时候<code>notification.userInfo</code>里面包含一个<code>AVAudioSessionInterruptionOptions</code>值来表明音频会话是否已经重新激活以及是否可以再次播放</p>
+<p><strong><em>注:这个地方遇到个坑</em></strong> 当意外中断时候有时音频会话会很不灵敏 后来发现这种情况下需要重新激活会话 如下代码:</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[[<span class="built_in">AVAudioSession</span> sharedInstance] setActive:<span class="literal">YES</span> withOptions:<span class="built_in">AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation</span> error:&amp;error];</div></pre></td></tr></table></figure>
+<p>这里<code>AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation</code>是为了通知其它应用会话被我激活了 很多播放器开发者很不讲究 每次从来不用这个方法导致每次别人播放完音频 自己都收不到音频重新播放的信息 建议大家以和为贵, 写良心代码.</p>
+<p>因为我外接的小米蓝牙音响发现还是不好使 最后又补上了<code>AVAudioSessionCategoryOptionAllowBluetooth</code>这个  </p>
+<p><strong>激活音频会话 允许外接音响</strong></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[[<span class="built_in">AVAudioSession</span> sharedInstance] setCategory:<span class="built_in">AVAudioSessionCategoryPlayback</span> withOptions:<span class="built_in">AVAudioSessionCategoryOptionAllowBluetooth</span> error:<span class="literal">nil</span>];</div></pre></td></tr></table></figure>
+<p>就好使了</p>
+<p>下面说一下耳机插拔或者USB麦克风断开 Apple有个什么<code>Human Interface Guidelines(HIG)</code>相关定义 意思是说当硬件耳机拔出时建议 暂停播放音乐或者麦克风断开时。就是处于静音状态。是为了保密播放内容不被外界听到,不管苹果啥规定 我们都得照办 否则就得被拒。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)hanldeRouteChange:(<span class="built_in">NSNotification</span> *)notification &#123;</div><div class="line"><span class="built_in">NSDictionary</span> *info = notification.userInfo;</div><div class="line"><span class="built_in">AVAudioSessionRouteChangeReason</span> reason = [info[<span class="built_in">AVAudioSessionRouteChangeReasonKey</span>] unsignedIntegerValue];</div><div class="line"><span class="comment">//老设备不可用</span></div><div class="line"><span class="keyword">if</span> (reason == <span class="built_in">AVAudioSessionRouteChangeReasonOldDeviceUnavailable</span>) &#123;</div><div class="line"><span class="built_in">AVAudioSessionRouteDescription</span> *previousRoute = info[<span class="built_in">AVAudioSessionRouteChangePreviousRouteKey</span>];</div><div class="line"><span class="built_in">AVAudioSessionPortDescription</span> *previousOutput = previousRoute.outputs[<span class="number">0</span>];</div><div class="line"><span class="built_in">NSString</span> *portType = previousOutput.portType;</div><div class="line"><span class="keyword">if</span> ([portType isEqualToString:<span class="built_in">AVAudioSessionPortHeadphones</span>]) &#123;</div><div class="line">[<span class="keyword">self</span> stop];</div><div class="line"><span class="keyword">self</span>.playButton.selected = <span class="literal">NO</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这需要用<code>AVAudioSessionRouteChangeReasonKey</code>取出线路切换的原因<code>AVAudioSessionRouteChangeReason</code> 原因有这么多</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="built_in">NS_ENUM</span>(<span class="built_in">NSUInteger</span>, <span class="built_in">AVAudioSessionRouteChangeReason</span>)</div><div class="line">&#123;</div><div class="line"><span class="built_in">AVAudioSessionRouteChangeReasonUnknown</span> = <span class="number">0</span>,</div><div class="line"><span class="built_in">AVAudioSessionRouteChangeReasonNewDeviceAvailable</span> = <span class="number">1</span>,</div><div class="line"><span class="built_in">AVAudioSessionRouteChangeReasonOldDeviceUnavailable</span> = <span class="number">2</span>,</div><div class="line"><span class="built_in">AVAudioSessionRouteChangeReasonCategoryChange</span> = <span class="number">3</span>,</div><div class="line"><span class="built_in">AVAudioSessionRouteChangeReasonOverride</span> = <span class="number">4</span>,</div><div class="line"><span class="built_in">AVAudioSessionRouteChangeReasonWakeFromSleep</span> = <span class="number">6</span>,</div><div class="line"><span class="built_in">AVAudioSessionRouteChangeReasonNoSuitableRouteForCategory</span> = <span class="number">7</span>,</div><div class="line"><span class="built_in">AVAudioSessionRouteChangeReasonRouteConfigurationChange</span> <span class="built_in">NS_ENUM_AVAILABLE_IOS</span>(<span class="number">7</span>_0) = <span class="number">8</span></div><div class="line">&#125; <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">6</span>_0);</div></pre></td></tr></table></figure>
+<p>我们需要这个<code>AVAudioSessionRouteChangeReasonOldDeviceUnavailable</code> 判断是否是旧设备<br>通过<code>AVAudioSessionRouteChangePreviousRouteKey</code>拿出</p>
+<p><code>AVAudioSessionRouteDescription</code>描述信息<br><code>previousRoute</code> 在通过<br><code>previousRoute.outputs[0]</code>拿出<code>AVAudioSessionPortDescription</code></p>
+<p>拿出<code>NSString *portType = previousOutput.portType</code></p>
+<p>如果<code>[portType isEqualToString:AVAudioSessionPortHeadphones]</code></p>
+<p>如果是耳机<code>AVAudioSessionPortHeadphones</code>则暂停播放</p>
+<p>以上就是中断和线路切换的一些代码逻辑</p>
+<p>下面我介绍一些好玩的</p>
+<p><img src="https://raw.githubusercontent.com/sunyazhou13/sunyazhou13.github.io-images/master/Learning%20AV%20Foundation2AVAudioPlayer/IMG_2090.PNG" alt=""></p>
+<p>前面说的一些后台设置信息显示的内容就是上图所示 在锁屏的时候显示</p>
+<p>但是大家一定很奇怪的是怎么实现接收 <strong>锁屏状态下 点击 上一曲 暂停/播放 下一曲等操作</strong></p>
+<p>需要在AppDelegate里面写上</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application didFinishLaunchingWithOptions:(<span class="built_in">NSDictionary</span> *)launchOptions &#123;</div><div class="line"></div><div class="line"><span class="built_in">AVAudioSession</span> *session = [<span class="built_in">AVAudioSession</span> sharedInstance];</div><div class="line"><span class="built_in">NSError</span> *error;</div><div class="line"><span class="keyword">if</span> (![session setCategory:<span class="built_in">AVAudioSessionCategoryPlayback</span> error:&amp;error]) &#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"Category Error: %@"</span>, [error localizedDescription]);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (![session setActive:<span class="literal">YES</span> error:&amp;error]) &#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"Activation Error: %@"</span>, [error localizedDescription]);</div><div class="line">&#125;</div><div class="line"></div><div class="line">[[<span class="built_in">UIApplication</span> sharedApplication] beginReceivingRemoteControlEvents];</div><div class="line">[<span class="keyword">self</span> becomeFirstResponder];</div><div class="line"><span class="keyword">return</span> <span class="literal">YES</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这<code>[[UIApplication sharedApplication] beginReceivingRemoteControlEvents];</code><br>行代码 以及调用自己为 <code>[self becomeFirstResponder];</code>第一响应者 这样写是为了应用响应音频播放 后台切换或者中断的时候更灵敏.</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">BOOL</span>)canBecomeFirstResponder &#123;</div><div class="line"><span class="keyword">return</span> <span class="literal">YES</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>然后 写上如下代码 处理<strong>锁屏状态下 点击 上一曲 暂停/播放 下一曲等操作</strong></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)remoteControlReceivedWithEvent:(<span class="built_in">UIEvent</span> *)event &#123;</div><div class="line"><span class="keyword">if</span> (event.type == <span class="built_in">UIEventTypeRemoteControl</span>) &#123;</div><div class="line"><span class="keyword">switch</span> (event.subtype) &#123;</div><div class="line"><span class="keyword">case</span> <span class="built_in">UIEventSubtypeRemoteControlPlay</span>:</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"暂停播放"</span>);</div><div class="line"><span class="keyword">break</span>;</div><div class="line"><span class="keyword">case</span> <span class="built_in">UIEventSubtypeRemoteControlPause</span>:</div><div class="line"></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"继续播放"</span>);</div><div class="line"><span class="keyword">break</span>;</div><div class="line"><span class="keyword">case</span> <span class="built_in">UIEventSubtypeRemoteControlNextTrack</span>:</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"下一曲"</span>);</div><div class="line"><span class="keyword">break</span>;</div><div class="line"><span class="keyword">case</span> <span class="built_in">UIEventSubtypeRemoteControlPreviousTrack</span>:</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"上一曲"</span>);</div><div class="line"><span class="keyword">break</span>;</div><div class="line"><span class="keyword">default</span>:</div><div class="line"><span class="keyword">break</span>;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>剩余逻辑大家自己填充吧我就不介绍了. </p>
+<p>好了AVAudioPlayer就到这吧！有啥疑问大家可以评论留言都能看到或者指正我的错误。我会及时改正.</p>
+<p>全文完</p>
+<p><strong>文章的最终<a href="https://github.com/sunyazhou13/AVAudioPlayerDemo" target="_blank" rel="external">demo</a></strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://baiduhidevios.github.io/2017/03/26/团队原创之AV Foundation-AVAudioPlayer/" data-id="cj7zf6frs002focjmuzt6wzui" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-2017-03-26技术周报" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/03/26/2017-03-26技术周报/" class="article-date">
@@ -98,7 +256,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2017/03/26/2017-03-26技术周报/" data-id="cj7oqj1m10023czjmxqq6jfpc" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2017/03/26/2017-03-26技术周报/" data-id="cj7zf6fri0020ocjm1u15vidl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -143,7 +301,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2017/03/18/2017-03-18技术周报/" data-id="cj7oqj1lv001yczjmpjlmaoi1" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2017/03/18/2017-03-18技术周报/" data-id="cj7zf6fri001zocjmgdw6whq7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -189,7 +347,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2017/03/11/2017-03-11技术周报/" data-id="cj7oqj1lw001zczjm40jr5qf9" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2017/03/11/2017-03-11技术周报/" data-id="cj7zf6frh001yocjmqm1nwbv2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -234,7 +392,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2017/03/03/2017-03-03技术周报/" data-id="cj7oqj1lu001xczjmx9yc9wui" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2017/03/03/2017-03-03技术周报/" data-id="cj7zf6frg001xocjmvcnkqoeg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -278,7 +436,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2017/02/25/2017-02-25技术周报/" data-id="cj7oqj1lt001wczjmtgevbgxf" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2017/02/25/2017-02-25技术周报/" data-id="cj7zf6frf001wocjmxfxaxyaz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -335,7 +493,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2016/12/19/2016-12-18技术周报/" data-id="cj7oqj1ll001nczjm2l8hdxxq" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2016/12/19/2016-12-18技术周报/" data-id="cj7zf6fr5001mocjmy4en073l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -390,7 +548,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2016/12/11/2016-12-11技术周报/" data-id="cj7oqj1lk001mczjmnu9g6w00" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2016/12/11/2016-12-11技术周报/" data-id="cj7zf6fr4001kocjmbtubiif6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -447,7 +605,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2016/12/04/2016-12-04技术周报/" data-id="cj7oqj1lj001kczjmexhl3hkw" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2016/12/04/2016-12-04技术周报/" data-id="cj7zf6fr5001locjmg9be5k31" class="article-share-link">Share</a>
       
       
     </footer>
@@ -502,62 +660,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2016/11/27/2016-11-27技术周报/" data-id="cj7oqj1lh001jczjm2o1z1jg8" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2016-11-13技术周报" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/11/13/2016-11-13技术周报/" class="article-date">
-  <time datetime="2016-11-13T14:12:10.000Z" itemprop="datePublished">2016-11-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/13/2016-11-13技术周报/">2016-11-13技术周报</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="本期周报内容来自-DemoCooky、nolol"><a href="#本期周报内容来自-DemoCooky、nolol" class="headerlink" title="本期周报内容来自: DemoCooky、nolol"></a>本期周报内容来自: <a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
-<hr>
-<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><ol>
-<li><a href="http://www.cocoachina.com/ios/20161109/18007.html" target="_blank" rel="external">39个优秀的Swift UI开源库</a></li>
-<li><a href="http://www.cocoachina.com/ios/20161108/17998.html" target="_blank" rel="external">百里挑一：21个优质Swift开源App</a></li>
-</ol>
-<h1 id="技术实践"><a href="#技术实践" class="headerlink" title="技术实践"></a>技术实践</h1><ol>
-<li><a href="https://webkit.org/blog/7016/ios-10-link-preview-api-in-wkwebview/" target="_blank" rel="external">iOS 10 Link Preview API in WKWebView</a></li>
-<li><a href="https://onevcat.com/2016/08/notification/" target="_blank" rel="external">iOS 10 UserNotifications 框架解析</a></li>
-<li><a href="http://blog.xcodev.com/posts/sqlite3-performance-indeep/" target="_blank" rel="external">SQLite3性能深入分析</a></li>
-<li><a href="http://dev.qq.com/topic/58203cfcd149ba305c5ccf85" target="_blank" rel="external">揭秘：微信是如何用libco支撑8亿用户的</a></li>
-</ol>
-<h1 id="视野拓展"><a href="#视野拓展" class="headerlink" title="视野拓展"></a>视野拓展</h1><ol>
-<li><a href="http://www.freebuf.com/video/119864.html" target="_blank" rel="external">【FB TV】一周「BUF大事件」：利用Mirai僵尸网络企图关闭国家网络；可自己发明加密算法的AI；Gmail被发现存高危漏洞</a>: 导致半个美国网络瘫痪的Mirai僵尸网络”，被“有心人士”盯上，他们竟企图关闭整个国家的互联网；人工智能不再只存在与想象之中，Google的人工智能可以自己发明加密算法；Gmail被发现存在高危漏洞，此漏洞可使用户帐号被轻松破解。</li>
-<li><a href="http://www.securityweek.com/yahoo-reveals-more-details-about-massive-hack" target="_blank" rel="external">Yahoo Reveals More Details About Massive Hack</a>: 雅虎披露更多大规模黑客入侵事件的细节</li>
-</ol>
-<h1 id="开源代码"><a href="#开源代码" class="headerlink" title="开源代码"></a>开源代码</h1><ol>
-<li><a href="http://ios.jobbole.com/84388/" target="_blank" rel="external">GitHub 上 iOS 开源库 Top 100</a>: 主要对当前 GitHub 排名前 100 的项目做一个简单的简介, 方便初学者快速了解到当前 Objective-C 在 GitHub 的情况.</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2016/11/13/2016-11-13技术周报/" data-id="cj7oqj1lh001iczjmcq650nac" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2016/11/27/2016-11-27技术周报/" data-id="cj7zf6fr3001jocjmtmbidfg9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -586,7 +689,7 @@ var _hmt = _hmt || [];
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -596,6 +699,10 @@ var _hmt = _hmt || [];
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/09/25/2017-09-25技术周报/">2017-09-25技术周报</a>
+          </li>
         
           <li>
             <a href="/2017/09/17/2017-09-17技术周报/">2017-09-17技术周报</a>
@@ -611,10 +718,6 @@ var _hmt = _hmt || [];
         
           <li>
             <a href="/2017/07/14/2017-07-14技术周报/">2017-07-14技术周报</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/26/2017-06-26期技术周报/">2017-06-26技术周报</a>
           </li>
         
       </ul>
