@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baiduhidevios.github.io/"/>
-  <updated>2017-09-25T00:13:47.000Z</updated>
+  <updated>2017-11-26T15:14:11.000Z</updated>
   <id>http://baiduhidevios.github.io/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2017-10-29技术周报</title>
+    <link href="http://baiduhidevios.github.io/2017/10/29/2017-10-29%E6%9C%9F%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
+    <id>http://baiduhidevios.github.io/2017/10/29/2017-10-29期技术周报/</id>
+    <published>2017-10-29T07:36:58.000Z</published>
+    <updated>2017-11-26T15:14:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="本期周报内容来自-DemoCooky、nolol"><a href="#本期周报内容来自-DemoCooky、nolol" class="headerlink" title="本期周报内容来自: DemoCooky、nolol"></a>本期周报内容来自: <a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
+<hr>
+<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><p>1.<a href="https://onevcat.com/2017/10/swift-error-category/" target="_blank" rel="external">关于 Swift Error 的分类</a><br>2.<a href="http://www.jianshu.com/p/3bedf1de5cb3" target="_blank" rel="external">What’s New in Swift 4?</a></p>
+<h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><p>1.<a href="http://mp.weixin.qq.com/s/kOEW_aeo__uv4V9xbkWVvA" target="_blank" rel="external">《手管iPhoneX的适配总结》</a></p>
+<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><p>1.<a href="http://www.jianshu.com/p/f16d7f3c8d5f" target="_blank" rel="external">TCP/IP（一）：数据链路层</a><br>2.<a href="http://www.jianshu.com/p/9cb5cf1864da" target="_blank" rel="external">TCP/IP（二）：IP协议</a><br>3.<a href="http://www.jianshu.com/p/f0d5a8ee9f17" target="_blank" rel="external">TCP/IP（三）：IP协议相关技术</a><br>4.<a href="http://www.jianshu.com/p/dc456cf57e06" target="_blank" rel="external">TCP/IP（四）：TCP 与 UDP 协议简介</a><br>5.<a href="http://www.jianshu.com/p/d9edbba4035b" target="_blank" rel="external">TCP/IP（五）：TCP 协议详解</a><br>6.<a href="http://www.jianshu.com/p/6e7521041e92" target="_blank" rel="external">TCP/IP（六）：HTTP 与 HTTPS 简介</a><br>7.<a href="http://www.jianshu.com/p/6ecd5ae12809" target="_blank" rel="external">字符串编码入门科普</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6 id=&quot;本期周报内容来自-DemoCooky、nolol&quot;&gt;&lt;a href=&quot;#本期周报内容来自-DemoCooky、nolol&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: DemoCooky、nolol&quot;&gt;&lt;/a&gt;本期周报内容来自: &lt;a 
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>2017-09-25技术周报</title>
@@ -658,43 +681,6 @@
 </ol>
 <h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><ol>
 <li><a href="http://weibo.com/swiftlanguage" target="_blank" rel="external">SwiftLanguage</a>: 让我们以开发者的视角追随、跟踪它的一举一动。dev.swiftguide.cn｜非官方微博</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h6 id=&quot;本期周报内容来自-GlareCH、nolol&quot;&gt;&lt;a href=&quot;#本期周报内容来自-GlareCH、nolol&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: GlareCH、nolol&quot;&gt;&lt;/a&gt;本期周报内容来自: &lt;a href=&quot;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2016-11-27技术周报</title>
-    <link href="http://baiduhidevios.github.io/2016/11/27/2016-11-27%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
-    <id>http://baiduhidevios.github.io/2016/11/27/2016-11-27技术周报/</id>
-    <published>2016-11-27T15:08:26.000Z</published>
-    <updated>2017-02-25T09:08:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<h6 id="本期周报内容来自-GlareCH、nolol"><a href="#本期周报内容来自-GlareCH、nolol" class="headerlink" title="本期周报内容来自: GlareCH、nolol"></a>本期周报内容来自: <a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
-<hr>
-<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><ol>
-<li><a href="https://www.objc.io/issues/15-testing/mocking-stubbing/" target="_blank" rel="external">Test Doubles: Mocks, Stubs, and More</a></li>
-<li><a href="https://www.objc.io/issues/15-testing/dependency-injection/" target="_blank" rel="external">Dependency Injection</a></li>
-<li><a href="https://www.objc.io/issues/15-testing/bad-testing-practices/" target="_blank" rel="external">Bad Testing Practices</a></li>
-</ol>
-<h1 id="技术实践"><a href="#技术实践" class="headerlink" title="技术实践"></a>技术实践</h1><ol>
-<li><a href="http://blog.ibireme.com/2015/11/02/mobile_image_benchmark/" target="_blank" rel="external">移动端图片格式调研</a>: <a href="https://github.com/ibireme" target="_blank" rel="external">ibireme</a> 在做YYImage时的调研成果</li>
-<li><a href="http://blog.ibireme.com/2015/11/02/ios_image_tips/" target="_blank" rel="external">iOS 处理图片的一些小 Tip</a>: <a href="https://github.com/ibireme" target="_blank" rel="external">ibireme</a> 在做YYImage时的调研成果</li>
-<li><a href="http://www.programering.com/a/MTN1ATNwATQ.html" target="_blank" rel="external">To speed up the XCode compile and link speed (200%+)</a>: 如何加快XCode编译速度？</li>
-</ol>
-<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ol>
-<li><a href="https://github.com/Flipboard/FLEX" target="_blank" rel="external">FLEX</a>: FLEX (Flipboard Explorer) is a set of in-app debugging and exploration tools for iOS development. When presented, FLEX shows a toolbar that lives in a window above your application. From this toolbar, you can view and modify nearly every piece of state in your running application.</li>
-<li><a href="http://www.freebuf.com/sectool/119680.html" target="_blank" rel="external">静态分析工具大集合</a>: 静态程序分析（Static program analysis）是指在不运行计算机程序的条件下，进行程序分析的方法。有些程序分析需要在程序运行时才能进行，这种程序分析称为动态程序分析。大部分的静态程序分析的对象是针对特定版本的源代码，也有些静态程序分析的对象是目标代码。静态程序分析一词多半是指配合静态程序分析工具进行的分析，人工进行的分析一般称为程序理解或代码审查。</li>
-</ol>
-<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><ol>
-<li><a href="https://www.objc.io/about/" target="_blank" rel="external">objc.io</a>: objc.io was founded 2013 in Berlin by Chris Eidhof, Daniel Eggert, and Florian Kugler. We started objc.io to create a platform for in-depth technical topics relevant to all iOS and OS X developers.</li>
 </ol>
 ]]></content>
     
