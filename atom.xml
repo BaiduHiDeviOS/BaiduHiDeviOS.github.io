@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baiduhidevios.github.io/"/>
-  <updated>2017-11-26T15:14:11.000Z</updated>
+  <updated>2018-01-07T15:21:57.000Z</updated>
   <id>http://baiduhidevios.github.io/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2018-01-07技术周报</title>
+    <link href="http://baiduhidevios.github.io/2018/01/07/2018-01-07%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
+    <id>http://baiduhidevios.github.io/2018/01/07/2018-01-07技术周报/</id>
+    <published>2018-01-07T15:09:40.000Z</published>
+    <updated>2018-01-07T15:21:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="本期周报内容来自-nolol、eggInBlack"><a href="#本期周报内容来自-nolol、eggInBlack" class="headerlink" title="本期周报内容来自:nolol、eggInBlack"></a>本期周报内容来自:<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a>、<a href="https://github.com/orgs/BaiduHiDeviOS/people/eggInBlack" target="_blank" rel="external">eggInBlack</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
+<hr>
+<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><p>1.<a href="http://www.cocoachina.com/ios/20180103/21732.html" target="_blank" rel="external">新年新语言，WCDB Swift</a>：WCDB 作为微信的终端数据库，从 2017.6 开源至今，共迭代了 5 个版本，如今终于正式发布了 WCDB Swift 的第一个正式版本。</p>
+<h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><p>1.<a href="https://juejin.im/post/5a33a6926fb9a045104a8d3c" target="_blank" rel="external">iOS 上的 FlexBox 布局</a>:FlexBox 是一种 UI 布局方式，并得到了所有浏览器的支持,其强大之处在于灵活的布局技巧以及相比于AutoLayout界面渲染更加的流畅。【推荐】</p>
+<p>2.<a href="https://juejin.im/entry/59924874518825485e1d5129" target="_blank" rel="external">Yoga 教程: 使用跨平台布局引擎</a></p>
+<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><p>1.<a href="http://blog.csdn.net/u010011236/article/details/53026127" target="_blank" rel="external">PCM、WAV格式介绍及用C语言实现PCM转WAV</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6 id=&quot;本期周报内容来自-nolol、eggInBlack&quot;&gt;&lt;a href=&quot;#本期周报内容来自-nolol、eggInBlack&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自:nolol、eggInBlack&quot;&gt;&lt;/a&gt;本期周报内容来自:&lt;a
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>2017-10-29技术周报</title>
@@ -648,45 +672,6 @@
     <summary type="html">
     
       &lt;h6 id=&quot;本期周报内容来自-nolol&quot;&gt;&lt;a href=&quot;#本期周报内容来自-nolol&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: nolol&quot;&gt;&lt;/a&gt;本期周报内容来自: &lt;a href=&quot;https://github.com/nolol
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2016-12-04技术周报</title>
-    <link href="http://baiduhidevios.github.io/2016/12/04/2016-12-04%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
-    <id>http://baiduhidevios.github.io/2016/12/04/2016-12-04技术周报/</id>
-    <published>2016-12-04T13:58:18.000Z</published>
-    <updated>2017-02-25T09:08:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<h6 id="本期周报内容来自-GlareCH、nolol"><a href="#本期周报内容来自-GlareCH、nolol" class="headerlink" title="本期周报内容来自: GlareCH、nolol"></a>本期周报内容来自: <a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
-<hr>
-<h1 id="技术实践"><a href="#技术实践" class="headerlink" title="技术实践"></a>技术实践</h1><ol>
-<li><a href="https://realm.io/news/tryswift-amy-dyer-incremental-swift/" target="_blank" rel="external">Incremental Swift</a>: 当你想升级到 Swift，但是重写所有的 Objective-C 代码根本不现实的时候，你要怎么做？Amy Dyer 讲述了他们在 Etsy 应用上的实践经验。  </li>
-<li><a href="https://oleb.net/blog/2016/11/rawrepresentable/" target="_blank" rel="external">The RawRepresentable Protocol in Swift</a><br><a href="http://chris.eidhof.nl/post/protocol-oriented-programming/" target="_blank" rel="external">Protocol Oriented Programming is Not a Silver Bullet</a></li>
-<li><a href="http://blog.benjamin-encz.de/post/understanding-data-race-detection-by-implementing-in-swift" target="_blank" rel="external">Understanding Data Race Detection by Implementing it in Swift</a>: Benjamin Encz wanted to understand the Thread Sanitizer better and so he implemented a version of it.</li>
-<li><a href="http://dev.qq.com/topic/583ccfecb5f2ebea6e610f90" target="_blank" rel="external">Bugly热更新SDK你需要知道的一些事</a>: 热更新能力是Bugly为解决开发者紧急修复线上Bug，而无需重新发版让用户无感知就能把问题修复的一项能力。</li>
-</ol>
-<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ol>
-<li><a href="https://eject.herokuapp.com" target="_blank" rel="external">Eject from Interface Builder</a>: 当界面复杂到不再适合使用IB时，可以将xib文件转成loadView方法。</li>
-</ol>
-<h1 id="开源"><a href="#开源" class="headerlink" title="开源"></a>开源</h1><ol>
-<li><a href="https://github.com/aschuch/StatefulViewController" target="_blank" rel="external">StatefulViewController</a>: 基于内容状态（加载中、错误、空）的占位符实用视图组件。</li>
-<li><a href="https://github.com/Onix-Systems/RainyRefreshControl" target="_blank" rel="external">RainyRefreshControl</a>: 下雨要撑伞动效下拉刷新组件。</li>
-<li><a href="https://github.com/Cosmo/TinyConsole" target="_blank" rel="external">TinyConsole</a>: A tiny log console to display information while using your iOS app. Written in Swift 3.</li>
-<li><a href="https://github.com/facebookincubator/Keyframes" target="_blank" rel="external">Keyframes</a>: A library for converting Adobe AE shape based animations to a data format and playing it back on Android and iOS devices.</li>
-<li><a href="https://github.com/Ramotion/adaptive-tab-bar" target="_blank" rel="external">Adaptive Tab Bar</a>: 这个库提供了一个很有意思的产品设计思路，让界面随着用户使用时长的变化而变化。</li>
-</ol>
-<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><ol>
-<li><a href="http://weibo.com/swiftlanguage" target="_blank" rel="external">SwiftLanguage</a>: 让我们以开发者的视角追随、跟踪它的一举一动。dev.swiftguide.cn｜非官方微博</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h6 id=&quot;本期周报内容来自-GlareCH、nolol&quot;&gt;&lt;a href=&quot;#本期周报内容来自-GlareCH、nolol&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: GlareCH、nolol&quot;&gt;&lt;/a&gt;本期周报内容来自: &lt;a href=&quot;
     
     </summary>
     
