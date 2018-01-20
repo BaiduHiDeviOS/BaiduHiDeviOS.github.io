@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baiduhidevios.github.io/"/>
-  <updated>2018-01-20T07:45:14.000Z</updated>
+  <updated>2018-01-20T08:14:22.000Z</updated>
   <id>http://baiduhidevios.github.io/</id>
   
   <author>
@@ -16,15 +16,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2018-01-20技术周报</title>
+    <link href="http://baiduhidevios.github.io/2018/01/20/2018-01-20%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
+    <id>http://baiduhidevios.github.io/2018/01/20/2018-01-20技术周报/</id>
+    <published>2018-01-20T07:48:28.000Z</published>
+    <updated>2018-01-20T08:14:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="本期周报内容来自-nolol、DemoCooky"><a href="#本期周报内容来自-nolol、DemoCooky" class="headerlink" title="本期周报内容来自:nolol、DemoCooky"></a>本期周报内容来自:<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
+<hr>
+<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><p>1.<a href="https://github.com/Lax/iOS-Swift-Demos" target="_blank" rel="external">Swift学习资源大礼包</a>:哈哈 新年大礼包~~快上车</p>
+<p>2.<a href="https://mp.weixin.qq.com/s?__biz=MzA3ODg4MDk0Ng==&amp;mid=2651114138&amp;idx=1&amp;sn=a02787b9faa8c8bd0afb19922b60f982" target="_blank" rel="external">2017最受欢迎的30个Swift 库，你关注到了吗？</a></p>
+<p>3.<a href="https://www.jianshu.com/p/3a3bf236e85e" target="_blank" rel="external">[Swift] 2017年33个必须了解的iOS开源库</a></p>
+<h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><p>1.<a href="http://www.cocoachina.com/ios/20180118/21902.html" target="_blank" rel="external">从 Aspects 源码中我学到了什么</a></p>
+<p>2.<a href="https://www.jianshu.com/p/be9a0a088feb" target="_blank" rel="external">iOS图片加载框架－SDWebImage解读</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6 id=&quot;本期周报内容来自-nolol、DemoCooky&quot;&gt;&lt;a href=&quot;#本期周报内容来自-nolol、DemoCooky&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自:nolol、DemoCooky&quot;&gt;&lt;/a&gt;本期周报内容来自:&lt;a hr
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>2018-01-14技术周报</title>
     <link href="http://baiduhidevios.github.io/2018/01/20/2018-01-14%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
     <id>http://baiduhidevios.github.io/2018/01/20/2018-01-14技术周报/</id>
     <published>2018-01-20T07:33:01.000Z</published>
-    <updated>2018-01-20T07:45:14.000Z</updated>
+    <updated>2018-01-20T07:46:43.000Z</updated>
     
     <content type="html"><![CDATA[<h6 id="本期周报内容来自-nolol、DemoCooky"><a href="#本期周报内容来自-nolol、DemoCooky" class="headerlink" title="本期周报内容来自:nolol、DemoCooky"></a>本期周报内容来自:<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
 <hr>
-<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><p>######介绍两款数据格式转换的神器^_^<br>1.<a href="https://github.com/typwr/typewriter" target="_blank" rel="external">Typewriter</a>：typewriter是客户端翻译服务端数据交换格式的代码翻译器</p>
+<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><h6 id="介绍两款数据格式转换的神器"><a href="#介绍两款数据格式转换的神器" class="headerlink" title="介绍两款数据格式转换的神器^_^"></a>介绍两款数据格式转换的神器^_^</h6><p>1.<a href="https://github.com/typwr/typewriter" target="_blank" rel="external">Typewriter</a>：typewriter是客户端翻译服务端数据交换格式的代码翻译器</p>
 <p>2.<a href="https://github.com/quicktype/quicktype-xcode" target="_blank" rel="external">QuickType</a>:QuickType也是一款数据类型翻译器，它从Json数据中推断出数据类型，然后转换成相应的数据模型。</p>
 <h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><p>1.<a href="https://juejin.im/post/5a3214a451882503eb4b4bed" target="_blank" rel="external">iOS 花式二维码生成和二维码识别</a>:EFQRCode 是一个用 Swift 编写的用来生成和识别二维码的库，基于 CoreImage 进行开发。亮点是支持Gif生成动态二维码。</p>
 <p>2.<a href="https://www.jianshu.com/p/e5a52409ffd5" target="_blank" rel="external">基于TableStore/MaxCompute的数据采集分析系统介绍</a>：TableStore(表格存储)是阿里云自主研发的专业级分布式NoSQL数据库，是基于共享存储的高性能、低成本、易扩展、全托管的半结构化数据存储平台，支撑互联网和物联网数据的高效计算与分析。</p>
@@ -620,45 +645,6 @@
     <summary type="html">
     
       &lt;p&gt;本期周报内容来自: &lt;a href=&quot;https://github.com/orgs/BaiduHiDeviOS/people/eggInBlack&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;eggInBlack&lt;/a&gt;、&lt;a href=&quot;https:
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2016-12-18技术周报</title>
-    <link href="http://baiduhidevios.github.io/2016/12/19/2016-12-18%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
-    <id>http://baiduhidevios.github.io/2016/12/19/2016-12-18技术周报/</id>
-    <published>2016-12-18T16:09:02.000Z</published>
-    <updated>2017-02-25T09:08:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<h6 id="本期周报内容来自-nolol"><a href="#本期周报内容来自-nolol" class="headerlink" title="本期周报内容来自: nolol"></a>本期周报内容来自: <a href="https://github.com/nolol" target="_blank" rel="external">nolol</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
-<hr>
-<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><ol>
-<li><a href="http://www.cocoachina.com/swift/20161201/18198.html" target="_blank" rel="external">iOS界面布局的核心以及TangramKit介绍</a>: <a href="https://github.com/youngsoft/TangramKit" target="_blank" rel="external">TangramKit</a>是iOS系统下用Swift编写的第三方界面布局框架。他集成了iOS的AutoLayout和SizeClass以及Android的五大容器布局体系以及HTML/CSS中的float和flex-box的布局功能和思想，目的是为iOS开发人员提供一套功能强大、多屏幕灵活适配、简单易用的UI布局解决方案</li>
-<li><a href="https://github.com/apple/swift-protobuf" target="_blank" rel="external">Swift Protobuf</a>: Plugin and runtime library for using protobuf with Swift</li>
-<li><a href="https://www.ibm.com/developerworks/cn/linux/l-cn-gpb/" target="_blank" rel="external">Google Protocol Buffer 的使用和原理 - IBM</a></li>
-<li><a href="http://www.cocoachina.com/swift/20161121/18144.html" target="_blank" rel="external">从 Swift 的面向协议编程说开去</a></li>
-</ol>
-<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ol>
-<li><a href="http://www.jianshu.com/p/92cd90e65d4c" target="_blank" rel="external">Xcode 8 Instruments 学习（一）</a></li>
-<li><a href="http://www.jianshu.com/p/9ac281228de2" target="_blank" rel="external">Xcode 8 Instruments 学习（二）</a></li>
-<li><a href="http://www.jianshu.com/p/b3443352169c" target="_blank" rel="external">Xcode 8 Instruments 学习（三）</a></li>
-<li><a href="http://www.jianshu.com/p/ca6e25bf4604" target="_blank" rel="external">Xcode 8 Instruments 学习（四）</a></li>
-<li><a href="http://www.jianshu.com/p/0783cb5e1a46" target="_blank" rel="external">Xcode 8 Instruments 学习（五）</a></li>
-<li><a href="https://github.com/Carthage/Carthage" target="_blank" rel="external">Carthage</a>: A simple, decentralized dependency manager for Cocoa</li>
-</ol>
-<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><ol>
-<li><a href="http://www.jianshu.com/p/856f0e26279d" target="_blank" rel="external">AFNetworking到底做了什么？</a></li>
-<li><a href="http://www.jianshu.com/p/f32bd79233da" target="_blank" rel="external">AFNetworking到底做了什么？(二)</a></li>
-<li><a href="https://wereadteam.github.io/2016/05/23/GYBootingProtection/" target="_blank" rel="external">iOS 启动连续闪退保护方案</a>: “如果某个实体表现出以下任何一种特性，它就具备自主性：自我修复、自我保护、自我维护、对目标的自我控制、自我改进。” —— 凯文·凯利</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h6 id=&quot;本期周报内容来自-nolol&quot;&gt;&lt;a href=&quot;#本期周报内容来自-nolol&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: nolol&quot;&gt;&lt;/a&gt;本期周报内容来自: &lt;a href=&quot;https://github.com/nolol
     
     </summary>
     

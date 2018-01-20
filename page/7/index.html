@@ -65,6 +65,83 @@ var _hmt = _hmt || [];
       <div class="outer">
         <section id="main">
   
+    <article id="post-iOS单元测试" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/20/iOS单元测试/" class="article-date">
+  <time datetime="2016-03-20T10:44:48.000Z" itemprop="datePublished">2016-03-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/20/iOS单元测试/">iOS单元测试</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="by-崔春健"><a href="#by-崔春健" class="headerlink" title="by 崔春健"></a>by 崔春健</h5><h4 id="一、什么是单元测试？"><a href="#一、什么是单元测试？" class="headerlink" title="一、什么是单元测试？"></a>一、什么是单元测试？</h4><p> 1、最小可测单元</p>
+<p> 2、不是为了发现bug，是为了提高开发效率，为了我们的代码健康可持续发展</p>
+<h4 id="二、单元测试的优缺点"><a href="#二、单元测试的优缺点" class="headerlink" title="二、单元测试的优缺点"></a>二、单元测试的优缺点</h4><h5 id="1⃣️优点："><a href="#1⃣️优点：" class="headerlink" title="1⃣️优点："></a>1⃣️优点：</h5><p> 1、好的单元测试就是一份上好的文档，而且比文档更容易被程序员接受。</p>
+<p> 2、开发人员修改代码不再畏首畏尾，提高开发者的信心</p>
+<p> 3、单元测试能保证在加入新功能或修改旧功能时代码的正确性</p>
+<p> 4、单元测试保证在整个开发流程中代码都会被测试，更容易及早发现问题，降低风险。对于项目管理来说，使软件的开发流程更容易掌控。</p>
+<h5 id="2⃣️缺点："><a href="#2⃣️缺点：" class="headerlink" title="2⃣️缺点："></a>2⃣️缺点：</h5><p> 1、单元测试不能减少研发的代码量，反而会花费很多精力在编写单元测试上，增加了开发成本，而且对开发人员的要求也会更高<br> 另外个人觉得，单元测试对于很小的项目意义不大；对于项目周期较长，需求比较复杂的中性或大型项目，单测将意义重大</p>
+<h4 id="三、测试用例的来源"><a href="#三、测试用例的来源" class="headerlink" title="三、测试用例的来源"></a>三、测试用例的来源</h4><p> 1、需求和详细设计文档</p>
+<p> 2、bug fix</p>
+<h4 id="四、单元测试由谁写"><a href="#四、单元测试由谁写" class="headerlink" title="四、单元测试由谁写"></a>四、单元测试由谁写</h4><p> 1、最好是开发者本人</p>
+<p> 2、对于新人，可以由老师傅来写单元测试，用于指导新人开发</p>
+<h4 id="五、如何写单元测试"><a href="#五、如何写单元测试" class="headerlink" title="五、如何写单元测试"></a>五、如何写单元测试</h4><p> 1、iOS单元测试的结构是这样的，</p>
+<p> 2、每一个Test Case的写法有三个步骤：①Mock对象，准备测试数据。②调用要测试的目标API。③验证输出和行为是否正确</p>
+<p> 测试普通文件消息收发:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">- (void)testSendFileMessage &#123;</div><div class="line"></div><div class="line">    // ①Mock对象，准备测试数据</div><div class="line">    BDIMFileMessage *fileMessage = [[BDIMFileMessage alloc] init];</div><div class="line"></div><div class="line">   BDIMFileMessageContent *fileContent = [[BDIMFileMessageContent alloc] init];</div><div class="line">    fileContent.fileName = @&quot;bd_logo1.png&quot;;</div><div class="line">    fileContent.filePath = deskTopPath;</div><div class="line"></div><div class="line">	fileMessage.comnFile = fileContent;</div><div class="line">	fileMessage.addresserName = @&quot;tester&quot;;</div><div class="line">   fileMessage.extra = @&quot;file_extra&quot;;</div><div class="line"></div><div class="line">    // ②调用要测试的目标API</div><div class="line">    [self.conversation sendMessage:fileMessage];</div><div class="line"></div><div class="line">    // ③验证输出和行为是否正确</div><div class="line">    expect([_imMessage isKindOfClass:[BDIMFileMessage class]]).will.beTruthy();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> 3、Application Tests</p>
+<pre><code>.    $(BUILT_PRODUCTS_DIR)/&lt;app_name&gt;.app/&lt;app_name&gt;
+.    $(BUNDLE_LOADER)
+</code></pre><h4 id="六、代码的可测性"><a href="#六、代码的可测性" class="headerlink" title="六、代码的可测性"></a>六、代码的可测性</h4><ul>
+<li>类之间要松耦合</li>
+<li>被测试的函数需要产生可测量的结果</li>
+<li>被测试的函数要遵循单一职责</li>
+<li>展示和业务逻辑要分开</li>
+<li>记得重构，不断提高代码的可测性</li>
+</ul>
+<h4 id="七、最佳实践"><a href="#七、最佳实践" class="headerlink" title="七、最佳实践"></a>七、最佳实践</h4><ul>
+<li><p>每个功能类都应提供单元测试，且每一个测试类，只依赖于其要测试的受测类。使用伪造对象避免对其他类的依赖，保证一个测试类只关注一个被测类，当测试不通过时，就能迅速的定位到是谁发生了错误，而不会受到其他类的干扰；使用伪造环境避免其他环境的干扰，保证case在任何环境下都能输出同样的测试结果</p>
+</li>
+<li><p>一个单测方法只测试一个功能点，并且不依赖其他测试用例的结果作为输入，保证case的原子性。if-else这种分支的情况最好分成两个case来测试</p>
+</li>
+<li><p>单元测试通过数据的变化来做输出结果的验证</p>
+</li>
+<li><p>应对所有暴露的属性和方法提供测试（包含回调方法），私有方法则不必。因为对外接口应该会调用到所有的私有方法，而且私有方法相对公有方法来说发生变动的可能性大很多，会造成不必要的修改测试代码的成本。如果非要测试私有方法，可以通过KVC、子类化和类别来实现</p>
+</li>
+<li><p>TDD，测试驱动开发的妙处即在于，它以需求为引领，通过测试的形式，来指导开发者进行软件的设计与架构，并编写出最为精炼的代码，使得测试用例运行通过。经过适当的重构之后，测试用例与产品代码可达到较为健康的状态。</p>
+</li>
+<li><p>第三方的框架有很多，OCUnit、<a href="https://github.com/gh-unit/gh-unit.git" target="_blank" rel="external">GHUnit</a>、<a href="https://github.com/specta/expecta.git" target="_blank" rel="external">Expecta</a>、<a href="https://github.com/erikdoe/ocmock.git" target="_blank" rel="external">OCMock</a>，目前我使用的OCUnit + Expecta</p>
+</li>
+</ul>
+<h4 id="八、衡量标准"><a href="#八、衡量标准" class="headerlink" title="八、衡量标准"></a>八、衡量标准</h4><p> 1、代码覆盖率</p>
+<p> 2、Case的成功率</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://baiduhidevios.github.io/2016/03/20/iOS单元测试/" data-id="cjcn2vsld002g2cjmgrfw4iqy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-2016-03-06技术周报" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/03/06/2016-03-06技术周报/" class="article-date">
@@ -103,7 +180,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2016/03/06/2016-03-06技术周报/" data-id="cjcn1ulj4000ldsjmxk2bu5uz" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2016/03/06/2016-03-06技术周报/" data-id="cjcn2vsjo000k2cjmaxxkn7bx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -159,7 +236,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2016/02/28/20160228/" data-id="cjcn1ulk9001udsjmnkltfoxq" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2016/02/28/20160228/" data-id="cjcn2vskx001v2cjmnfmi6ygr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -206,7 +283,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2016/02/21/20160221/" data-id="cjcn1ulk6001sdsjm5jk7gz9r" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2016/02/21/20160221/" data-id="cjcn2vskv001u2cjm1x41bmnr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -250,7 +327,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2016/02/14/20160214/" data-id="cjcn1ulk7001tdsjmqqdg0oec" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2016/02/14/20160214/" data-id="cjcn2vsku001t2cjmes79xjuv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -299,7 +376,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2016/02/14/20160207/" data-id="cjcn1ulk5001rdsjm70kv9npb" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2016/02/14/20160207/" data-id="cjcn2vskt001s2cjmyitkectd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -347,7 +424,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2016/01/31/20160201/" data-id="cjcn1ulk4001qdsjmtfrnnms6" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2016/01/31/20160201/" data-id="cjcn2vskr001r2cjm38ju8ys8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -393,7 +470,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2016/01/24/20160125/" data-id="cjcn1ulk3001pdsjmkftdk3hf" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2016/01/24/20160125/" data-id="cjcn2vskr001q2cjmdulzw4d2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -446,7 +523,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2016/01/17/20160118/" data-id="cjcn1ulk3001odsjmf79w287q" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2016/01/17/20160118/" data-id="cjcn2vskq001p2cjm2keyaw00" class="article-share-link">Share</a>
       
       
     </footer>
@@ -491,54 +568,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2016/01/10/20160111/" data-id="cjcn1ulk2001ndsjm350106pm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-20160104" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/01/04/20160104/" class="article-date">
-  <time datetime="2016-01-04T14:53:50.000Z" itemprop="datePublished">2016-01-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/04/20160104/">2016.01.04技术周报</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>感谢本期周报线索提供同学: 展歌，桉远。</p>
-<p>周报汇总 <a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">地址</a></p>
-<p>周报博客 <a href="http://baiduhidevios.github.io/">地址</a></p>
-<h3 id="开源代码："><a href="#开源代码：" class="headerlink" title="开源代码："></a>开源代码：</h3><p><a href="https://github.com/postmates/PMKVObserver" target="_blank" rel="external">PMKVObserver</a>:A type-safe Swift/ObjC KVO wrapper.</p>
-<h3 id="文章："><a href="#文章：" class="headerlink" title="文章："></a>文章：</h3><p><a href="http://kayosite.com/ios-development-and-detail-of-photo-framework.html" target="_blank" rel="external">iOS 开发之照片框架详解</a> 包括AssetsLibrary及新库photoKit(<a href="https://developer.apple.com/library/ios/samplecode/UsingPhotosFramework/Introduction/Intro.html#//apple_ref/doc/uid/TP40014575" target="_blank" rel="external">官方demo</a>)</p>
-<p><a href="http://nshipster.com/nsformatter/" target="_blank" rel="external">NSFormatter</a>: 各种听过没听过，用过没用过的formatter</p>
-<p><a href="https://www.mikeash.com/pyblog/friday-qa-2015-12-25-swifty-targetaction.html" target="_blank" rel="external">Swift target acton</a>: Cocoa’s target/action system for responding to controls is a great system for Objective-C, but is a bit unnatural to use in Swift. Today, I’m going to explore building a wrapper that allows using a Swift function as the action.</p>
-<p><a href="https://www.objc.io/issues/6-build-tools/compiler/" target="_blank" rel="external">objc.io: Compiler</a>: In this article we’ll have a look at what a compiler does, and how we can use that to our advantage.</p>
-<p><a href="https://www.objc.io/issues/6-build-tools/mach-o-executables/" target="_blank" rel="external">objc.io: mach-o excutables</a>: When we build an application in Xcode, part of what happens is that the sources files (.m and .h) get turned into an executable. This executable contains the byte code than will run on the CPU, the ARM processor on the iOS device, or the Intel processor on your Mac. We’ll walk through some of what the compiler does and what’s inside such an executable. There’s more to it than first meets the eye.</p>
-<h3 id="效率工具"><a href="#效率工具" class="headerlink" title="效率工具"></a>效率工具</h3><p><a href="http://macpaw.com/zh/store/cleanmymac" target="_blank" rel="external">CleanMyMac 3</a>: 智能清理Mac磁盘空间。</p>
-<h3 id="程序员的自我修养"><a href="#程序员的自我修养" class="headerlink" title="程序员的自我修养"></a>程序员的自我修养</h3><p><a href="http://www.yinwang.org/blog-cn/2015/11/21/programming-philosophy/" target="_blank" rel="external">编程的智慧</a>: 编程是一种创造性的工作，是一门艺术。精通任何一门艺术，都需要很多的练习和领悟，所以这里提出的“智慧”，并不是号称一天瘦十斤的减肥药，它并不能代替你自己的勤奋。然而由于软件行业喜欢标新立异，喜欢把简单的事情搞复杂，我希望这些文字能给迷惑中的人们指出一些正确的方向，让他们少走一些弯路，基本做到一分耕耘一分收获。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://baiduhidevios.github.io/2016/01/04/20160104/" data-id="cjcn1ulk2001mdsjmzmxkl7ic" class="article-share-link">Share</a>
+      <a data-url="http://baiduhidevios.github.io/2016/01/10/20160111/" data-id="cjcn2vskp001n2cjm9db816lb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -550,7 +580,7 @@ var _hmt = _hmt || [];
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
     </nav>
   
 </section>
@@ -567,7 +597,7 @@ var _hmt = _hmt || [];
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -577,6 +607,10 @@ var _hmt = _hmt || [];
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/01/20/2018-01-20技术周报/">2018-01-20技术周报</a>
+          </li>
         
           <li>
             <a href="/2018/01/20/2018-01-14技术周报/">2018-01-14技术周报</a>
@@ -592,10 +626,6 @@ var _hmt = _hmt || [];
         
           <li>
             <a href="/2017/09/25/2017-09-25技术周报/">2017-09-25技术周报</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/17/2017-09-17技术周报/">2017-09-17技术周报</a>
           </li>
         
       </ul>
