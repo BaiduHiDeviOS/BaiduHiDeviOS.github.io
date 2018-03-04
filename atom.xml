@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baiduhidevios.github.io/"/>
-  <updated>2018-01-20T08:14:22.000Z</updated>
+  <updated>2018-03-04T14:28:03.000Z</updated>
   <id>http://baiduhidevios.github.io/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2018-03-04技术周报</title>
+    <link href="http://baiduhidevios.github.io/2018/03/04/2018-03-04%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
+    <id>http://baiduhidevios.github.io/2018/03/04/2018-03-04技术周报/</id>
+    <published>2018-03-04T14:12:15.000Z</published>
+    <updated>2018-03-04T14:28:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="本期周报内容来自-nolol、DemoCooky"><a href="#本期周报内容来自-nolol、DemoCooky" class="headerlink" title="本期周报内容来自:nolol、DemoCooky"></a>本期周报内容来自:<a href="https://github.com/nolol" target="_blank" rel="external">nolol</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a></h6><p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
+<hr>
+<h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><p>1.<a href="https://www.jianshu.com/p/a98c871cc3fd" target="_blank" rel="external">UIScrollView &amp;&amp; UITableView &amp;&amp; UICollectionView</a></p>
+<p>2.<a href="https://neyoufan.github.io/2017/04/19/ios/网易HubbleData无埋点SDK在iOS端的设计与实现/" target="_blank" rel="external">网易HubbleData无埋点SDK在iOS端的设计与实现</a></p>
+<p>3.<a href="https://mp.weixin.qq.com/s/CiqMlEIp1Ir2EJSDGgMooQ" target="_blank" rel="external">iOS微信内存监控</a></p>
+<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><p>1.<a href="https://www.jianshu.com/p/83b99f34d67c" target="_blank" rel="external">对于 iOS 开发，人工智能意味着什么？</a></p>
+<p>2.<a href="http://www.cocoachina.com/ios/20180224/22329.html" target="_blank" rel="external">移动 APP 网络优化概述</a></p>
+<p>3.<a href="：http://iosfly.com/2016/12/03/HTTPDNS/">移动解析HTTPDNS在App开发中实践总结</a></p>
+<p>4.<a href="https://mp.weixin.qq.com/s/z4RFP3Y0UGUrSiwcSN72GA" target="_blank" rel="external">谷歌今日上线基于TensorFlow的机器学习速成课程（中文版）</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6 id=&quot;本期周报内容来自-nolol、DemoCooky&quot;&gt;&lt;a href=&quot;#本期周报内容来自-nolol、DemoCooky&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自:nolol、DemoCooky&quot;&gt;&lt;/a&gt;本期周报内容来自:&lt;a hr
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>2018-01-20技术周报</title>
@@ -619,32 +646,6 @@
     <summary type="html">
     
       &lt;h6 id=&quot;本期周报内容来自-eggInBlack、GlareCH、DemoCooky&quot;&gt;&lt;a href=&quot;#本期周报内容来自-eggInBlack、GlareCH、DemoCooky&quot; class=&quot;headerlink&quot; title=&quot;本期周报内容来自: eggInBla
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2017-02-25技术周报</title>
-    <link href="http://baiduhidevios.github.io/2017/02/25/2017-02-25%E6%8A%80%E6%9C%AF%E5%91%A8%E6%8A%A5/"/>
-    <id>http://baiduhidevios.github.io/2017/02/25/2017-02-25技术周报/</id>
-    <published>2017-02-25T07:28:32.000Z</published>
-    <updated>2017-02-25T09:13:31.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>本期周报内容来自: <a href="https://github.com/orgs/BaiduHiDeviOS/people/eggInBlack" target="_blank" rel="external">eggInBlack</a>、<a href="https://github.com/glarech" target="_blank" rel="external">GlareCH</a>、<a href="https://github.com/DemoCooky" target="_blank" rel="external">DemoCooky</a></p>
-<p>时光机：<a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">周报汇总</a>、<a href="http://baiduhidevios.github.io/">周报博客</a>、<a href="https://github.com/BaiduHiDeviOS/iOS-puzzles" target="_blank" rel="external">iOS puzzles</a></p>
-<hr>
-<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>是的！我们的技术周报又开始更新了~首先，和大家道个歉，在2017年伊始，由于组内同学都忙于各自的项目中，以至于冷落了这里，也陆续收到了一些『催更』的吐槽邮件，说明大家还在关注我们哈~再次表示感激！！本周起我们会继续给大家提供高质量的博客文章，也希望各位大牛参与我们的投稿，同时更加欢迎热爱技术的你对我们的周报提出宝贵的意见与建议~好啦，话不多说，精彩内容往下戳哦~</p>
-<h1 id="Objective-C"><a href="#Objective-C" class="headerlink" title="Objective-C"></a>Objective-C</h1><p>1.<a href="http://www.jianshu.com/p/addd4eac54ed" target="_blank" rel="external">漫谈iOS AOP编程之路</a><br>2.<a href="http://mp.weixin.qq.com/s?__biz=MzA3ODkzOTQ2NA==&amp;mid=2651911406&amp;idx=1&amp;sn=c047d58f4e1bf7c37fa24d32d82e1143&amp;chksm=845f40c9b328c9df7d53e03fb5127248a5ab536000cc2365d86207b3e33d23e4c2d2dee708c2&amp;scene=21#wechat_redirect" target="_blank" rel="external">聊聊AOP模式与ObjC对它的实现</a></p>
-<h1 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h1><p>1.<a href="https://www.raywenderlich.com/150322/swift-json-tutorial-2" target="_blank" rel="external">Swift JSON Tutorial: Working with JSON</a></p>
-<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><p>1.<a href="https://zhuanlan.zhihu.com/p/22590949?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">谈谈GIF格式</a><br>2.<a href="http://blog.leichunfeng.com/blog/2017/02/20/talking-about-the-decompression-of-the-image-in-ios/#jtss-tsina" target="_blank" rel="external">谈谈iOS中图片的解压缩</a></p>
-<h1 id="精华贴"><a href="#精华贴" class="headerlink" title="精华贴"></a>精华贴</h1><p>1.<a href="http://www.jianshu.com/p/69ce01e15042" target="_blank" rel="external">iOS无埋点数据SDK实践之路</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本期周报内容来自: &lt;a href=&quot;https://github.com/orgs/BaiduHiDeviOS/people/eggInBlack&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;eggInBlack&lt;/a&gt;、&lt;a href=&quot;https:
     
     </summary>
     
